@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -17,9 +18,8 @@ namespace PosSystem
 
         private void CreateTopBar()
         {
-            TopBar.TopBar topBar = new TopBar.TopBar();
-            Controls.Add(topBar);
-            Controls.SetChildIndex(topBar, 0);
+            Controls.Add(new TopBar.TopBar());
+            Controls.SetChildIndex(Controls.Find("TopBar", true).FirstOrDefault() as TopBar.TopBar, 0);
         }
 
         private void CreateLoginPage()

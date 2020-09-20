@@ -4,8 +4,7 @@ namespace PosSystem
 {
     public partial class LoginPage : UserControl
     {
-        public int GetLoginPageWidth => Width;
-        public Label GetLoginPageLabel1 => label1;
+        private const string WELCOME = "Welcome back, ";
 
         public LoginPage()
         {
@@ -14,23 +13,46 @@ namespace PosSystem
 
         private void LoginPage_Load(object sender, System.EventArgs e)
         {
-            label1.Location = SetLocationLoginPage.SetLabel1Location();
-            button1.Location = new System.Drawing.Point(Width/2 - button1.Width/2, 350);
+            label1.Location = SetLabelLocation();
+            button1.Location = SetButtonLocation();
         }
 
         private void TextBox1_TextChanged(object sender, System.EventArgs e)
         {
-            label1.Text = "Welcome back, " + textBox1.Text;
-            label1.Location = new System.Drawing.Point(Width / 2 - label1.Width / 2, 50);
+            label1.Text = WELCOME + textBox1.Text;
+            label1.Location = SetLabelLocation();
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && Textbox1NotEmpty())
+            if (e.KeyCode == Keys.Enter)
             {
                 textBox2.Focus();
                 e.SuppressKeyPress = true;
             }
+
+            if (CheckTextbox1Range() && e.KeyCode != Keys.Back)
+                e.SuppressKeyPress = true;
+        }
+
+        private void TextBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            { 
+                button1.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
+            if (Textbox1NotEmpty() && Textbox2NotEmpty())
+                MessageBox.Show("loged in");
+        }
+
+        private bool Textbox2NotEmpty()
+        {
+            return textBox2.Text != string.Empty;
         }
 
         private bool Textbox1NotEmpty()
@@ -38,15 +60,19 @@ namespace PosSystem
             return textBox1.Text != string.Empty;
         }
 
-        private void TextBox2_KeyDown(object sender, KeyEventArgs e)
+        private System.Drawing.Point SetLabelLocation()
         {
-            if (e.KeyCode == Keys.Enter && Textbox2NotEmpty())
-                MessageBox.Show("loged in");
+            return new System.Drawing.Point(Width / 2 - label1.Width / 2, 50);
         }
 
-        private bool Textbox2NotEmpty()
+        private System.Drawing.Point SetButtonLocation()
         {
-            return textBox2.Text != string.Empty;
+            return new System.Drawing.Point(Width / 2 - button1.Width / 2, 350);
+        }
+
+        private bool CheckTextbox1Range()
+        {
+            return textBox1.Text.Length >= 20;
         }
     }
 }
