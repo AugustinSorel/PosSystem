@@ -47,9 +47,14 @@ namespace PosSystem
         private void Button1_Click(object sender, System.EventArgs e)
         {
             if (Textbox1NotEmpty() && Textbox2NotEmpty())
-                MessageBox.Show("loged in");
+                Dispose();
         }
 
+        protected override void OnHandleDestroyed(System.EventArgs e)
+        {
+            Form.ActiveForm.Bounds = Screen.PrimaryScreen.Bounds;
+        }
+        
         private bool Textbox2NotEmpty()
         {
             return textBox2.Text != string.Empty;
