@@ -47,12 +47,15 @@ namespace PosSystem
         private void Button1_Click(object sender, System.EventArgs e)
         {
             if (Textbox1NotEmpty() && Textbox2NotEmpty())
+            {
                 Dispose();
+                Form.ActiveForm.Controls.Add(new Menu());
+            }
         }
 
         protected override void OnHandleDestroyed(System.EventArgs e)
         {
-            Form.ActiveForm.Bounds = Screen.PrimaryScreen.Bounds;
+           Form.ActiveForm.Bounds = Screen.PrimaryScreen.Bounds;
         }
         
         private bool Textbox2NotEmpty()
