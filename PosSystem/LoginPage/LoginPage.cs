@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -49,7 +51,7 @@ namespace PosSystem
             if (Textbox1NotEmpty() && Textbox2NotEmpty())
             {
                 Dispose();
-                Form.ActiveForm.Controls.Add(new Menu());
+                (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new Menu());
             }
         }
 

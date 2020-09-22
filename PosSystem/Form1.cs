@@ -24,7 +24,7 @@ namespace PosSystem
 
         private void CreateLoginPage()
         {
-            Controls.Add(new LoginPage());
+            panel1.Controls.Add(new LoginPage());
         }
     }
 }
