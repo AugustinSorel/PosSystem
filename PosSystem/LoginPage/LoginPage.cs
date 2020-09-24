@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -72,12 +71,12 @@ namespace PosSystem
 
         private System.Drawing.Point SetLabelLocation()
         {
-            return new System.Drawing.Point(Width / 2 - label1.Width / 2, 50);
+            return new System.Drawing.Point(Width / 2 - label1.Width / 2, 10);
         }
 
         private System.Drawing.Point SetButtonLocation()
         {
-            return new System.Drawing.Point(Width / 2 - button1.Width / 2, 350);
+            return new System.Drawing.Point(Width / 2 - button1.Width / 2, 330);
         }
 
         private bool CheckTextbox1Range()
