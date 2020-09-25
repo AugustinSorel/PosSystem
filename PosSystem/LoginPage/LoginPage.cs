@@ -12,6 +12,8 @@ namespace PosSystem
             InitializeComponent();
         }
 
+        // TODO: Create class for function
+
         private void LoginPage_Load(object sender, System.EventArgs e)
         {
             label1.Location = SetLabelLocation();
@@ -50,8 +52,13 @@ namespace PosSystem
             if (Textbox1NotEmpty() && Textbox2NotEmpty())
             {
                 Dispose();
-                (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new Menu());
+                ShowMenu();
             }
+        }
+
+        private static void ShowMenu()
+        {
+            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new Menu());
         }
 
         protected override void OnHandleDestroyed(System.EventArgs e)
