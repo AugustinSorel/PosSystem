@@ -5,25 +5,21 @@ namespace PosSystem
 {
     public partial class LoginPage : UserControl
     {
-        private const string WELCOME = "Welcome back, ";
-
         public LoginPage()
         {
             InitializeComponent();
         }
 
-        // TODO: Create class for function
-
         private void LoginPage_Load(object sender, System.EventArgs e)
         {
-            label1.Location = SetLabelLocation();
-            button1.Location = SetButtonLocation();
+            label1.Location = SetLocationLoginPage.SetLabelLocation(Width, label1.Width);
+            button1.Location = SetLocationLoginPage.SetButtonLocation(Width, button1.Width);
         }
 
         private void TextBox1_TextChanged(object sender, System.EventArgs e)
         {
-            label1.Text = WELCOME + textBox1.Text;
-            label1.Location = SetLabelLocation();
+            label1.Text = LoginPageTextBox.ChangeTextBox1Text(textBox1);
+            label1.Location = SetLocationLoginPage.SetLabelLocation(Width, label1.Width);
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -34,7 +30,7 @@ namespace PosSystem
                 e.SuppressKeyPress = true;
             }
 
-            if (CheckTextbox1Range() && e.KeyCode != Keys.Back)
+            if (LoginPageTextBox.CheckTextbox1Range(textBox1) && e.KeyCode != Keys.Back)
                 e.SuppressKeyPress = true;
         }
 
@@ -49,7 +45,7 @@ namespace PosSystem
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            if (Textbox1NotEmpty() && Textbox2NotEmpty())
+            if (LoginPageTextBox.Textbox1NotEmpty(textBox1) && LoginPageTextBox.Textbox2NotEmpty(textBox2))
             {
                 Dispose();
                 ShowMenu();
@@ -64,31 +60,6 @@ namespace PosSystem
         protected override void OnHandleDestroyed(System.EventArgs e)
         {
            Form.ActiveForm.Bounds = Screen.PrimaryScreen.Bounds;
-        }
-        
-        private bool Textbox2NotEmpty()
-        {
-            return textBox2.Text != string.Empty;
-        }
-
-        private bool Textbox1NotEmpty()
-        {
-            return textBox1.Text != string.Empty;
-        }
-
-        private System.Drawing.Point SetLabelLocation()
-        {
-            return new System.Drawing.Point(Width / 2 - label1.Width / 2, 10);
-        }
-
-        private System.Drawing.Point SetButtonLocation()
-        {
-            return new System.Drawing.Point(Width / 2 - button1.Width / 2, 330);
-        }
-
-        private bool CheckTextbox1Range()
-        {
-            return textBox1.Text.Length >= 20;
-        }
+        }        
     }
 }
