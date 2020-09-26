@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu\MenuPageLabelEffect.cs" />
+    <Compile Include="Menu\CreateHomePage.cs" />
+    <Compile Include="Menu\BackToLoginPage.cs" />
     <Compile Include="LoginPage\LoginPageTextBox.cs" />
     <Compile Include="RoundedButton\Button_WOC.cs">
       <SubType>Component</SubType>
