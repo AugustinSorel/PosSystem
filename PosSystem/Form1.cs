@@ -13,6 +13,12 @@ namespace PosSystem
         {
             CreateTopBar();
             CreateLoginPage();
+            CheckDatabaseCreated();
+        }
+
+        private void CheckDatabaseCreated()
+        {
+            new CreateDatabase();
         }
 
         private void CreateTopBar()
