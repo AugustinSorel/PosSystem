@@ -14,6 +14,7 @@ namespace PosSystem
         {
             label1.Location = SetLocationLoginPage.SetLabelLocation(Width, label1.Width);
             button1.Location = SetLocationLoginPage.SetButtonLocation(Width, button1.Width);
+            textBox1.Focus();
         }
 
         private void TextBox1_TextChanged(object sender, System.EventArgs e)

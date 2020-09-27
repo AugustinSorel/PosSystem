@@ -14,6 +14,25 @@ namespace PosSystem
         {
             Dock = SetDockStyleMenu();
             TriggerButton1Click();
+            SetComponentsLocation();
+        }
+
+        private void SetComponentsLocation()
+        {
+            SetLabelsLocation();
+            SetButtonsLocation();
+        }
+
+        private void SetButtonsLocation()
+        {
+            button1.Location = MenuSetLocation.SetButtonLocation(Width, button1.Width, 100);
+            button2.Location = MenuSetLocation.SetButtonLocation(Width, button2.Width, 150);
+            button3.Location = MenuSetLocation.SetButtonLocation(Width, button3.Width, 200);
+        }
+
+        private void SetLabelsLocation()
+        {
+            label2.Location = MenuSetLocation.SetLabelLocation(Width, label2.Width);
         }
 
         private void TriggerButton1Click()
