@@ -90,6 +90,7 @@
     <Compile Include="TopBar\TopBar.Designer.cs">
       <DependentUpon>TopBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQL\CreateDatabase\WorkerSecurityTable.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

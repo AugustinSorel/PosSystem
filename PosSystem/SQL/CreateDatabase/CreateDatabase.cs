@@ -1,4 +1,5 @@
 ﻿using ADOX;
+using System;
 using System.Data.OleDb;
 using System.IO;
 
@@ -15,6 +16,12 @@ namespace PosSystem
         {
             CreateCatalogue();
             CreateWorkerDetailsTable();
+            CreateWrokerSecurityTable();
+        }
+
+        private void CreateWrokerSecurityTable()
+        {
+            new WorkerSecurityTable();
         }
 
         private void CreateWorkerDetailsTable()

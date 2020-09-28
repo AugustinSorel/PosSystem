@@ -2,9 +2,9 @@
 
 namespace PosSystem
 {
-    class CreateWorkerDetailsTable : SqlQueries
+    class WorkerSecurityTable: SqlQueries
     {
-        public CreateWorkerDetailsTable()
+        public WorkerSecurityTable()
         {
             ExecuteCommand(CreateCommand());
         }
@@ -21,14 +21,11 @@ namespace PosSystem
 
         private string GetCommand()
         {
-            return "CREATE TABLE WorkerDetails("
-                + "WorkerID SHORT NOT NULL,"
-                + "WorkerName CHAR(30),"
-                + "WorkerSurname CHAR(30),"
-                + "Age NUMERIC,"
-                + "Gender CHAR(30),"
-                + "WorkerPhoto OLEOBJECT,"//?
-                + "PRIMARY KEY(WorkerID)"
+            return "CREATE TABLE WorkerSecurity("
+                + "WorkerID NUMERIC,"
+                + "Username CHAR(30),"
+                + "[Password] CHAR(30),"
+                + "Admin BIT NOT NULL DEFAULT 0"//?
                 + ")";
         }
     }
