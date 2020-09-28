@@ -1,8 +1,6 @@
 ﻿using ADOX;
-using System;
 using System.Data.OleDb;
 using System.IO;
-using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -39,19 +37,10 @@ namespace PosSystem
                 + ")";
         }
 
-        private CatalogClass CreateCatalogue()
+        private void CreateCatalogue()
         {
-            try
-            {
-                CatalogClass catalogClass = new CatalogClass();
-                catalogClass.Create(CONNECTION_STRING);
-                return catalogClass;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR in CreateDatabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
+            CatalogClass catalogClass = new CatalogClass();
+            catalogClass.Create(CONNECTION_STRING);
         }
     }
 }
