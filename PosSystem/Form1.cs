@@ -18,7 +18,8 @@ namespace PosSystem
 
         private void CheckDatabaseCreated()
         {
-            new CreateDatabase();
+            if (CreateDatabase.CheckifDatabaseExists())
+                new CreateDatabase(); 
         }
 
         private void CreateTopBar()
@@ -28,7 +29,7 @@ namespace PosSystem
 
         private void CreateLoginPage()
         {
-            panel1.Controls.Add(new LoginPage());
+            panel1.Controls.Add(new LoginPage()); //TODO: Create panel dynamicly
         }
     }
 }

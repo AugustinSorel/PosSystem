@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\CreateDatabase\CreateWorkerDetailsTable.cs" />
     <Compile Include="Menu\MenuSetLocation.cs" />
     <Compile Include="Menu\MenuPageLabelEffect.cs" />
     <Compile Include="Menu\CreateHomePage.cs" />

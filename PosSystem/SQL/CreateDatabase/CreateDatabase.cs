@@ -8,39 +8,29 @@ namespace PosSystem
     {
         public CreateDatabase()
         {
-            if (!File.Exists(DATABASE_NAME))
-                CreateDB();
+            CreateDB();
         }
 
         private void CreateDB()
         {
             CreateCatalogue();
-            ExecuteCommand(CreateCommand());
+            CreateWorkerDetailsTable();
         }
 
-        private OleDbCommand CreateCommand()
+        private void CreateWorkerDetailsTable()
         {
-            OleDbCommand oleDbCommand = new OleDbCommand
-            {
-                Connection = oleDbConnection,
-                CommandText = GetCommand()
-            };
-            return oleDbCommand;
-        }
-
-        private string GetCommand()
-        {
-            return "CREATE TABLE BOOK("
-                + "BookID SHORT NOT NULL,"
-                + "Title CHAR(30),"
-                + "PRIMARY KEY(BookID)"
-                + ")";
+            new CreateWorkerDetailsTable();
         }
 
         private void CreateCatalogue()
         {
             CatalogClass catalogClass = new CatalogClass();
             catalogClass.Create(CONNECTION_STRING);
+        }
+
+        public static bool CheckifDatabaseExists()
+        {
+            return !File.Exists(DATABASE_NAME);
         }
     }
 }
