@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SQL\CreateDatabase\CreateAdminSecurity.cs" />
-    <Compile Include="SQL\CreateDatabase\CreateDefaultAdmin.cs" />
-    <Compile Include="SQL\CreateDatabase\CreateWorkerDetailsTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Admin\CreateAdminSecurity.cs" />
+    <Compile Include="SQL\CreateDatabase\Admin\CreateDefaultAdminDetails.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateWorkerDetailsTable.cs" />
     <Compile Include="Menu\MenuSetLocation.cs" />
     <Compile Include="Menu\MenuPageLabelEffect.cs" />
     <Compile Include="Menu\CreateHomePage.cs" />
@@ -92,7 +92,7 @@
     <Compile Include="TopBar\TopBar.Designer.cs">
       <DependentUpon>TopBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\CreateDatabase\WorkerSecurityTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateWorkerSecurityTable.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

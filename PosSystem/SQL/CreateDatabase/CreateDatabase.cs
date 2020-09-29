@@ -20,7 +20,7 @@ namespace PosSystem
 
         private void CreateDefaultAdmin()
         {
-            new CreateDefaultAdmin();
+            new CreateDefaultAdminDetails();
             new CreateAdminSecurity();
         }
 

@@ -2,11 +2,11 @@
 
 namespace PosSystem
 {
-    class CreateDefaultAdmin: SqlQueries
+    class CreateDefaultAdminDetails: SqlQueries
     {
         private const string ADMIN = "Admin";
 
-        public CreateDefaultAdmin()
+        public CreateDefaultAdminDetails()
         {
             ExecuteCommand(GetCommand());
         }
