@@ -1,6 +1,4 @@
 ﻿using ADOX;
-using System;
-using System.Data.OleDb;
 using System.IO;
 
 namespace PosSystem
@@ -17,6 +15,13 @@ namespace PosSystem
             CreateCatalogue();
             CreateWorkerDetailsTable();
             CreateWrokerSecurityTable();
+            CreateDefaultAdmin();
+        }
+
+        private void CreateDefaultAdmin()
+        {
+            new CreateDefaultAdmin();
+            new CreateAdminSecurity();
         }
 
         private void CreateWrokerSecurityTable()

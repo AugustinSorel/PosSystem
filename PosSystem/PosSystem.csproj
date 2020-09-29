@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\CreateDatabase\CreateAdminSecurity.cs" />
+    <Compile Include="SQL\CreateDatabase\CreateDefaultAdmin.cs" />
     <Compile Include="SQL\CreateDatabase\CreateWorkerDetailsTable.cs" />
     <Compile Include="Menu\MenuSetLocation.cs" />
     <Compile Include="Menu\MenuPageLabelEffect.cs" />
@@ -82,7 +84,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoginPage\SetLocationLoginPage.cs" />
-    <Compile Include="SqlQueries.cs" />
+    <Compile Include="SQL\SqlQueries.cs" />
     <Compile Include="SQL\CreateDatabase\CreateDatabase.cs" />
     <Compile Include="TopBar\TopBar.cs">
       <SubType>UserControl</SubType>
@@ -111,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TopBar\TopBar.resx">
       <DependentUpon>TopBar.cs</DependentUpon>
@@ -139,6 +142,8 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\DefaultAvatar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

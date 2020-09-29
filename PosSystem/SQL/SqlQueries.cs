@@ -21,6 +21,12 @@ namespace PosSystem
                 oleDbConnection.Open();
         }
 
+        protected byte[] ConvertImageToByte(System.Drawing.Image image)
+        {
+            System.Drawing.ImageConverter imageConverter = new System.Drawing.ImageConverter();
+            return (byte[])imageConverter.ConvertTo(image, typeof(byte[]));
+        }
+
         protected void ExecuteCommand(OleDbCommand oleDbCommand)
         {
             try

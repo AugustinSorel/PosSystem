@@ -11,18 +11,15 @@ namespace PosSystem
 
         private OleDbCommand CreateCommand()
         {
-            OleDbCommand oleDbCommand = new OleDbCommand
-            {
-                Connection = oleDbConnection,
-                CommandText = GetCommand()
-            };
+            OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
+            oleDbCommand.CommandText = GetCommand();
             return oleDbCommand;
         }
 
         private string GetCommand()
         {
             return "CREATE TABLE WorkerDetails("
-                + "WorkerID SHORT NOT NULL,"
+                + "WorkerID AUTOINCREMENT,"
                 + "WorkerName CHAR(30),"
                 + "WorkerSurname CHAR(30),"
                 + "Age NUMERIC,"
