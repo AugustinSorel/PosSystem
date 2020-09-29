@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -47,10 +48,17 @@ namespace PosSystem
         private void Button1_Click(object sender, System.EventArgs e)
         {
             if (LoginPageTextBox.Textbox1NotEmpty(textBox1) && LoginPageTextBox.Textbox2NotEmpty(textBox2))
-            {
-                Dispose();
-                ShowMenu();
-            }
+                if (RightLogDetails())
+                {
+                    MessageBox.Show("yessss");
+                    Dispose();
+                    ShowMenu();
+                }
+        }
+
+        private bool RightLogDetails()
+        {
+            return CheckLoginDetails.LoginDetailsIsCorrect(textBox1.Text, textBox2.Text);
         }
 
         private static void ShowMenu()

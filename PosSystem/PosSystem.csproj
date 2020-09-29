@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\CheckLogin\CheckLoginDetails.cs" />
     <Compile Include="SQL\CreateDatabase\Admin\CreateAdminSecurity.cs" />
     <Compile Include="SQL\CreateDatabase\Admin\CreateDefaultAdminDetails.cs" />
     <Compile Include="SQL\CreateDatabase\Tables\CreateWorkerDetailsTable.cs" />
