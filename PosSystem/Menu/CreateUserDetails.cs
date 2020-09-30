@@ -3,14 +3,14 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    class CreateHomePage
+    class CreateUserDetails
     {
-        public CreateHomePage()
+        public CreateUserDetails()
         {
             if (MoreThan1ChildInPanel())
                 DestroyChildInPanel();
             else
-                AddHomePageToPanel();
+                AddUserDetails();
         }
 
         private void DestroyChildInPanel()
@@ -18,12 +18,12 @@ namespace PosSystem
             foreach (Control item in (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.OfType<UserControl>())
                 (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Remove(item);
 
-            AddHomePageToPanel();
+            AddUserDetails();
         }
 
-        private void AddHomePageToPanel()
+        private void AddUserDetails()
         {
-            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new HomePage());
+            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new UserDetails());
         }
 
         private bool MoreThan1ChildInPanel()

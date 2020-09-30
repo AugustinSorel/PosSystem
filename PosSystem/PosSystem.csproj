@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu\CreateUserDetails.cs" />
+    <Compile Include="SQL\UserDetails\ShowUserDetails.cs" />
     <Compile Include="SQL\CheckLogin\CheckLoginDetails.cs" />
     <Compile Include="SQL\CreateDatabase\Admin\CreateAdminSecurity.cs" />
     <Compile Include="SQL\CreateDatabase\Admin\CreateDefaultAdminDetails.cs" />
@@ -94,6 +96,13 @@
       <DependentUpon>TopBar.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\CreateDatabase\Tables\CreateWorkerSecurityTable.cs" />
+    <Compile Include="UserDetails\UserDetailsSetLocation.cs" />
+    <Compile Include="UserDetails\UserDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserDetails\UserDetails.Designer.cs">
+      <DependentUpon>UserDetails.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="TopBar\TopBar.resx">
       <DependentUpon>TopBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDetails\UserDetails.resx">
+      <DependentUpon>UserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DefaultAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

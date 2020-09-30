@@ -20,14 +20,18 @@ namespace PosSystem
         private void SetComponentsLocation()
         {
             SetLabelsLocation();
-            SetButtonsLocation();
+            //SetButtonsLocation();
+            //SetPicturePoxLocation();
+        }
+
+        private void SetPicturePoxLocation()
+        {
+            pictureBox2.Location = MenuSetLocation.SetPictureBoxLocation(button1.Location.Y, button1.Height);
         }
 
         private void SetButtonsLocation()
         {
-            button1.Location = MenuSetLocation.SetButtonLocation(Width, button1.Width, 100);
-            button2.Location = MenuSetLocation.SetButtonLocation(Width, button2.Width, 150);
-            button3.Location = MenuSetLocation.SetButtonLocation(Width, button3.Width, 200);
+            button2.Location = MenuSetLocation.SetButtonLocation(Width, button2.Width, 500);
         }
 
         private void SetLabelsLocation()
@@ -50,9 +54,9 @@ namespace PosSystem
             GetHomePage();
         }
 
-        private static void GetHomePage()
+        private void GetHomePage()
         {
-            CreateHomePage.CreateNewHomePage();
+            new CreateHomePage();
         }
 
         private void Label2_MouseLeave(object sender, EventArgs e)
@@ -67,7 +71,12 @@ namespace PosSystem
 
         private void Label2_Click(object sender, EventArgs e)
         {
-            BackToLoginPage.GetBackToLoginPage();
+            new BackToLoginPage();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            new CreateUserDetails();
         }
     }
 }

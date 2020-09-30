@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -47,13 +46,18 @@ namespace PosSystem
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            if (LoginPageTextBox.Textbox1NotEmpty(textBox1) && LoginPageTextBox.Textbox2NotEmpty(textBox2))
-                if (RightLogDetails())
-                {
-                    MessageBox.Show("yessss");
-                    Dispose();
-                    ShowMenu();
-                }
+            if (TextBoxNotEmpty() && RightLogDetails()) 
+            { 
+                Dispose();
+                ShowMenu();
+            }
+            else
+                MessageBox.Show("The username or password is incorrect", "Wrong Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private bool TextBoxNotEmpty()
+        {
+            return LoginPageTextBox.Textbox1NotEmpty(textBox1) && LoginPageTextBox.Textbox2NotEmpty(textBox2);
         }
 
         private bool RightLogDetails()
