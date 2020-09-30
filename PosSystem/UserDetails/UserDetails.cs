@@ -19,7 +19,7 @@ namespace PosSystem
 
         private void LoadData()
         {
-            // 
+            new ShowUserDetails(this);
         }
 
         private DockStyle GetFill()
