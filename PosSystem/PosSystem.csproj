@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menu\CreateUserDetails.cs" />
+    <Compile Include="SaveUserSecurity.cs" />
+    <Compile Include="SQL\UserDetails\oleDbConnection.cs" />
+    <Compile Include="SQL\UserDetails\ShowUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\SaveUserDetails.cs" />
     <Compile Include="SQL\UserDetails\ShowUserDetails.cs" />
     <Compile Include="SQL\CheckLogin\CheckLoginDetails.cs" />

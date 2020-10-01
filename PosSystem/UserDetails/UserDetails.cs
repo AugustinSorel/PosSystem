@@ -21,6 +21,7 @@ namespace PosSystem
         private void LoadData()
         {
             new ShowUserDetails(this);
+            new ShowUserSecurity(this);
         }
 
         private DockStyle GetFill()
@@ -45,6 +46,27 @@ namespace PosSystem
         private void Button1_Click(object sender, System.EventArgs e)
         {
             new SaveUserDetails(this);
+        }
+
+        private void Button2_Click(object sender, System.EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            LoadData();
+        }
+
+        private void Button5_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void Button6_Click(object sender, System.EventArgs e)
+        {
+            groupBox2.Enabled = true;
+        }
+
+        private void Button7_Click(object sender, System.EventArgs e)
+        {
+            new SaveUserSecurity(this);
         }
     }
 }

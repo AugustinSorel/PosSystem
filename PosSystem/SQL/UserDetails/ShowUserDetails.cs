@@ -9,7 +9,7 @@ namespace PosSystem
 
         public ShowUserDetails(UserDetails userControl)
         {
-            OpenConnectionString();
+            OpenOleDbConnection();
             OleDbDataReader oleDbDataReader = GetCommand().ExecuteReader();
             try
             {
@@ -30,12 +30,6 @@ namespace PosSystem
                 userControl.pictureBox1.Image = null;
             else
                 userControl.pictureBox1.Image = ConvertByteToImage(image); 
-        }
-
-        private static void OpenConnectionString()
-        {
-            if (oleDbConnection.State == ConnectionState.Closed)
-                oleDbConnection.Open();
         }
 
         private OleDbCommand GetCommand()
