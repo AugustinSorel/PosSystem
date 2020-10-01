@@ -13,10 +13,10 @@ namespace PosSystem
             {
                 while (oleDbDataReader.Read())
                 {
-                    userControl.textBox1.Text = oleDbDataReader["WorkerName"].ToString();
-                    userControl.textBox2.Text = oleDbDataReader["WorkerSurname"].ToString();
-                    userControl.textBox3.Text = oleDbDataReader["Age"].ToString();
-                    userControl.textBox4.Text = oleDbDataReader["Gender"].ToString();
+                    userControl.textBox1.Text = oleDbDataReader["WorkerName"].ToString().Trim();
+                    userControl.textBox2.Text = oleDbDataReader["WorkerSurname"].ToString().Trim();
+                    userControl.textBox3.Text = oleDbDataReader["Age"].ToString().Trim();
+                    userControl.textBox4.Text = oleDbDataReader["Gender"].ToString().Trim();
                     image = ((byte[])oleDbDataReader[5]);
                 }
             }

@@ -32,6 +32,7 @@ namespace PosSystem
         private void Button3_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = true;
+            textBox1.Focus();
         }
 
         private void Button4_Click(object sender, System.EventArgs e)
@@ -65,13 +66,67 @@ namespace PosSystem
         private void Button6_Click(object sender, System.EventArgs e)
         {
             groupBox2.Enabled = true;
+            textBox5.Focus();
         }
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
             new SaveUserSecurityDetails(this);
         }
-        // TODO: enter features
+
+        private void TextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox2.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void TextBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox3.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void TextBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox4.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void TextBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void TextBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox6.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void TextBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button7.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
 
