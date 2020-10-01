@@ -73,6 +73,16 @@ namespace PosSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddWorker {
+            get {
+                object obj = ResourceManager.GetObject("AddWorker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DefaultAvatar {
             get {
                 object obj = ResourceManager.GetObject("DefaultAvatar", resourceCulture);
@@ -86,6 +96,16 @@ namespace PosSystem.Properties {
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SeeTeam {
+            get {
+                object obj = ResourceManager.GetObject("SeeTeam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

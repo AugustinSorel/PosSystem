@@ -4,6 +4,8 @@ namespace PosSystem
 {
     class ShowUserSecurity: SqlQueries
     {
+        //string admin;
+
         public ShowUserSecurity(UserDetails userControl)
         {
             OpenOleDbConnection();
@@ -12,6 +14,7 @@ namespace PosSystem
             {
                 userControl.textBox5.Text = oleDbDataReader["UserName"].ToString();
                 userControl.textBox6.Text = oleDbDataReader["Password"].ToString();
+                //admin = oleDbDataReader["Admin"].ToString();
             }
         }
 

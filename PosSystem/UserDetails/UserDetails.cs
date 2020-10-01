@@ -56,7 +56,8 @@ namespace PosSystem
 
         private void Button5_Click(object sender, System.EventArgs e)
         {
-
+            groupBox2.Enabled = false;
+            LoadData();
         }
 
         private void Button6_Click(object sender, System.EventArgs e)
@@ -68,5 +69,6 @@ namespace PosSystem
         {
             new SaveUserSecurity(this);
         }
+        // TODO: see if he is an admin and change it
     }
 }

@@ -15,6 +15,16 @@ namespace PosSystem
             Dock = SetDockStyleMenu();
             TriggerButton1Click();
             SetComponentsLocation();
+            HideControlsForNonAdmin();
+        }
+
+        private void HideControlsForNonAdmin()
+        {
+            if (! UserDetailsVAR.Admin)
+            {
+                pictureBox3.Visible = pictureBox4.Visible = false;
+                button3.Visible = button4.Visible = false;
+            }
         }
 
         private void SetComponentsLocation()

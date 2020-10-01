@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.OleDb;
 
 namespace PosSystem
@@ -7,6 +8,7 @@ namespace PosSystem
     {
         private static string _Username;
         private static string _Password;
+        
 
         public static bool LoginDetailsIsCorrect(string username, string password) 
         {
@@ -18,16 +20,27 @@ namespace PosSystem
         private static OleDbDataReader CreateDataReader()
         {
             OleDbDataReader dataReader = CreateCommand().ExecuteReader();
-            UserDetailsVAR.Id = GetID(dataReader);
+            GetIdAndAdmin(dataReader);
             return dataReader;
         }
 
-        private static int GetID(OleDbDataReader oleDbDataReader)
+        private static void GetIdAndAdmin(OleDbDataReader oleDbDataReader)
         {
-            string s = "";
-            while (oleDbDataReader.Read())
-                s = oleDbDataReader["WorkerID"].ToString();
-            return int.Parse(s);
+            try
+            {
+                int s = -1;
+                bool b = false;
+                while (oleDbDataReader.Read())
+                {
+                    s = int.Parse(oleDbDataReader["WorkerID"].ToString());
+                    b = bool.Parse(oleDbDataReader["Admin"].ToString());
+                }
+                UserDetailsVAR.Id = s;
+                UserDetailsVAR.Admin = b;
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private static OleDbCommand CreateCommand()
