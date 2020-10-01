@@ -22,7 +22,7 @@ namespace PosSystem
                 + "WorkerID AUTOINCREMENT,"
                 + "Username CHAR(30),"
                 + "[Password] CHAR(30),"
-                + "Admin BIT NOT NULL DEFAULT 0"//?
+                + "Admin BIT NOT NULL DEFAULT 0"
                 + ")";
         }
     }

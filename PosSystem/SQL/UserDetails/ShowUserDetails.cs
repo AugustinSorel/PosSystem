@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Data.OleDb;
+﻿using System.Data.OleDb;
 
 namespace PosSystem
 {
@@ -9,7 +8,6 @@ namespace PosSystem
 
         public ShowUserDetails(UserDetails userControl)
         {
-            OpenOleDbConnection();
             OleDbDataReader oleDbDataReader = GetCommand().ExecuteReader();
             try
             {
@@ -34,6 +32,7 @@ namespace PosSystem
 
         private OleDbCommand GetCommand()
         {
+            OpenOleDbConnection();
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("WorkerID", UserDetailsVAR.Id);

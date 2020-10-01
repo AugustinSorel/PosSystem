@@ -30,18 +30,6 @@ namespace PosSystem
         private void SetComponentsLocation()
         {
             SetLabelsLocation();
-            //SetButtonsLocation();
-            //SetPicturePoxLocation();
-        }
-
-        private void SetPicturePoxLocation()
-        {
-            pictureBox2.Location = MenuSetLocation.SetPictureBoxLocation(button1.Location.Y, button1.Height);
-        }
-
-        private void SetButtonsLocation()
-        {
-            button2.Location = MenuSetLocation.SetButtonLocation(Width, button2.Width, 500);
         }
 
         private void SetLabelsLocation()

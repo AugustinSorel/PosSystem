@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -31,7 +32,7 @@ namespace PosSystem
                 e.SuppressKeyPress = true;
             }
 
-            if (LoginPageTextBox.CheckTextbox1Range(textBox1) && e.KeyCode != Keys.Back)
+            if (TextBoxInRange() && e.KeyCode != Keys.Back)
                 e.SuppressKeyPress = true;
         }
 
@@ -47,12 +48,18 @@ namespace PosSystem
         private void Button1_Click(object sender, System.EventArgs e)
         {
             if (TextBoxNotEmpty() && RightLogDetails()) 
-            { 
+            {
+                SetUserDetailsVar();
                 Dispose();
                 ShowMenu();
             }
             else
                 MessageBox.Show("The username or password is incorrect", "Wrong Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void SetUserDetailsVar()
+        {
+            new SetUserDetailsVar(textBox1.Text, textBox2.Text); 
         }
 
         private bool TextBoxNotEmpty()
@@ -65,9 +72,14 @@ namespace PosSystem
             return CheckLoginDetails.LoginDetailsIsCorrect(textBox1.Text, textBox2.Text);
         }
 
-        private static void ShowMenu()
+        private void ShowMenu()
         {
             (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new Menu());
+        }
+
+        private bool TextBoxInRange()
+        {
+            return LoginPageTextBox.CheckTextbox1Range(textBox1);
         }
 
         protected override void OnHandleDestroyed(System.EventArgs e)

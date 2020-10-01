@@ -46,6 +46,8 @@ namespace PosSystem
         private void Button1_Click(object sender, System.EventArgs e)
         {
             new SaveUserDetails(this);
+            MessageBox.Show("Account saved successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            groupBox1.Enabled = false;
         }
 
         private void Button2_Click(object sender, System.EventArgs e)
@@ -67,8 +69,9 @@ namespace PosSystem
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
-            new SaveUserSecurity(this);
+            new SaveUserSecurityDetails(this);
         }
-        // TODO: see if he is an admin and change it
+        // TODO: enter features
     }
 }
+

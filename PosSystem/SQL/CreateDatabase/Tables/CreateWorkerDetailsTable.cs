@@ -24,7 +24,7 @@ namespace PosSystem
                 + "WorkerSurname CHAR(30),"
                 + "Age NUMERIC,"
                 + "Gender CHAR(30),"
-                + "WorkerPhoto OLEOBJECT,"//?
+                + "WorkerPhoto OLEOBJECT,"
                 + "PRIMARY KEY(WorkerID)"
                 + ")";
         }

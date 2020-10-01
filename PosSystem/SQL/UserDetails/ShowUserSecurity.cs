@@ -4,22 +4,26 @@ namespace PosSystem
 {
     class ShowUserSecurity: SqlQueries
     {
-        //string admin;
-
         public ShowUserSecurity(UserDetails userControl)
         {
-            OpenOleDbConnection();
             OleDbDataReader oleDbDataReader = GetCommand().ExecuteReader();
             while (oleDbDataReader.Read())
             {
                 userControl.textBox5.Text = oleDbDataReader["UserName"].ToString();
                 userControl.textBox6.Text = oleDbDataReader["Password"].ToString();
-                //admin = oleDbDataReader["Admin"].ToString();
+                userControl.checkBox1.Checked = bool.Parse(oleDbDataReader["Admin"].ToString());
+            }
+
+            if (! userControl.checkBox1.Checked)
+            {
+                userControl.checkBox1.Visible = false;
+                userControl.label6.Visible = false;
             }
         }
 
         private OleDbCommand GetCommand()
         {
+            OpenOleDbConnection();
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("WorkerID", UserDetailsVAR.Id);

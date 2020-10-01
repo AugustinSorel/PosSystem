@@ -7,7 +7,6 @@ namespace PosSystem
         public SaveUserDetails(UserDetails userDetails)
         {
             ExecuteCommand(CreateCommand(userDetails));
-            System.Windows.Forms.MessageBox.Show("Account saved successfully", "Message", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information); ;
         }
 
         private OleDbCommand CreateCommand(UserDetails userDetails)
