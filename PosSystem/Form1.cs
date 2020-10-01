@@ -30,6 +30,7 @@ namespace PosSystem
         private void CreateLoginPage()
         {
             panel1.Controls.Add(new LoginPage()); //TODO: Create panel dynamicly
+            // TODO: PANEL BRING TO FRONT, not usercontrol bringtofont();
         }
     }
 }

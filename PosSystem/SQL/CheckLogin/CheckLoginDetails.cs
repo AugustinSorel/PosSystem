@@ -18,7 +18,16 @@ namespace PosSystem
         private static OleDbDataReader CreateDataReader()
         {
             OleDbDataReader dataReader = CreateCommand().ExecuteReader();
+            UserDetailsVAR.Id = GetID(dataReader);
             return dataReader;
+        }
+
+        private static int GetID(OleDbDataReader oleDbDataReader)
+        {
+            string s = "";
+            while (oleDbDataReader.Read())
+                s = oleDbDataReader["WorkerID"].ToString();
+            return int.Parse(s);
         }
 
         private static OleDbCommand CreateCommand()

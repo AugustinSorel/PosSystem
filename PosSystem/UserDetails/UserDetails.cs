@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -25,6 +26,25 @@ namespace PosSystem
         private DockStyle GetFill()
         {
             return DockStyle.Fill;
+        }
+
+        private void Button3_Click(object sender, System.EventArgs e)
+        {
+            groupBox1.Enabled = true;
+        }
+
+        private void Button4_Click(object sender, System.EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Multiselect = false })
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
+
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
+            new SaveUserDetails(this);
         }
     }
 }

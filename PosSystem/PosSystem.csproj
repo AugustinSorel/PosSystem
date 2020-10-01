@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menu\CreateUserDetails.cs" />
+    <Compile Include="SQL\UserDetails\SaveUserDetails.cs" />
     <Compile Include="SQL\UserDetails\ShowUserDetails.cs" />
     <Compile Include="SQL\CheckLogin\CheckLoginDetails.cs" />
     <Compile Include="SQL\CreateDatabase\Admin\CreateAdminSecurity.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="LoginPage\SetLocationLoginPage.cs" />
     <Compile Include="SQL\SqlQueries.cs" />
     <Compile Include="SQL\CreateDatabase\CreateDatabase.cs" />
+    <Compile Include="SQL\UserDetails\UserDetailsVAR.cs" />
     <Compile Include="TopBar\TopBar.cs">
       <SubType>UserControl</SubType>
     </Compile>

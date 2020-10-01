@@ -1,5 +1,7 @@
 ﻿using System.Data;
 using System.Data.OleDb;
+using System.Drawing;
+using System.IO;
 
 namespace PosSystem
 {
@@ -21,10 +23,16 @@ namespace PosSystem
                 oleDbConnection.Open();
         }
 
-        protected byte[] ConvertImageToByte(System.Drawing.Image image)
+        protected byte[] ConvertImageToByte(Image image)
         {
-            System.Drawing.ImageConverter imageConverter = new System.Drawing.ImageConverter();
+            ImageConverter imageConverter = new ImageConverter();
             return (byte[])imageConverter.ConvertTo(image, typeof(byte[]));
+        }
+
+        protected Image ConvertByteToImage(byte[] photo)
+        {
+            MemoryStream ms = new MemoryStream(photo);
+            return Image.FromStream(ms);
         }
 
         protected void ExecuteCommand(OleDbCommand oleDbCommand)
