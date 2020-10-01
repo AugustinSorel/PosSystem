@@ -24,8 +24,8 @@ namespace PosSystem
                 while (oleDbDataReader.Read())
                 {
                     UserDetailsVAR.Id = int.Parse(oleDbDataReader["WorkerID"].ToString());
-                    bool b = bool.Parse(oleDbDataReader["Admin"].ToString());
-                }
+                    UserDetailsVAR.Admin = bool.Parse(oleDbDataReader["Admin"].ToString());
+                }                
             }
             catch (Exception)
             {
