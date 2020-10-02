@@ -76,5 +76,15 @@ namespace PosSystem
         {
             new CreateUserDetails();
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            new CreateSeeTeam();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            new CreateAddWorker();
+        }
     }
 }

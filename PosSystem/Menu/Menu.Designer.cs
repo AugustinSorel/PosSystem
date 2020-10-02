@@ -32,8 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -97,6 +97,16 @@
             this.panel1.Size = new System.Drawing.Size(180, 100);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PosSystem.Properties.Resources.AccountDetails;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
@@ -109,16 +119,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Add Worker";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PosSystem.Properties.Resources.AccountDetails;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // pictureBox3
             // 
@@ -152,6 +153,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "See Team";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // pictureBox4
             // 
