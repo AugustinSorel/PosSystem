@@ -1,6 +1,6 @@
 ﻿namespace PosSystem
 {
-    partial class AddWorker
+    partial class ManageWorker
     {
         /// <summary> 
         /// Required designer variable.

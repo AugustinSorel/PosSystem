@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    class CreateAddWorker
+    class CreateManageWorker
     {
-        public CreateAddWorker()
+        public CreateManageWorker()
         {
             if (MoreThan1ChildInPanel())
                 DestroyChildInPanel();
@@ -23,7 +23,7 @@ namespace PosSystem
 
         private void AddHomePageToPanel()
         {
-            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new AddWorker());
+            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new ManageWorker());
         }
 
         private bool MoreThan1ChildInPanel()

@@ -84,7 +84,7 @@ namespace PosSystem
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            new CreateAddWorker();
+            new CreateManageWorker();
         }
     }
 }

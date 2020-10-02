@@ -46,13 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddWorker\AddWorker.cs">
+    <Compile Include="MangeWorker\ManageWorker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddWorker\AddWorker.Designer.cs">
-      <DependentUpon>AddWorker.cs</DependentUpon>
+    <Compile Include="MangeWorker\ManageWorker.Designer.cs">
+      <DependentUpon>ManageWorker.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateUserControls\CreateAddWorker.cs" />
+    <Compile Include="CreateUserControls\CreateManageWorker.cs" />
     <Compile Include="CreateUserControls\CreateSeeTeam.cs" />
     <Compile Include="CreateUserControls\CreateUserDetails.cs" />
     <Compile Include="SeeTeam\SeeTeam.cs">
@@ -124,8 +124,8 @@
     <Compile Include="UserDetails\UserDetails.Designer.cs">
       <DependentUpon>UserDetails.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddWorker\AddWorker.resx">
-      <DependentUpon>AddWorker.cs</DependentUpon>
+    <EmbeddedResource Include="MangeWorker\ManageWorker.resx">
+      <DependentUpon>ManageWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

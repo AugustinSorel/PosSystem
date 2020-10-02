@@ -2,9 +2,9 @@
 
 namespace PosSystem
 {
-    public partial class AddWorker : UserControl
+    public partial class ManageWorker : UserControl
     {
-        public AddWorker()
+        public ManageWorker()
         {
             InitializeComponent();
         }
