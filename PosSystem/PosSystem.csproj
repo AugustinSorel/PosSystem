@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MangeWorker\ManageWorkerSetLocationCenter.cs" />
+    <Compile Include="SeeTeam\SeeTeamSetLocationCenter.cs" />
     <Compile Include="SQL\SeeTeam\ShowUserDetailsFromDataGrid.cs" />
     <Compile Include="SQL\SeeTeam\LoadDataGridView.cs" />
     <Compile Include="MangeWorker\ManageWorker.cs">

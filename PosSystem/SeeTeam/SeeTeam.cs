@@ -14,21 +14,22 @@ namespace PosSystem
         private void SeeTeam_Load(object sender, System.EventArgs e)
         {
             Dock = GetFillDock();
-            dataGridView1.Dock = GetBottomDock();
+            SetLocation();
             BringToFront();
             LoadData();
             SelectFirstRow();
+        }
+
+        private void SetLocation()
+        {
+            panel1.Location = SeeTeamSetLocationCenter.SetPanel1(panel1.Width);
+            dataGridView1.Location = SeeTeamSetLocationCenter.SetDataGridView(dataGridView1.Width, dataGridView1.Height);
         }
 
         private void SelectFirstRow()
         {
             if (dataGridView1.Rows.Count > 1)
                 DataGridView1_CellClick(dataGridView1, new DataGridViewCellEventArgs(0, 0));
-        }
-
-        private DockStyle GetBottomDock()
-        {
-            return DockStyle.Bottom;
         }
 
         private void LoadData()
