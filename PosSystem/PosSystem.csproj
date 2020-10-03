@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\SeeTeam\ShowUserDetailsFromDataGrid.cs" />
+    <Compile Include="SQL\SeeTeam\LoadDataGridView.cs" />
     <Compile Include="MangeWorker\ManageWorker.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -62,6 +64,7 @@
       <DependentUpon>SeeTeam.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\UserDetails\SetUserDetailsVar.cs" />
+    <Compile Include="SQL\SeeTeam\UpdateWorkerDetails.cs" />
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />
     <Compile Include="SQL\UserDetails\SaveUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\oleDbConnection.cs" />
