@@ -18,6 +18,7 @@ namespace PosSystem
             BringToFront();
             LoadData();
             SelectFirstRow();
+            RemoveTheWorkerLoggedIn();
         }
 
         private void SetLocation()
@@ -44,13 +45,12 @@ namespace PosSystem
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            RemoveTheWorkerLoggedIn();
             new ShowUserDetailsFromDataGrid(this);
         }
 
         private void RemoveTheWorkerLoggedIn()
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (int.Parse(row.Cells[0].Value.ToString()) == UserDetailsVAR.Id)
                     dataGridView1.Rows.Remove(row);

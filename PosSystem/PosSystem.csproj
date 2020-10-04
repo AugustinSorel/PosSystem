@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\ManageWorker\CheckIfWorkerIdExists.cs" />
+    <Compile Include="MangeWorker\ManageWorkerClearControls.cs" />
+    <Compile Include="SQL\ManageWorker\CheckDataFilled.cs" />
+    <Compile Include="SQL\ManageWorker\CheckIfUserNameIsTaken.cs" />
+    <Compile Include="SQL\ManageWorker\DeleteWorkerSecurity.cs" />
+    <Compile Include="SQL\ManageWorker\DeleteWorkerDetails.cs" />
+    <Compile Include="SQL\ManageWorker\AddWorkerSecurity.cs" />
+    <Compile Include="SQL\ManageWorker\AddWorkerDetails.cs" />
     <Compile Include="MangeWorker\ManageWorkerSetLocationCenter.cs" />
     <Compile Include="SeeTeam\SeeTeamSetLocationCenter.cs" />
     <Compile Include="SQL\SeeTeam\ShowUserDetailsFromDataGrid.cs" />
