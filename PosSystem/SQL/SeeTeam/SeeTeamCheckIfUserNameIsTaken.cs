@@ -7,11 +7,12 @@ namespace PosSystem
     class SeeTeamCheckIfUserNameIsTaken: SqlQueries
     {
         private static string _Username;
+        private static string _Username2;
 
         public static bool CheckUserName(string username)
         {
             _Username = username;
-            if (CreateDataReader().HasRows && username == _Username)// TODO: checkUsername not the same
+            if (CreateDataReader().HasRows && _Username2 != _Username)// TODO: checkUsername not the same
             {
                 MessageBox.Show("Username already taken", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
@@ -23,6 +24,13 @@ namespace PosSystem
         private static OleDbDataReader CreateDataReader()
         {
             OleDbDataReader dataReader = CreateCommand().ExecuteReader();
+            
+            
+            while (dataReader.Read())
+            {
+                _Username2 = dataReader["UserName"].ToString().Trim();
+            }
+            
             return dataReader;
         }
 
