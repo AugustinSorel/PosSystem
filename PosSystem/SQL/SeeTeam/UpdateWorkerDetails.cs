@@ -1,4 +1,5 @@
 ﻿using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -7,6 +8,7 @@ namespace PosSystem
         public UpdateWorkerDetails(SeeTeam seeTeam)
         {
             ExecuteCommand(CreateCommand(seeTeam));
+            MessageBox.Show("The worker has been successfully updated", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private OleDbCommand CreateCommand(SeeTeam seeTeam)

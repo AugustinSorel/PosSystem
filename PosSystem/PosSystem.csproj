@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SeeTeam\SeeTeamCheckDataFilled.cs" />
+    <Compile Include="SQL\SeeTeam\SeeTeamCheckIfUserNameIsTaken.cs" />
+    <Compile Include="SQL\SeeTeam\SearchWorkerByName.cs" />
+    <Compile Include="SQL\SeeTeam\UpdateUserSecurity.cs" />
+    <Compile Include="SQL\SeeTeam\ShowUserSecurityFromDataGrid.cs" />
     <Compile Include="SQL\ManageWorker\CheckDeletingWorker.cs" />
     <Compile Include="SQL\ManageWorker\CheckAdminRight.cs" />
     <Compile Include="SQL\ManageWorker\CheckIfWorkerIdExists.cs" />

@@ -25,6 +25,7 @@ namespace PosSystem
         {
             panel1.Location = SeeTeamSetLocationCenter.SetPanel1(panel1.Width);
             dataGridView1.Location = SeeTeamSetLocationCenter.SetDataGridView(dataGridView1.Width, dataGridView1.Height);
+            panel2.Location = SeeTeamSetLocationCenter.SetPanel2(panel2.Width, panel2.Height);
         }
 
         private void SelectFirstRow()
@@ -46,6 +47,7 @@ namespace PosSystem
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             new ShowUserDetailsFromDataGrid(this);
+            new ShowUserSecurityFromDataGrid(this);
         }
 
         private void RemoveTheWorkerLoggedIn()
@@ -72,7 +74,7 @@ namespace PosSystem
         {
             new UpdateWorkerDetails(this);
             groupBox1.Enabled = false;
-            MessageBox.Show("The worker has been successfully updated", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadData();
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -84,6 +86,57 @@ namespace PosSystem
             }
         }
 
-        // TODO: search a worker ? and filter the datagridview
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            groupBox2.Enabled = true;
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            DataGridView1_CellClick(dataGridView1, new DataGridViewCellEventArgs(0, 0));
+            groupBox2.Enabled = false;
+        }
+
+        private void Button7_Click_1(object sender, EventArgs e)
+        {
+            new SearchWorkerByName(this);
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+            groupBox3.Enabled = true;
+            textBox7.Focus();
+        }
+
+        private void Button9_Click(object sender, EventArgs e)
+        {
+            textBox7.Text = string.Empty;
+            groupBox3.Enabled = false;
+            LoadData();
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            if (UserNameIsNotTaken() && DataFilled() && HandleCheckboxChecked())
+            {
+                new UpdateUserSecurity(this);
+                groupBox2.Enabled = false;
+            }
+        }
+
+        private bool HandleCheckboxChecked()
+        {
+            return CheckAdminRight.Check(checkBox1);
+        }
+
+        private bool DataFilled()
+        {
+            return SeeTeamCheckDataFilled.TextboxFilled(this);
+        }
+
+        private bool UserNameIsNotTaken()
+        {
+            return !SeeTeamCheckIfUserNameIsTaken.CheckUserName(textBox5.Text);
+        }
     }
 }

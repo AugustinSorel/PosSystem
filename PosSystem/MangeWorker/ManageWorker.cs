@@ -66,7 +66,7 @@ namespace PosSystem
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            if (WorkerIdExists() && WarningMessage() && textBox7.Text != string.Empty)
+            if (textBox7.Text != string.Empty && WorkerIdExists() && WarningMessage())
             {
                 new DeleteWorkerDetails(this);
                 new DeleteWorkerSecurity(this);
@@ -157,6 +157,15 @@ namespace PosSystem
             if (e.KeyCode == Keys.Enter)
             {
                 button7.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }
