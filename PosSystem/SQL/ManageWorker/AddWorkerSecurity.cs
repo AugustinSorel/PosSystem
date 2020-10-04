@@ -10,24 +10,7 @@ namespace PosSystem
         public AddWorkerSecurity(ManageWorker manageWorker)
         {
             this.manageWorker = manageWorker;
-            if (CheckBoxChecked())
-            {
-                if (ChoiceIsYes())
-                    ExecuteCommand(CreateCommand());
-            }
-            else
-                ExecuteCommand(CreateCommand());
-        }
-
-        private bool ChoiceIsYes()
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to give admin right to "+manageWorker.textBox1.Text, "Warning", MessageBoxButtons.YesNo);
-            return dialogResult == DialogResult.Yes;
-        }
-
-        private bool CheckBoxChecked()
-        {
-            return manageWorker.checkBox1.Checked;
+            ExecuteCommand(CreateCommand());
         }
 
         private OleDbCommand CreateCommand()

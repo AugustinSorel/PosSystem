@@ -32,12 +32,17 @@ namespace PosSystem
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
-            if (UserNameIsNotTaken() && DataFilled())
+            if (UserNameIsNotTaken() && DataFilled() && HandleCheckboxChecked())
             {
                 new AddWorkerDetails(this);
                 new AddWorkerSecurity(this);
                 button5.PerformClick();
             }
+        }
+
+        private bool HandleCheckboxChecked()
+        {
+            return CheckAdminRight.Check(checkBox1);
         }
 
         private bool DataFilled()
@@ -61,12 +66,17 @@ namespace PosSystem
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            if (WorkerIdExists())
+            if (WorkerIdExists() && WarningMessage() && textBox7.Text != string.Empty)
             {
                 new DeleteWorkerDetails(this);
                 new DeleteWorkerSecurity(this);
                 button6.PerformClick();
             }
+        }
+
+        private bool WarningMessage()
+        {
+            return CheckDeletingWorker.Check(); 
         }
 
         private bool WorkerIdExists()
@@ -83,6 +93,7 @@ namespace PosSystem
         private void Button3_Click(object sender, System.EventArgs e)
         {
             groupBox3.Enabled = true;
+            textBox7.Focus();
         }
 
         private void Button5_Click(object sender, System.EventArgs e)
