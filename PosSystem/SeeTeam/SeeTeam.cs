@@ -136,7 +136,7 @@ namespace PosSystem
 
         private bool UserNameIsNotTaken()
         {
-            return !SeeTeamCheckIfUserNameIsTaken.CheckUserName(textBox5.Text);
+            return !SeeTeamCheckIfUserNameIsTaken.CheckUserName(this);
         }
     }
 }

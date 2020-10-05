@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -71,7 +72,13 @@ namespace PosSystem
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
-            new SaveUserSecurityDetails(this);
+            if (UsernameNotTaken())
+                new SaveUserSecurityDetails(this);
+        }
+
+        private bool UsernameNotTaken()
+        {
+            return !UserDerailsCheckIfUserNameIsTaken.CheckUserName(this);
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)

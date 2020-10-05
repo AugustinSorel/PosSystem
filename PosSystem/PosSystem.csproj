@@ -137,6 +137,7 @@
       <DependentUpon>TopBar.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\CreateDatabase\Tables\CreateWorkerSecurityTable.cs" />
+    <Compile Include="SQL\UserDetails\UserDerailsCheckIfUserNameIsTaken.cs" />
     <Compile Include="UserDetails\UserDetailsSetLocation.cs" />
     <Compile Include="UserDetails\UserDetails.cs">
       <SubType>UserControl</SubType>

@@ -4,15 +4,15 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    class SeeTeamCheckIfUserNameIsTaken: SqlQueries
+    class UserDerailsCheckIfUserNameIsTaken: SqlQueries
     {
         private static string _Username;
         private static string _ID;
 
-        public static bool CheckUserName(SeeTeam seeTeam)
+        public static bool CheckUserName(UserDetails userDetails)
         {
-            _Username = seeTeam.textBox5.Text;
-            if (CreateDataReader().HasRows && seeTeam.dataGridView1.SelectedRows[0].Cells[0].Value.ToString() != _ID)
+            _Username = userDetails.textBox5.Text;
+            if (CreateDataReader().HasRows && UserDetailsVAR.Id.ToString() != _ID)
             {
                 MessageBox.Show("Username already taken", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
@@ -24,11 +24,11 @@ namespace PosSystem
         private static OleDbDataReader CreateDataReader()
         {
             OleDbDataReader dataReader = CreateCommand().ExecuteReader();
-            
-            
+
+
             while (dataReader.Read())
                 _ID = dataReader["WorkerID"].ToString().Trim();
-            
+
             return dataReader;
         }
 
