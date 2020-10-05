@@ -161,7 +161,7 @@ namespace PosSystem
             }
         }
 
-        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        private void TextBox7_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
