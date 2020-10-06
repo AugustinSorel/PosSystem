@@ -9,8 +9,8 @@ namespace PosSystem
             OleDbDataReader oleDbDataReader = GetCommand(seeTeam).ExecuteReader();
             while (oleDbDataReader.Read())
             {
-                seeTeam.textBox5.Text = oleDbDataReader["UserName"].ToString().Trim();
-                seeTeam.textBox6.Text = oleDbDataReader["Password"].ToString().Trim();
+                seeTeam.TxtBoxUsername.Text = oleDbDataReader["UserName"].ToString().Trim();
+                seeTeam.TxtBoxPassword.Text = oleDbDataReader["Password"].ToString().Trim();
                 seeTeam.checkBox1.Checked = bool.Parse(oleDbDataReader["Admin"].ToString());
             }
         }

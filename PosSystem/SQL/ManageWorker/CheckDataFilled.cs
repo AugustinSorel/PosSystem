@@ -4,12 +4,12 @@
     {
         public static bool TextboxFilled(ManageWorker manageWorker)
         {
-            if (manageWorker.textBox1.Text != string.Empty &&
-                manageWorker.textBox2.Text != string.Empty &&
-                manageWorker.textBox3.Text != string.Empty &&
-                manageWorker.textBox4.Text != string.Empty &&
-                manageWorker.textBox5.Text != string.Empty &&
-                manageWorker.textBox6.Text != string.Empty)
+            if (manageWorker.txtBoxName.Text != string.Empty &&
+                manageWorker.txtBoxSurname.Text != string.Empty &&
+                manageWorker.txtBoxAge.Text != string.Empty &&
+                manageWorker.txtBoxGender.Text != string.Empty &&
+                manageWorker.txtBoxUsername.Text != string.Empty &&
+                manageWorker.txtBoxPassword.Text != string.Empty)
                 return true;
             else
             {

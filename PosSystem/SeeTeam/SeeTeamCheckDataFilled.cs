@@ -4,7 +4,7 @@
     {
         public static bool TextboxFilled(SeeTeam seeTeam)
         {
-            if (seeTeam.textBox5.Text != string.Empty && seeTeam.textBox6.Text != string.Empty)
+            if (seeTeam.TxtBoxUsername.Text != string.Empty && seeTeam.TxtBoxPassword.Text != string.Empty)
                 return true;
             else
             {

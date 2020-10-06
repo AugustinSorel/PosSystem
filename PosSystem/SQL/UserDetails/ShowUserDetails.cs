@@ -13,10 +13,10 @@ namespace PosSystem
             {
                 while (oleDbDataReader.Read())
                 {
-                    userControl.textBox1.Text = oleDbDataReader["WorkerName"].ToString().Trim();
-                    userControl.textBox2.Text = oleDbDataReader["WorkerSurname"].ToString().Trim();
-                    userControl.textBox3.Text = oleDbDataReader["Age"].ToString().Trim();
-                    userControl.textBox4.Text = oleDbDataReader["Gender"].ToString().Trim();
+                    userControl.TxtboxName.Text = oleDbDataReader["WorkerName"].ToString().Trim();
+                    userControl.TxtboxSurname.Text = oleDbDataReader["WorkerSurname"].ToString().Trim();
+                    userControl.TxtboxAge.Text = oleDbDataReader["Age"].ToString().Trim();
+                    userControl.TxtboxGender.Text = oleDbDataReader["Gender"].ToString().Trim();
                     image = ((byte[])oleDbDataReader[5]);
                 }
             }
@@ -25,9 +25,9 @@ namespace PosSystem
             }
 
             if (image == null)
-                userControl.pictureBox1.Image = null;
+                userControl.UserPicture.Image = null;
             else
-                userControl.pictureBox1.Image = ConvertByteToImage(image); 
+                userControl.UserPicture.Image = ConvertByteToImage(image); 
         }
 
         private OleDbCommand GetCommand()

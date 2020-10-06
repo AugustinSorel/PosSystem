@@ -18,7 +18,7 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
-            oleDbCommand.Parameters.AddWithValue("WorkerID", manageWorker.textBox7.Text);
+            oleDbCommand.Parameters.AddWithValue("WorkerID", manageWorker.txtDelete.Text);
             return oleDbCommand;
         }
 

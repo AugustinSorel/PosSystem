@@ -16,11 +16,11 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = CreateCommandText();
-            oleDbCommand.Parameters.AddWithValue("WorkerName", manageWorker.textBox1.Text);
-            oleDbCommand.Parameters.AddWithValue("WorkerSurname", manageWorker.textBox2.Text);
-            oleDbCommand.Parameters.AddWithValue("Age", manageWorker.textBox3.Text);
-            oleDbCommand.Parameters.AddWithValue("Gender", manageWorker.textBox4.Text);
-            oleDbCommand.Parameters.AddWithValue("WorkerPhoto", ConvertImageToByte(manageWorker.pictureBox1.Image));
+            oleDbCommand.Parameters.AddWithValue("WorkerName", manageWorker.txtBoxName.Text);
+            oleDbCommand.Parameters.AddWithValue("WorkerSurname", manageWorker.txtBoxSurname.Text);
+            oleDbCommand.Parameters.AddWithValue("Age", manageWorker.txtBoxAge.Text);
+            oleDbCommand.Parameters.AddWithValue("Gender", manageWorker.txtBoxGender.Text);
+            oleDbCommand.Parameters.AddWithValue("WorkerPhoto", ConvertImageToByte(manageWorker.WorkerPicture.Image));
             return oleDbCommand;
         }
 

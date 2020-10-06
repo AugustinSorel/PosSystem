@@ -11,7 +11,7 @@ namespace PosSystem
 
         public static bool CheckUserName(SeeTeam seeTeam)
         {
-            _Username = seeTeam.textBox5.Text;
+            _Username = seeTeam.TxtBoxUsername.Text;
             if (CreateDataReader().HasRows && seeTeam.dataGridView1.SelectedRows[0].Cells[0].Value.ToString() != _ID)
             {
                 MessageBox.Show("Username already taken", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

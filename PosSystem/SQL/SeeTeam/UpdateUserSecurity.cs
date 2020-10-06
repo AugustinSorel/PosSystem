@@ -13,8 +13,8 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
-            oleDbCommand.Parameters.AddWithValue("@Username", seeTeam.textBox5.Text);
-            oleDbCommand.Parameters.AddWithValue("@Password", seeTeam.textBox5.Text);
+            oleDbCommand.Parameters.AddWithValue("@Username", seeTeam.TxtBoxUsername.Text);
+            oleDbCommand.Parameters.AddWithValue("@Password", seeTeam.TxtBoxUsername.Text);
             oleDbCommand.Parameters.AddWithValue("@Admin", seeTeam.checkBox1.Checked);
             oleDbCommand.Parameters.AddWithValue("@WorkerID", seeTeam.dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             return oleDbCommand;

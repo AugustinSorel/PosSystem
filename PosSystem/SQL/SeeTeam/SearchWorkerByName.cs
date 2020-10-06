@@ -33,7 +33,7 @@ namespace PosSystem
 
         private string GetCommandText()
         {
-            return "SELECT * FROM WorkerDetails WHERE [WorkerName] like('" + seeTeam.textBox7.Text + "%')";
+            return "SELECT * FROM WorkerDetails WHERE [WorkerName] like('" + seeTeam.TxtBoxSearchName.Text + "%')";
         }
     }
 }

@@ -12,8 +12,8 @@ namespace PosSystem
 
         private void AddWorker_Load(object sender, System.EventArgs e)
         {
-            textBox1.Focus();
-            pictureBox1.Image = Properties.Resources.DefaultAvatar;
+            txtBoxName.Focus();
+            WorkerPicture.Image = Properties.Resources.DefaultAvatar;
             Dock = GetDock();
             BringToFront();
             SetPanelLocation();
@@ -36,7 +36,7 @@ namespace PosSystem
             {
                 new AddWorkerDetails(this);
                 new AddWorkerSecurity(this);
-                button5.PerformClick();
+                BtnCancel.PerformClick();
             }
         }
 
@@ -52,7 +52,7 @@ namespace PosSystem
 
         private bool UserNameIsNotTaken()
         {
-            return !CheckIfUserNameIsTaken.CheckUserName(textBox5.Text);
+            return !CheckIfUserNameIsTaken.CheckUserName(txtBoxUsername.Text);
         }
 
         private void Button4_Click(object sender, System.EventArgs e)
@@ -60,17 +60,17 @@ namespace PosSystem
             using (OpenFileDialog openFileDialog = new OpenFileDialog() { Multiselect = false })
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    WorkerPicture.Image = Image.FromFile(openFileDialog.FileName);
             }
         }
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            if (textBox7.Text != string.Empty && WorkerIdExists() && WarningMessage())
+            if (txtDelete.Text != string.Empty && WorkerIdExists() && WarningMessage())
             {
                 new DeleteWorkerDetails(this);
                 new DeleteWorkerSecurity(this);
-                button6.PerformClick();
+                BtnDeleteCancel.PerformClick();
             }
         }
 
@@ -81,7 +81,7 @@ namespace PosSystem
 
         private bool WorkerIdExists()
         {
-            return CheckIfWorkerIdExists.IdExists(textBox7.Text);
+            return CheckIfWorkerIdExists.IdExists(txtDelete.Text);
         }
 
         private void Button2_Click(object sender, System.EventArgs e)
@@ -93,7 +93,7 @@ namespace PosSystem
         private void Button3_Click(object sender, System.EventArgs e)
         {
             groupBox3.Enabled = true;
-            textBox7.Focus();
+            txtDelete.Focus();
         }
 
         private void Button5_Click(object sender, System.EventArgs e)
@@ -111,7 +111,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtBoxSurname.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -120,7 +120,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.Focus();
+                txtBoxAge.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -129,7 +129,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox4.Focus();
+                txtBoxGender.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -138,7 +138,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox5.Focus();
+                txtBoxUsername.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -147,7 +147,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox6.Focus();
+                txtBoxPassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -156,7 +156,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button7.PerformClick();
+                BtnAdd.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }
@@ -165,7 +165,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1.PerformClick();
+                BtnDeleteDelete.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }

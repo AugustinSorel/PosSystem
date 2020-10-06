@@ -14,8 +14,8 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
-            oleDbCommand.Parameters.AddWithValue("@Password", userDetails.textBox6.Text);
-            oleDbCommand.Parameters.AddWithValue("@Username", userDetails.textBox5.Text);
+            oleDbCommand.Parameters.AddWithValue("@Password", userDetails.TxtboxPassword.Text);
+            oleDbCommand.Parameters.AddWithValue("@Username", userDetails.TxtboxUsername.Text);
             oleDbCommand.Parameters.AddWithValue("@Admin", userDetails.checkBox1.Checked);
             oleDbCommand.Parameters.AddWithValue("@WorkerID", UserDetailsVAR.Id);
             return oleDbCommand;

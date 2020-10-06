@@ -13,13 +13,13 @@ namespace PosSystem
         private void LoginPage_Load(object sender, System.EventArgs e)
         {
             label1.Location = SetLocationLoginPage.SetLabelLocation(Width, label1.Width);
-            button1.Location = SetLocationLoginPage.SetButtonLocation(Width, button1.Width);
-            textBox1.Focus();
+            BtnLogin.Location = SetLocationLoginPage.SetButtonLocation(Width, BtnLogin.Width);
+            txtboxUsername.Focus();
         }
 
         private void TextBox1_TextChanged(object sender, System.EventArgs e)
         {
-            label1.Text = LoginPageTextBox.ChangeTextBox1Text(textBox1);
+            label1.Text = LoginPageTextBox.ChangeTextBox1Text(txtboxUsername);
             label1.Location = SetLocationLoginPage.SetLabelLocation(Width, label1.Width);
         }
 
@@ -27,7 +27,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtboxPassword.Focus();
                 e.SuppressKeyPress = true;
             }
 
@@ -39,7 +39,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             { 
-                button1.PerformClick();
+                BtnLogin.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }
@@ -58,17 +58,17 @@ namespace PosSystem
 
         private void SetUserDetailsVar()
         {
-            new SetUserDetailsVar(textBox1.Text, textBox2.Text); 
+            new SetUserDetailsVar(txtboxUsername.Text, txtboxPassword.Text); 
         }
 
         private bool TextBoxNotEmpty()
         {
-            return LoginPageTextBox.Textbox1NotEmpty(textBox1) && LoginPageTextBox.Textbox2NotEmpty(textBox2);
+            return LoginPageTextBox.Textbox1NotEmpty(txtboxUsername) && LoginPageTextBox.Textbox2NotEmpty(txtboxPassword);
         }
 
         private bool RightLogDetails()
         {
-            return CheckLoginDetails.LoginDetailsIsCorrect(textBox1.Text, textBox2.Text);
+            return CheckLoginDetails.LoginDetailsIsCorrect(txtboxUsername.Text, txtboxPassword.Text);
         }
 
         private void ShowMenu()
@@ -78,7 +78,7 @@ namespace PosSystem
 
         private bool TextBoxInRange()
         {
-            return LoginPageTextBox.CheckTextbox1Range(textBox1);
+            return LoginPageTextBox.CheckTextbox1Range(txtboxUsername);
         }
 
         protected override void OnHandleDestroyed(System.EventArgs e)

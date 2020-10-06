@@ -32,7 +32,7 @@ namespace PosSystem
         private void Button3_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = true;
-            textBox1.Focus();
+            TxtboxName.Focus();
         }
 
         private void Button4_Click(object sender, System.EventArgs e)
@@ -40,7 +40,7 @@ namespace PosSystem
             using (OpenFileDialog openFileDialog = new OpenFileDialog() { Multiselect = false })
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    UserPicture.Image = Image.FromFile(openFileDialog.FileName);
             }
         }
 
@@ -66,7 +66,7 @@ namespace PosSystem
         private void Button6_Click(object sender, System.EventArgs e)
         {
             groupBox2.Enabled = true;
-            textBox5.Focus();
+            TxtboxUsername.Focus();
         }
 
         private void Button7_Click(object sender, System.EventArgs e)
@@ -84,7 +84,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                TxtboxSurname.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -93,7 +93,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.Focus();
+                TxtboxAge.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -102,7 +102,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox4.Focus();
+                TxtboxGender.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -111,7 +111,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1.PerformClick();
+                BtnUserDetailsSave.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }
@@ -120,7 +120,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox6.Focus();
+                TxtboxPassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
@@ -129,7 +129,7 @@ namespace PosSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button7.PerformClick();
+                BtnUserSecuritySave.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }

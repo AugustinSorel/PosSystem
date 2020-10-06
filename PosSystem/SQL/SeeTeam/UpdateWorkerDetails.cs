@@ -15,11 +15,11 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
-            oleDbCommand.Parameters.AddWithValue("@WorkerName", seeTeam.textBox1.Text);
-            oleDbCommand.Parameters.AddWithValue("@WorkerSurname", seeTeam.textBox2.Text);
-            oleDbCommand.Parameters.AddWithValue("@Age", seeTeam.textBox3.Text);
-            oleDbCommand.Parameters.AddWithValue("@Gender", seeTeam.textBox4.Text);
-            oleDbCommand.Parameters.AddWithValue("@WorkerPhoto", ConvertImageToByte(seeTeam.pictureBox1.Image));
+            oleDbCommand.Parameters.AddWithValue("@WorkerName", seeTeam.TxtBoxName.Text);
+            oleDbCommand.Parameters.AddWithValue("@WorkerSurname", seeTeam.TxtBoxSurname.Text);
+            oleDbCommand.Parameters.AddWithValue("@Age", seeTeam.TxtBoxAge.Text);
+            oleDbCommand.Parameters.AddWithValue("@Gender", seeTeam.TxtBoxGender.Text);
+            oleDbCommand.Parameters.AddWithValue("@WorkerPhoto", ConvertImageToByte(seeTeam.WorkerPicture.Image));
             oleDbCommand.Parameters.AddWithValue("@WorkerID", seeTeam.dataGridView1.SelectedRows[0].Cells[0].Value);
             return oleDbCommand;
         }

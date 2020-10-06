@@ -20,7 +20,7 @@ namespace PosSystem
             manageWorker.groupBox1.Enabled = false;
             manageWorker.groupBox2.Enabled = false;
             manageWorker.checkBox1.Checked = false;
-            manageWorker.pictureBox1.Image = Properties.Resources.DefaultAvatar;
+            manageWorker.WorkerPicture.Image = Properties.Resources.DefaultAvatar;
         }
 
         public static void ClearTextBoxesInPanel2(GroupBox groupBox3)

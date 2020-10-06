@@ -17,8 +17,6 @@ namespace PosSystem
             SetLocation();
             BringToFront();
             LoadData();
-            SelectFirstRow();
-            RemoveTheWorkerLoggedIn();
         }
 
         private void SetLocation()
@@ -37,6 +35,8 @@ namespace PosSystem
         private void LoadData()
         {
             new LoadDataGridView(dataGridView1);
+            SelectFirstRow();
+            RemoveTheWorkerLoggedIn();
         }
 
         private DockStyle GetFillDock()
@@ -82,7 +82,7 @@ namespace PosSystem
             using (OpenFileDialog openFileDialog = new OpenFileDialog() { Multiselect = false })
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    WorkerPicture.Image = Image.FromFile(openFileDialog.FileName);
             }
         }
 
@@ -105,12 +105,12 @@ namespace PosSystem
         private void Button8_Click(object sender, EventArgs e)
         {
             groupBox3.Enabled = true;
-            textBox7.Focus();
+            TxtBoxSearchName.Focus();
         }
 
         private void Button9_Click(object sender, EventArgs e)
         {
-            textBox7.Text = string.Empty;
+            TxtBoxSearchName.Text = string.Empty;
             groupBox3.Enabled = false;
             LoadData();
         }

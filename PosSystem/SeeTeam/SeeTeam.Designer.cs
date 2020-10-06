@@ -31,38 +31,38 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtBoxGender = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtBoxAge = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtBoxSurname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtBoxName = new System.Windows.Forms.TextBox();
+            this.WorkerPicture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnWorkerDetailsCancel = new System.Windows.Forms.Button();
+            this.BtnWorkerDetailsUpdate = new System.Windows.Forms.Button();
+            this.BtnWorkerDetailsEnable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtBoxPassword = new System.Windows.Forms.TextBox();
+            this.TxtBoxUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnWorkerSecurityEnable = new System.Windows.Forms.Button();
+            this.BtnWorkerSecurityUpdate = new System.Windows.Forms.Button();
+            this.BtnWorkerSecurityCancel = new System.Windows.Forms.Button();
+            this.BtnSearchNameSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.TxtBoxSearchName = new System.Windows.Forms.TextBox();
+            this.BtnSearchNameReset = new System.Windows.Forms.Button();
+            this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkerPicture)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,14 +86,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.TxtBoxGender);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.TxtBoxAge);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TxtBoxSurname);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.TxtBoxName);
+            this.groupBox1.Controls.Add(this.WorkerPicture);
             this.groupBox1.Enabled = false;
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.groupBox1.Location = new System.Drawing.Point(22, 3);
@@ -117,14 +117,14 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
-            // textBox4
+            // TxtBoxGender
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox4.Location = new System.Drawing.Point(362, 262);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(213, 20);
-            this.textBox4.TabIndex = 2;
+            this.TxtBoxGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxGender.Location = new System.Drawing.Point(362, 262);
+            this.TxtBoxGender.Name = "TxtBoxGender";
+            this.TxtBoxGender.Size = new System.Drawing.Size(213, 20);
+            this.TxtBoxGender.TabIndex = 2;
             // 
             // label4
             // 
@@ -137,14 +137,14 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Gender";
             // 
-            // textBox3
+            // TxtBoxAge
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox3.Location = new System.Drawing.Point(362, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 2;
+            this.TxtBoxAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxAge.Location = new System.Drawing.Point(362, 182);
+            this.TxtBoxAge.Name = "TxtBoxAge";
+            this.TxtBoxAge.Size = new System.Drawing.Size(213, 20);
+            this.TxtBoxAge.TabIndex = 2;
             // 
             // label3
             // 
@@ -157,14 +157,14 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Age";
             // 
-            // textBox2
+            // TxtBoxSurname
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox2.Location = new System.Drawing.Point(362, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 2;
+            this.TxtBoxSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxSurname.Location = new System.Drawing.Point(362, 114);
+            this.TxtBoxSurname.Name = "TxtBoxSurname";
+            this.TxtBoxSurname.Size = new System.Drawing.Size(213, 20);
+            this.TxtBoxSurname.TabIndex = 2;
             // 
             // label2
             // 
@@ -177,23 +177,23 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Surname";
             // 
-            // textBox1
+            // TxtBoxName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox1.Location = new System.Drawing.Point(362, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 2;
+            this.TxtBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxName.Location = new System.Drawing.Point(362, 47);
+            this.TxtBoxName.Name = "TxtBoxName";
+            this.TxtBoxName.Size = new System.Drawing.Size(213, 20);
+            this.TxtBoxName.TabIndex = 2;
             // 
-            // pictureBox1
+            // WorkerPicture
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(27, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.WorkerPicture.Location = new System.Drawing.Point(27, 34);
+            this.WorkerPicture.Name = "WorkerPicture";
+            this.WorkerPicture.Size = new System.Drawing.Size(100, 100);
+            this.WorkerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WorkerPicture.TabIndex = 0;
+            this.WorkerPicture.TabStop = false;
             // 
             // label1
             // 
@@ -206,57 +206,57 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Search by name";
             // 
-            // button1
+            // BtnWorkerDetailsCancel
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button1.Location = new System.Drawing.Point(22, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 38);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.BtnWorkerDetailsCancel.FlatAppearance.BorderSize = 0;
+            this.BtnWorkerDetailsCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWorkerDetailsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnWorkerDetailsCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnWorkerDetailsCancel.Location = new System.Drawing.Point(22, 356);
+            this.BtnWorkerDetailsCancel.Name = "BtnWorkerDetailsCancel";
+            this.BtnWorkerDetailsCancel.Size = new System.Drawing.Size(100, 38);
+            this.BtnWorkerDetailsCancel.TabIndex = 3;
+            this.BtnWorkerDetailsCancel.Text = "Cancel";
+            this.BtnWorkerDetailsCancel.UseVisualStyleBackColor = true;
+            this.BtnWorkerDetailsCancel.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // BtnWorkerDetailsUpdate
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button2.Location = new System.Drawing.Point(573, 356);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.BtnWorkerDetailsUpdate.FlatAppearance.BorderSize = 0;
+            this.BtnWorkerDetailsUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWorkerDetailsUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnWorkerDetailsUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnWorkerDetailsUpdate.Location = new System.Drawing.Point(573, 356);
+            this.BtnWorkerDetailsUpdate.Name = "BtnWorkerDetailsUpdate";
+            this.BtnWorkerDetailsUpdate.Size = new System.Drawing.Size(100, 38);
+            this.BtnWorkerDetailsUpdate.TabIndex = 3;
+            this.BtnWorkerDetailsUpdate.Text = "Update";
+            this.BtnWorkerDetailsUpdate.UseVisualStyleBackColor = true;
+            this.BtnWorkerDetailsUpdate.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // button3
+            // BtnWorkerDetailsEnable
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button3.Location = new System.Drawing.Point(467, 356);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 38);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Enable";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.BtnWorkerDetailsEnable.FlatAppearance.BorderSize = 0;
+            this.BtnWorkerDetailsEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWorkerDetailsEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnWorkerDetailsEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnWorkerDetailsEnable.Location = new System.Drawing.Point(467, 356);
+            this.BtnWorkerDetailsEnable.Name = "BtnWorkerDetailsEnable";
+            this.BtnWorkerDetailsEnable.Size = new System.Drawing.Size(100, 38);
+            this.BtnWorkerDetailsEnable.TabIndex = 3;
+            this.BtnWorkerDetailsEnable.Text = "Enable";
+            this.BtnWorkerDetailsEnable.UseVisualStyleBackColor = true;
+            this.BtnWorkerDetailsEnable.Click += new System.EventHandler(this.Button3_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnWorkerSecurityEnable);
+            this.panel1.Controls.Add(this.BtnWorkerDetailsEnable);
+            this.panel1.Controls.Add(this.BtnWorkerSecurityUpdate);
+            this.panel1.Controls.Add(this.BtnWorkerDetailsUpdate);
+            this.panel1.Controls.Add(this.BtnWorkerSecurityCancel);
+            this.panel1.Controls.Add(this.BtnWorkerDetailsCancel);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -266,8 +266,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.TxtBoxPassword);
+            this.groupBox2.Controls.Add(this.TxtBoxUsername);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
@@ -289,23 +289,23 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // TxtBoxPassword
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox6.Location = new System.Drawing.Point(61, 256);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(188, 20);
-            this.textBox6.TabIndex = 2;
+            this.TxtBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxPassword.Location = new System.Drawing.Point(61, 256);
+            this.TxtBoxPassword.Name = "TxtBoxPassword";
+            this.TxtBoxPassword.Size = new System.Drawing.Size(188, 20);
+            this.TxtBoxPassword.TabIndex = 2;
             // 
-            // textBox5
+            // TxtBoxUsername
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox5.Location = new System.Drawing.Point(70, 109);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 20);
-            this.textBox5.TabIndex = 2;
+            this.TxtBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxUsername.Location = new System.Drawing.Point(70, 109);
+            this.TxtBoxUsername.Name = "TxtBoxUsername";
+            this.TxtBoxUsername.Size = new System.Drawing.Size(188, 20);
+            this.TxtBoxUsername.TabIndex = 2;
             // 
             // label6
             // 
@@ -340,54 +340,68 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Username";
             // 
-            // button5
+            // BtnWorkerSecurityEnable
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button5.Location = new System.Drawing.Point(832, 356);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 38);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Enable";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            this.BtnWorkerSecurityEnable.FlatAppearance.BorderSize = 0;
+            this.BtnWorkerSecurityEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWorkerSecurityEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnWorkerSecurityEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnWorkerSecurityEnable.Location = new System.Drawing.Point(832, 356);
+            this.BtnWorkerSecurityEnable.Name = "BtnWorkerSecurityEnable";
+            this.BtnWorkerSecurityEnable.Size = new System.Drawing.Size(83, 38);
+            this.BtnWorkerSecurityEnable.TabIndex = 4;
+            this.BtnWorkerSecurityEnable.Text = "Enable";
+            this.BtnWorkerSecurityEnable.UseVisualStyleBackColor = true;
+            this.BtnWorkerSecurityEnable.Click += new System.EventHandler(this.Button5_Click);
             // 
-            // button6
+            // BtnWorkerSecurityUpdate
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button6.Location = new System.Drawing.Point(726, 356);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 38);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Cancel";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            this.BtnWorkerSecurityUpdate.FlatAppearance.BorderSize = 0;
+            this.BtnWorkerSecurityUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWorkerSecurityUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnWorkerSecurityUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnWorkerSecurityUpdate.Location = new System.Drawing.Point(919, 356);
+            this.BtnWorkerSecurityUpdate.Name = "BtnWorkerSecurityUpdate";
+            this.BtnWorkerSecurityUpdate.Size = new System.Drawing.Size(100, 38);
+            this.BtnWorkerSecurityUpdate.TabIndex = 3;
+            this.BtnWorkerSecurityUpdate.Text = "Update";
+            this.BtnWorkerSecurityUpdate.UseVisualStyleBackColor = true;
+            this.BtnWorkerSecurityUpdate.Click += new System.EventHandler(this.Button10_Click);
             // 
-            // button7
+            // BtnWorkerSecurityCancel
             // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button7.Location = new System.Drawing.Point(625, 95);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 38);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Search";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click_1);
+            this.BtnWorkerSecurityCancel.FlatAppearance.BorderSize = 0;
+            this.BtnWorkerSecurityCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWorkerSecurityCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnWorkerSecurityCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnWorkerSecurityCancel.Location = new System.Drawing.Point(726, 356);
+            this.BtnWorkerSecurityCancel.Name = "BtnWorkerSecurityCancel";
+            this.BtnWorkerSecurityCancel.Size = new System.Drawing.Size(100, 38);
+            this.BtnWorkerSecurityCancel.TabIndex = 3;
+            this.BtnWorkerSecurityCancel.Text = "Cancel";
+            this.BtnWorkerSecurityCancel.UseVisualStyleBackColor = true;
+            this.BtnWorkerSecurityCancel.Click += new System.EventHandler(this.Button6_Click);
+            // 
+            // BtnSearchNameSearch
+            // 
+            this.BtnSearchNameSearch.FlatAppearance.BorderSize = 0;
+            this.BtnSearchNameSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSearchNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnSearchNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnSearchNameSearch.Location = new System.Drawing.Point(625, 95);
+            this.BtnSearchNameSearch.Name = "BtnSearchNameSearch";
+            this.BtnSearchNameSearch.Size = new System.Drawing.Size(83, 38);
+            this.BtnSearchNameSearch.TabIndex = 5;
+            this.BtnSearchNameSearch.Text = "Search";
+            this.BtnSearchNameSearch.UseVisualStyleBackColor = true;
+            this.BtnSearchNameSearch.Click += new System.EventHandler(this.Button7_Click_1);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.BtnSearchNameReset);
+            this.panel2.Controls.Add(this.BtnSearchNameEnable);
+            this.panel2.Controls.Add(this.BtnSearchNameSearch);
             this.panel2.Location = new System.Drawing.Point(172, 433);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 139);
@@ -395,7 +409,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.TxtBoxSearchName);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Enabled = false;
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
@@ -406,56 +420,42 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search worker";
             // 
-            // textBox7
+            // TxtBoxSearchName
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBox7.Location = new System.Drawing.Point(429, 31);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(213, 20);
-            this.textBox7.TabIndex = 2;
+            this.TxtBoxSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxSearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxSearchName.Location = new System.Drawing.Point(429, 31);
+            this.TxtBoxSearchName.Name = "TxtBoxSearchName";
+            this.TxtBoxSearchName.Size = new System.Drawing.Size(213, 20);
+            this.TxtBoxSearchName.TabIndex = 2;
             // 
-            // button9
+            // BtnSearchNameReset
             // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button9.Location = new System.Drawing.Point(27, 95);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(83, 38);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Reset";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Button9_Click);
+            this.BtnSearchNameReset.FlatAppearance.BorderSize = 0;
+            this.BtnSearchNameReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSearchNameReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnSearchNameReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnSearchNameReset.Location = new System.Drawing.Point(27, 95);
+            this.BtnSearchNameReset.Name = "BtnSearchNameReset";
+            this.BtnSearchNameReset.Size = new System.Drawing.Size(83, 38);
+            this.BtnSearchNameReset.TabIndex = 5;
+            this.BtnSearchNameReset.Text = "Reset";
+            this.BtnSearchNameReset.UseVisualStyleBackColor = true;
+            this.BtnSearchNameReset.Click += new System.EventHandler(this.Button9_Click);
             // 
-            // button8
+            // BtnSearchNameEnable
             // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button8.Location = new System.Drawing.Point(456, 95);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(83, 38);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Enable";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Button8_Click);
-            // 
-            // button10
-            // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button10.Location = new System.Drawing.Point(919, 356);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 38);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Update";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.Button10_Click);
+            this.BtnSearchNameEnable.FlatAppearance.BorderSize = 0;
+            this.BtnSearchNameEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSearchNameEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnSearchNameEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnSearchNameEnable.Location = new System.Drawing.Point(456, 95);
+            this.BtnSearchNameEnable.Name = "BtnSearchNameEnable";
+            this.BtnSearchNameEnable.Size = new System.Drawing.Size(83, 38);
+            this.BtnSearchNameEnable.TabIndex = 5;
+            this.BtnSearchNameEnable.Text = "Enable";
+            this.BtnSearchNameEnable.UseVisualStyleBackColor = true;
+            this.BtnSearchNameEnable.Click += new System.EventHandler(this.Button8_Click);
             // 
             // SeeTeam
             // 
@@ -471,7 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkerPicture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -484,36 +484,36 @@
 
         #endregion
         public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox TxtBoxGender;
         public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox TxtBoxAge;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox TxtBoxSurname;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox TxtBoxName;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox WorkerPicture;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button BtnWorkerDetailsCancel;
+        public System.Windows.Forms.Button BtnWorkerDetailsUpdate;
+        public System.Windows.Forms.Button BtnWorkerDetailsEnable;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.CheckBox checkBox1;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox TxtBoxPassword;
+        public System.Windows.Forms.TextBox TxtBoxUsername;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button7;
-        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button BtnWorkerSecurityEnable;
+        public System.Windows.Forms.Button BtnSearchNameSearch;
+        public System.Windows.Forms.Button BtnWorkerSecurityCancel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.Button button9;
-        public System.Windows.Forms.Button button8;
-        public System.Windows.Forms.Button button10;
+        public System.Windows.Forms.TextBox TxtBoxSearchName;
+        public System.Windows.Forms.Button BtnSearchNameReset;
+        public System.Windows.Forms.Button BtnSearchNameEnable;
+        public System.Windows.Forms.Button BtnWorkerSecurityUpdate;
     }
 }

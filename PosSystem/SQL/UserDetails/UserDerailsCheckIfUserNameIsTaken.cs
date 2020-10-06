@@ -11,7 +11,7 @@ namespace PosSystem
 
         public static bool CheckUserName(UserDetails userDetails)
         {
-            _Username = userDetails.textBox5.Text;
+            _Username = userDetails.TxtboxUsername.Text;
             if (CreateDataReader().HasRows && UserDetailsVAR.Id.ToString() != _ID)
             {
                 MessageBox.Show("Username already taken", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
