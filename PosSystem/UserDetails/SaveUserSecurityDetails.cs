@@ -9,7 +9,7 @@ namespace PosSystem
         public SaveUserSecurityDetails(UserDetails userDetails)
         {
             UserDetails = userDetails;
-            if (CheckBoxChanged())
+            if (CheckBoxChanged() && userDetails.checkBox1.Visible)
                 ShowWarning();
             else
                 SaveUserSecurity();
