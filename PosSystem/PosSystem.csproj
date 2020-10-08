@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\CreateDatabase\Tables\CreateCustomerTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateStockTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateOrderDetailsTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateSupplierTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateOrderTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateItemsTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateSaleTable.cs" />
     <Compile Include="SeeTeam\SeeTeamCheckDataFilled.cs" />
     <Compile Include="SQL\SeeTeam\SeeTeamCheckIfUserNameIsTaken.cs" />
     <Compile Include="SQL\SeeTeam\SearchWorkerByName.cs" />

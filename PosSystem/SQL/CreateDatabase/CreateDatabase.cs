@@ -16,6 +16,48 @@ namespace PosSystem
             CreateWorkerDetailsTable();
             CreateWrokerSecurityTable();
             CreateDefaultAdmin();
+            CreateSaleTable();
+            CreateItemsTable();
+            CreateOrderTable();
+            CreateOrderDetailsTable();
+            CreateSupplierTable();
+            CreateStockTable();
+            CreateCustomer();
+        }
+
+        private void CreateCustomer()
+        {
+            new CreateCustomerTable();
+        }
+
+        private void CreateStockTable()
+        {
+            new CreateStockTable();
+        }
+
+        private void CreateOrderDetailsTable()
+        {
+            new CreateOrderDetailsTable();
+        }
+
+        private void CreateSupplierTable()
+        {
+            new CreateSupplierTable();
+        }
+
+        private void CreateOrderTable()
+        {
+            new CreateOrderTable();
+        }
+
+        private void CreateItemsTable()
+        {
+            new CreateItemsTable();
+        }
+
+        private void CreateSaleTable()
+        {
+            new CreateSaleTable();
         }
 
         private void CreateDefaultAdmin()
