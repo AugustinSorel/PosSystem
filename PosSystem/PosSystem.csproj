@@ -46,15 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MangeStock\ManageStockClearControls.cs" />
-    <Compile Include="SQL\ManageStock\AddProduct.cs" />
-    <Compile Include="CreateUserControls\CreateManageStock.cs" />
-    <Compile Include="MangeStock\ManageStockSetCenterLocation.cs" />
-    <Compile Include="MangeStock\ManageStock.cs">
+    <Compile Include="MangeItem\ManageItemClearControls.cs" />
+    <Compile Include="SQL\ManageItem\AddProduct.cs" />
+    <Compile Include="CreateUserControls\CreateManageItem.cs" />
+    <Compile Include="MangeItem\ManageItemSetCenterLocation.cs" />
+    <Compile Include="MangeItem\ManageItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MangeStock\ManageStock.Designer.cs">
-      <DependentUpon>ManageStock.cs</DependentUpon>
+    <Compile Include="MangeItem\ManageItem.Designer.cs">
+      <DependentUpon>ManageItem.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\CreateDatabase\Tables\CreateCustomerTable.cs" />
     <Compile Include="SQL\CreateDatabase\Tables\CreateStockTable.cs" />
@@ -162,8 +162,8 @@
     <Compile Include="UserDetails\UserDetails.Designer.cs">
       <DependentUpon>UserDetails.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MangeStock\ManageStock.resx">
-      <DependentUpon>ManageStock.cs</DependentUpon>
+    <EmbeddedResource Include="MangeItem\ManageItem.resx">
+      <DependentUpon>ManageItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MangeWorker\ManageWorker.resx">
       <DependentUpon>ManageWorker.cs</DependentUpon>
@@ -243,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DefaultItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManageItem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

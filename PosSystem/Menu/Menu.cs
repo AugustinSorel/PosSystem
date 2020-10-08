@@ -94,7 +94,7 @@ namespace PosSystem
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            new CreateManageStock();
+            new CreateManageItem();
         }
     }
 }

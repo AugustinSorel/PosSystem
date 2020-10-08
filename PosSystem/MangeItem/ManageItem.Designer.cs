@@ -1,6 +1,6 @@
 ﻿namespace PosSystem
 {
-    partial class ManageStock
+    partial class ManageItem
     {
         /// <summary> 
         /// Required designer variable.
@@ -75,7 +75,7 @@
             this.groupBox1.Size = new System.Drawing.Size(654, 296);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Item";
+            this.groupBox1.Text = "Create Item";
             // 
             // textBoxStockMax
             // 

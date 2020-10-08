@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    public partial class ManageStock : UserControl
+    public partial class ManageItem : UserControl
     {
-        public ManageStock()
+        public ManageItem()
         {
             InitializeComponent();
         }

@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -106,20 +106,6 @@
             this.panel1.Size = new System.Drawing.Size(180, 377);
             this.panel1.TabIndex = 4;
             // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button3.Location = new System.Drawing.Point(83, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 78);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Manage Worker";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
             // button4
             // 
             this.button4.FlatAppearance.BorderSize = 0;
@@ -144,9 +130,23 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 78);
             this.button5.TabIndex = 0;
-            this.button5.Text = "Manage Stock";
+            this.button5.Text = "Manage Item";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button3.Location = new System.Drawing.Point(83, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 78);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Manage Worker";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // pictureBox2
             // 
@@ -160,7 +160,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::PosSystem.Properties.Resources.stock;
+            this.pictureBox5.Image = global::PosSystem.Properties.Resources.ManageItem;
             this.pictureBox5.Location = new System.Drawing.Point(3, 30);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);

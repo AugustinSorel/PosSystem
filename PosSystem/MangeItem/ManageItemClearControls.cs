@@ -4,7 +4,7 @@ namespace PosSystem
 {
     class ManageStockClearControls
     {
-        public ManageStockClearControls(ManageStock manageStock)
+        public ManageStockClearControls(ManageItem manageStock)
         {
             foreach (Control item in manageStock.groupBox1.Controls)
             {

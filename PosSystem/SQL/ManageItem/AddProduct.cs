@@ -4,9 +4,9 @@ namespace PosSystem
 {
     class AddProduct : SqlQueries
     {
-        private readonly ManageStock ManageStock;
+        private readonly ManageItem ManageStock;
 
-        public AddProduct(ManageStock manageStock)
+        public AddProduct(ManageItem manageStock)
         {
             ManageStock = manageStock;
             ExecuteCommand(CreateCommand());

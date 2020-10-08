@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    class CreateManageStock
+    class CreateManageItem
     {
-        public CreateManageStock()
+        public CreateManageItem()
         {
             if (MoreThan1ChildInPanel())
                 DestroyChildInPanel();
@@ -23,7 +23,7 @@ namespace PosSystem
 
         private void AddUserDetails()
         {
-            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new ManageStock());
+            (Form.ActiveForm.Controls.Find("panel1", true).FirstOrDefault() as Panel).Controls.Add(new ManageItem());
         }
 
         private bool MoreThan1ChildInPanel()

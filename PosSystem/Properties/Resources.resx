@@ -124,19 +124,22 @@
   <data name="SeeTeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SeeTeam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AccountDetails" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AccountDetails.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DefaultAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefaultAvatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddWorker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddWorker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DefaultItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DefaultItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ManageItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ManageItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
