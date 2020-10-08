@@ -22,8 +22,13 @@ namespace PosSystem
         {
             if (! UserDetailsVAR.Admin)
             {
-                pictureBox3.Visible = pictureBox4.Visible = false;
-                button3.Visible = button4.Visible = false;
+                pictureBox3.Visible = false; // TODO: Clean this;
+                pictureBox4.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
+
+                button5.Visible = false;
+                pictureBox5.Visible = false;
             }
         }
 
@@ -85,6 +90,11 @@ namespace PosSystem
         private void Button3_Click(object sender, EventArgs e)
         {
             new CreateManageWorker();
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            new CreateManageStock();
         }
     }
 }
