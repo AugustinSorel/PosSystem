@@ -35,6 +35,15 @@ namespace PosSystem
             return Image.FromStream(ms);
         }
 
+        protected object SetDataSource(OleDbCommand oleDbCommand)
+        {
+            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(oleDbCommand);
+            DataTable dataTable = new DataTable();
+            oleDbDataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
+
         protected void ExecuteCommand(OleDbCommand oleDbCommand)
         {
             try

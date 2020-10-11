@@ -1,17 +1,15 @@
 ﻿using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
-    class SearchWorkerByName: SqlQueries
+    class OrderByWorkerName: SqlQueries
     {
-        private readonly SeeTeam seeTeam;
-
-        public SearchWorkerByName(SeeTeam seeTeam)
+        public OrderByWorkerName(DataGridView dataGridView)
         {
-            this.seeTeam = seeTeam;
             OleDbCommand oleDbCommand = CreateCommand();
             ExecuteCommand(oleDbCommand);
-            seeTeam.dataGridView1.DataSource = SetDataSource(oleDbCommand);
+            dataGridView.DataSource = SetDataSource(oleDbCommand);
         }
 
         private OleDbCommand CreateCommand()
@@ -23,7 +21,7 @@ namespace PosSystem
 
         private string GetCommandText()
         {
-            return "SELECT * FROM WorkerDetails WHERE [WorkerName] like('" + seeTeam.TxtBoxSearchName.Text + "%')";
+            return "SELECT WorkerName From WorkerDetails ORDER BY WorkerName";
         }
     }
 }

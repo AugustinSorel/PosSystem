@@ -124,6 +124,37 @@ namespace PosSystem
             }
         }
 
+        private void EnableGroupBoxGroupBy_Click(object sender, EventArgs e)
+        {
+            groupBox4.Enabled = true;
+        }
+
+        private void ResetGroupBoxGroupBy_Click(object sender, EventArgs e)
+        {
+            groupBox4.Enabled = false;
+            LoadData();
+        }
+
+        private void GroupByName_Click(object sender, EventArgs e)
+        {
+            new OrderByWorkerName(dataGridView1); // TODO: Having a label with sql aggreagtion queries
+        }
+
+        private void BtnGroupBySurnameName_Click(object sender, EventArgs e)
+        {
+            new OrderByWorkerSurname(dataGridView1);
+        }
+
+        private void BtnGroupByAge_Click(object sender, EventArgs e)
+        {
+            new OrderByWorkerAge(dataGridView1);
+        }
+
+        private void BtnGroupByAdmin_Click(object sender, EventArgs e)
+        {
+            new OrderByWorkerAdmin(dataGridView1);
+        }
+
         private bool HandleCheckboxChecked()
         {
             return CheckAdminRight.Check(checkBox1);

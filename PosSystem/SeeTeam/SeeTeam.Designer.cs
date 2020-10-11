@@ -56,8 +56,16 @@
             this.BtnWorkerSecurityCancel = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnGroupByAdmin = new System.Windows.Forms.Button();
+            this.BtnGroupByAge = new System.Windows.Forms.Button();
+            this.BtnGroupBySurnameName = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BtnGroupByName = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtBoxSearchName = new System.Windows.Forms.TextBox();
+            this.EnableGroupBoxGroupBy = new System.Windows.Forms.Button();
+            this.ResetGroupBoxGroupBy = new System.Windows.Forms.Button();
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,6 +74,7 @@
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,11 +84,11 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(196, 594);
+            this.dataGridView1.Location = new System.Drawing.Point(196, 705);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(651, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(651, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
@@ -398,14 +407,100 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Controls.Add(this.EnableGroupBoxGroupBy);
+            this.panel2.Controls.Add(this.ResetGroupBoxGroupBy);
             this.panel2.Controls.Add(this.BtnSearchNameReset);
             this.panel2.Controls.Add(this.BtnSearchNameEnable);
             this.panel2.Controls.Add(this.BtnSearchNameSearch);
             this.panel2.Location = new System.Drawing.Point(172, 433);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(739, 139);
+            this.panel2.Size = new System.Drawing.Size(739, 266);
             this.panel2.TabIndex = 5;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnGroupByAdmin);
+            this.groupBox4.Controls.Add(this.BtnGroupByAge);
+            this.groupBox4.Controls.Add(this.BtnGroupBySurnameName);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.BtnGroupByName);
+            this.groupBox4.Enabled = false;
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox4.Location = new System.Drawing.Point(24, 139);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(681, 70);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Group by";
+            // 
+            // btnGroupByAdmin
+            // 
+            this.btnGroupByAdmin.FlatAppearance.BorderSize = 0;
+            this.btnGroupByAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroupByAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnGroupByAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.btnGroupByAdmin.Location = new System.Drawing.Point(591, 19);
+            this.btnGroupByAdmin.Name = "btnGroupByAdmin";
+            this.btnGroupByAdmin.Size = new System.Drawing.Size(84, 38);
+            this.btnGroupByAdmin.TabIndex = 6;
+            this.btnGroupByAdmin.Text = "Admin";
+            this.btnGroupByAdmin.UseVisualStyleBackColor = true;
+            this.btnGroupByAdmin.Click += new System.EventHandler(this.BtnGroupByAdmin_Click);
+            // 
+            // BtnGroupByAge
+            // 
+            this.BtnGroupByAge.FlatAppearance.BorderSize = 0;
+            this.BtnGroupByAge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGroupByAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnGroupByAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnGroupByAge.Location = new System.Drawing.Point(520, 19);
+            this.BtnGroupByAge.Name = "BtnGroupByAge";
+            this.BtnGroupByAge.Size = new System.Drawing.Size(65, 38);
+            this.BtnGroupByAge.TabIndex = 6;
+            this.BtnGroupByAge.Text = "Age";
+            this.BtnGroupByAge.UseVisualStyleBackColor = true;
+            this.BtnGroupByAge.Click += new System.EventHandler(this.BtnGroupByAge_Click);
+            // 
+            // BtnGroupBySurnameName
+            // 
+            this.BtnGroupBySurnameName.FlatAppearance.BorderSize = 0;
+            this.BtnGroupBySurnameName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGroupBySurnameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnGroupBySurnameName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnGroupBySurnameName.Location = new System.Drawing.Point(396, 19);
+            this.BtnGroupBySurnameName.Name = "BtnGroupBySurnameName";
+            this.BtnGroupBySurnameName.Size = new System.Drawing.Size(100, 38);
+            this.BtnGroupBySurnameName.TabIndex = 6;
+            this.BtnGroupBySurnameName.Text = "Surname";
+            this.BtnGroupBySurnameName.UseVisualStyleBackColor = true;
+            this.BtnGroupBySurnameName.Click += new System.EventHandler(this.BtnGroupBySurnameName_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label8.Location = new System.Drawing.Point(10, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Group by: ";
+            // 
+            // BtnGroupByName
+            // 
+            this.BtnGroupByName.FlatAppearance.BorderSize = 0;
+            this.BtnGroupByName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGroupByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnGroupByName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnGroupByName.Location = new System.Drawing.Point(288, 19);
+            this.BtnGroupByName.Name = "BtnGroupByName";
+            this.BtnGroupByName.Size = new System.Drawing.Size(83, 38);
+            this.BtnGroupByName.TabIndex = 5;
+            this.BtnGroupByName.Text = "Name";
+            this.BtnGroupByName.UseVisualStyleBackColor = true;
+            this.BtnGroupByName.Click += new System.EventHandler(this.GroupByName_Click);
             // 
             // groupBox3
             // 
@@ -428,6 +523,34 @@
             this.TxtBoxSearchName.Name = "TxtBoxSearchName";
             this.TxtBoxSearchName.Size = new System.Drawing.Size(213, 20);
             this.TxtBoxSearchName.TabIndex = 2;
+            // 
+            // EnableGroupBoxGroupBy
+            // 
+            this.EnableGroupBoxGroupBy.FlatAppearance.BorderSize = 0;
+            this.EnableGroupBoxGroupBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EnableGroupBoxGroupBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.EnableGroupBoxGroupBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.EnableGroupBoxGroupBy.Location = new System.Drawing.Point(456, 215);
+            this.EnableGroupBoxGroupBy.Name = "EnableGroupBoxGroupBy";
+            this.EnableGroupBoxGroupBy.Size = new System.Drawing.Size(83, 38);
+            this.EnableGroupBoxGroupBy.TabIndex = 5;
+            this.EnableGroupBoxGroupBy.Text = "Enable";
+            this.EnableGroupBoxGroupBy.UseVisualStyleBackColor = true;
+            this.EnableGroupBoxGroupBy.Click += new System.EventHandler(this.EnableGroupBoxGroupBy_Click);
+            // 
+            // ResetGroupBoxGroupBy
+            // 
+            this.ResetGroupBoxGroupBy.FlatAppearance.BorderSize = 0;
+            this.ResetGroupBoxGroupBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetGroupBoxGroupBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.ResetGroupBoxGroupBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.ResetGroupBoxGroupBy.Location = new System.Drawing.Point(39, 215);
+            this.ResetGroupBoxGroupBy.Name = "ResetGroupBoxGroupBy";
+            this.ResetGroupBoxGroupBy.Size = new System.Drawing.Size(83, 38);
+            this.ResetGroupBoxGroupBy.TabIndex = 5;
+            this.ResetGroupBoxGroupBy.Text = "Reset";
+            this.ResetGroupBoxGroupBy.UseVisualStyleBackColor = true;
+            this.ResetGroupBoxGroupBy.Click += new System.EventHandler(this.ResetGroupBoxGroupBy_Click);
             // 
             // BtnSearchNameReset
             // 
@@ -466,7 +589,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SeeTeam";
-            this.Size = new System.Drawing.Size(1037, 795);
+            this.Size = new System.Drawing.Size(1037, 893);
             this.Load += new System.EventHandler(this.SeeTeam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -476,6 +599,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -515,5 +640,13 @@
         public System.Windows.Forms.Button BtnSearchNameReset;
         public System.Windows.Forms.Button BtnSearchNameEnable;
         public System.Windows.Forms.Button BtnWorkerSecurityUpdate;
+        private System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Button BtnGroupByName;
+        public System.Windows.Forms.Button EnableGroupBoxGroupBy;
+        public System.Windows.Forms.Button ResetGroupBoxGroupBy;
+        public System.Windows.Forms.Button BtnGroupBySurnameName;
+        public System.Windows.Forms.Button BtnGroupByAge;
+        public System.Windows.Forms.Button btnGroupByAdmin;
     }
 }
