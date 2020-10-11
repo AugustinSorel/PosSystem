@@ -137,7 +137,7 @@ namespace PosSystem
 
         private void GroupByName_Click(object sender, EventArgs e)
         {
-            new OrderByWorkerName(dataGridView1); // TODO: Having a label with sql aggreagtion queries
+            new OrderByWorkerName(dataGridView1); 
         }
 
         private void BtnGroupBySurnameName_Click(object sender, EventArgs e)

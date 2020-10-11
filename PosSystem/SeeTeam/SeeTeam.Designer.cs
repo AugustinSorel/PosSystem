@@ -433,7 +433,7 @@
             this.groupBox4.Size = new System.Drawing.Size(681, 70);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Group by";
+            this.groupBox4.Text = "Search by";
             // 
             // btnGroupByAdmin
             // 

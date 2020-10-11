@@ -21,15 +21,7 @@ namespace PosSystem
         private void HideControlsForNonAdmin()
         {
             if (! UserDetailsVAR.Admin)
-            {
-                pictureBox3.Visible = false; // TODO: Clean this;
-                pictureBox4.Visible = false;
-                button3.Visible = false;
-                button4.Visible = false;
-
-                button5.Visible = false;
-                pictureBox5.Visible = false;
-            }
+                panel2.Visible = false;
         }
 
         private void SetComponentsLocation()
