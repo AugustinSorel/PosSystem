@@ -13,15 +13,6 @@ namespace PosSystem
             dataGridView.DataSource = SetDataSource(oleDbCommand);
         }
 
-        protected object SetDataSource(OleDbCommand oleDbCommand)
-        {
-            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(oleDbCommand);
-            DataTable dataTable = new DataTable();
-            oleDbDataAdapter.Fill(dataTable);
-
-            return dataTable;
-        }
-
         private OleDbCommand CreateCommand()
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();

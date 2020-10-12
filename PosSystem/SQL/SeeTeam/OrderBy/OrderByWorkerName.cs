@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    class OrderByWorkerName: SqlQueries
+    class OrderByWorkerName : SqlQueries
     {
         public OrderByWorkerName(DataGridView dataGridView)
         {
