@@ -37,6 +37,12 @@ namespace PosSystem
             new LoadDataGridView(dataGridView1);
             SelectFirstRow();
             RemoveTheWorkerLoggedIn();
+            ShowNumberOfWorkers();
+        }
+
+        private void ShowNumberOfWorkers()
+        {
+            lblWorkerNumber.Text = Workers.GetNumberOfWorkers();
         }
 
         private DockStyle GetFillDock()
@@ -147,6 +153,7 @@ namespace PosSystem
 
         private void BtnGroupByAge_Click(object sender, EventArgs e)
         {
+            LoadData();
             new OrderByWorkerAge(dataGridView1);
         }
 

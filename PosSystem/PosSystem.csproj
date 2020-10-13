@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MangeItem\ManageItemClearControls.cs" />
+    <Compile Include="SQL\SeeTeam\Workers.cs" />
     <Compile Include="SQL\SeeTeam\OrderBy\OrderByWorkerAdmin.cs" />
     <Compile Include="SQL\SeeTeam\OrderBy\OrderByWorkerAge.cs" />
     <Compile Include="SQL\SeeTeam\OrderBy\OrderByWorkerSurname.cs" />

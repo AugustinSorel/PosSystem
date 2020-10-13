@@ -1,28 +1,9 @@
-﻿using System.Data.OleDb;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace PosSystem
 {
     class OrderByWorkerAge : SqlQueries
     {
-        //public OrderByWorkerAge(DataGridView dataGridView)
-        //{
-        //    OleDbCommand oleDbCommand = CreateCommand();
-        //    ExecuteCommand(oleDbCommand);
-        //    dataGridView.DataSource = SetDataSource(oleDbCommand);
-        //}
-
-        //private OleDbCommand CreateCommand()
-        //{
-        //    OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
-        //    oleDbCommand.CommandText = GetCommandText();
-        //    return oleDbCommand;
-        //}
-
-        //private string GetCommandText()
-        //{
-        //    return "SELECT WorkerName, Age From WorkerDetails ORDER BY Age";
-        //}
         public OrderByWorkerAge(DataGridView dataGridView)
         {
             int[] Age = new int[dataGridView.Rows.Count];
@@ -31,16 +12,20 @@ namespace PosSystem
             for (i = 0; i < dataGridView.Rows.Count; i++)
                 Age[i] = int.Parse(dataGridView.Rows[i].Cells[3].Value.ToString());
 
-            mergeSort(Age, 0, n - 1);
+            MergeSort(Age, 0, n - 1);
 
-            foreach (var age in Age)
+            dataGridView.Columns["WorkerID"].Visible = false;
+            dataGridView.Columns["WorkerSurname"].Visible = false;
+            dataGridView.Columns["WorkerPhoto"].Visible = false;
+            dataGridView.Columns["Gender"].Visible = false;
+
+            for (i = 0; i < Age.Length; i++)
             {
-                MessageBox.Show(age.ToString());
+                dataGridView[3, i].Value = Age[i];
             }
-
         }
 
-        static public void merge(int[] arr, int p, int q, int r)
+        static public void Merge(int[] arr, int p, int q, int r)
         {
             int i, j, k;
             int n1 = q - p + 1;
@@ -85,14 +70,14 @@ namespace PosSystem
                 k++;
             }
         }
-        static public void mergeSort(int[] arr, int p, int r)
+        static public void MergeSort(int[] arr, int p, int r)
         {
             if (p < r)
             {
                 int q = (p + r) / 2;
-                mergeSort(arr, p, q);
-                mergeSort(arr, q + 1, r);
-                merge(arr, p, q, r);
+                MergeSort(arr, p, q);
+                MergeSort(arr, q + 1, r);
+                Merge(arr, p, q, r);
             }
         }
     }
