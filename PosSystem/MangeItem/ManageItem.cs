@@ -38,6 +38,7 @@ namespace PosSystem
         {
             groupBox1.Enabled = false;
             new AddProduct(this);
+            new SaveToStock(TxtBoxBarCode.Text);
             new ManageStockClearControls(this);
         }
 

@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MangeItem\ManageItemClearControls.cs" />
+    <Compile Include="CreateUserControls\CreateStock.cs" />
+    <Compile Include="SQL\ManageItem\SaveToStock.cs" />
     <Compile Include="SQL\SeeTeam\Workers.cs" />
     <Compile Include="SQL\SeeTeam\OrderBy\OrderByWorkerAdmin.cs" />
     <Compile Include="SQL\SeeTeam\OrderBy\OrderByWorkerAge.cs" />
@@ -104,6 +106,14 @@
     </Compile>
     <Compile Include="SQL\UserDetails\SetUserDetailsVar.cs" />
     <Compile Include="SQL\SeeTeam\UpdateWorkerDetails.cs" />
+    <Compile Include="SQL\Stock\LoadDataGridViewStock.cs" />
+    <Compile Include="SQL\Stock\DisplayStock.cs" />
+    <Compile Include="Stock\Stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stock\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />
     <Compile Include="SQL\UserDetails\SaveUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\oleDbConnection.cs" />
@@ -197,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="SeeTeam\SeeTeam.resx">
       <DependentUpon>SeeTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopBar\TopBar.resx">
       <DependentUpon>TopBar.cs</DependentUpon>

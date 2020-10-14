@@ -41,6 +41,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnStock = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -48,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -97,9 +100,9 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 456);
+            this.panel1.Location = new System.Drawing.Point(0, 553);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 98);
+            this.panel1.Size = new System.Drawing.Size(173, 98);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox2
@@ -115,7 +118,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PosSystem.Properties.Resources.ManageItem;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 53);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 111);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +128,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PosSystem.Properties.Resources.AddWorker;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 137);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 195);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +138,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PosSystem.Properties.Resources.SeeTeam;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 233);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 291);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +151,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button4.Location = new System.Drawing.Point(83, 205);
+            this.button4.Location = new System.Drawing.Point(86, 263);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 78);
             this.button4.TabIndex = 0;
@@ -162,7 +165,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button5.Location = new System.Drawing.Point(83, 36);
+            this.button5.Location = new System.Drawing.Point(86, 94);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 78);
             this.button5.TabIndex = 0;
@@ -176,7 +179,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button3.Location = new System.Drawing.Point(83, 121);
+            this.button3.Location = new System.Drawing.Point(86, 179);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 78);
             this.button3.TabIndex = 0;
@@ -196,6 +199,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.BtnStock);
+            this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.button3);
@@ -203,10 +208,34 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 167);
+            this.panel2.Location = new System.Drawing.Point(0, 195);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 289);
+            this.panel2.Size = new System.Drawing.Size(173, 358);
             this.panel2.TabIndex = 4;
+            // 
+            // BtnStock
+            // 
+            this.BtnStock.FlatAppearance.BorderSize = 0;
+            this.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnStock.Location = new System.Drawing.Point(86, 10);
+            this.BtnStock.Name = "BtnStock";
+            this.BtnStock.Size = new System.Drawing.Size(94, 78);
+            this.BtnStock.TabIndex = 4;
+            this.BtnStock.Text = "Stock";
+            this.BtnStock.UseVisualStyleBackColor = true;
+            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::PosSystem.Properties.Resources.stock;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 26);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
             // 
             // Menu
             // 
@@ -219,7 +248,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Name = "Menu";
-            this.Size = new System.Drawing.Size(180, 554);
+            this.Size = new System.Drawing.Size(173, 651);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -228,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +278,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnStock;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

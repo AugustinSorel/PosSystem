@@ -88,5 +88,10 @@ namespace PosSystem
         {
             new CreateManageItem();
         }
+
+        private void BtnStock_Click(object sender, EventArgs e)
+        {
+            new CreateStock();
+        }
     }
 }
