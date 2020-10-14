@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -6,79 +8,80 @@ namespace PosSystem
     {
         public OrderByWorkerAge(DataGridView dataGridView)
         {
-            int[] Age = new int[dataGridView.Rows.Count];
-            int n = dataGridView.Rows.Count, i;
+            List<int> unsorted = new List<int>();
+            List<int> sorted;
 
-            for (i = 0; i < dataGridView.Rows.Count; i++)
-                Age[i] = int.Parse(dataGridView.Rows[i].Cells[3].Value.ToString());
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+                 unsorted.Add(int.Parse(dataGridView.Rows[i].Cells[3].Value.ToString()));
+           
+            sorted = MergeSort(unsorted);
 
-            MergeSort(Age, 0, n - 1);
+            for (int i = 0; i < unsorted.Count; i++)
+            {
+                dataGridView[3, i].Value = sorted[i];
+            }
 
             dataGridView.Columns["WorkerID"].Visible = false;
             dataGridView.Columns["WorkerSurname"].Visible = false;
             dataGridView.Columns["WorkerPhoto"].Visible = false;
             dataGridView.Columns["Gender"].Visible = false;
-
-            for (i = 0; i < Age.Length; i++)
-            {
-                dataGridView[3, i].Value = Age[i];
-            }
         }
 
-        static public void Merge(int[] arr, int p, int q, int r)
+        private static List<int> MergeSort(List<int> unsorted)
         {
-            int i, j, k;
-            int n1 = q - p + 1;
-            int n2 = r - q;
-            int[] L = new int[n1];
-            int[] R = new int[n2];
-            for (i = 0; i < n1; i++)
+            if (unsorted.Count <= 1)
+                return unsorted;
+
+            List<int> left = new List<int>();
+            List<int> right = new List<int>();
+
+            int middle = unsorted.Count / 2;
+            for (int i = 0; i < middle; i++)  //Dividing the unsorted list
             {
-                L[i] = arr[p + i];
+                left.Add(unsorted[i]);
             }
-            for (j = 0; j < n2; j++)
+            for (int i = middle; i < unsorted.Count; i++)
             {
-                R[j] = arr[q + 1 + j];
+                right.Add(unsorted[i]);
             }
-            i = 0;
-            j = 0;
-            k = p;
-            while (i < n1 && j < n2)
-            {
-                if (L[i] <= R[j])
-                {
-                    arr[k] = L[i];
-                    i++;
-                }
-                else
-                {
-                    arr[k] = R[j];
-                    j++;
-                }
-                k++;
-            }
-            while (i < n1)
-            {
-                arr[k] = L[i];
-                i++;
-                k++;
-            }
-            while (j < n2)
-            {
-                arr[k] = R[j];
-                j++;
-                k++;
-            }
+
+            left = MergeSort(left);
+            right = MergeSort(right);
+            return Merge(left, right);
         }
-        static public void MergeSort(int[] arr, int p, int r)
+
+        private static List<int> Merge(List<int> left, List<int> right)
         {
-            if (p < r)
+            List<int> result = new List<int>();
+
+            while (left.Count > 0 || right.Count > 0)
             {
-                int q = (p + r) / 2;
-                MergeSort(arr, p, q);
-                MergeSort(arr, q + 1, r);
-                Merge(arr, p, q, r);
+                if (left.Count > 0 && right.Count > 0)
+                {
+                    if (left.First() <= right.First())  //Comparing First two elements to see which is smaller
+                    {
+                        result.Add(left.First());
+                        left.Remove(left.First());      //Rest of the list minus the first element
+                    }
+                    else
+                    {
+                        result.Add(right.First());
+                        right.Remove(right.First());
+                    }
+                }
+                else if (left.Count > 0)
+                {
+                    result.Add(left.First());
+                    left.Remove(left.First());
+                }
+                else if (right.Count > 0)
+                {
+                    result.Add(right.First());
+
+                    right.Remove(right.First());
+                }
             }
+            return result;
         }
     }
 }

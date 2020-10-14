@@ -38,6 +38,15 @@ namespace PosSystem
             SelectFirstRow();
             RemoveTheWorkerLoggedIn();
             ShowNumberOfWorkers();
+            ShowTables();
+        }
+
+        private void ShowTables()
+        {
+            dataGridView1.Columns["WorkerID"].Visible = true;
+            dataGridView1.Columns["WorkerSurname"].Visible = true;
+            dataGridView1.Columns["WorkerPhoto"].Visible = true;
+            dataGridView1.Columns["Gender"].Visible = true;
         }
 
         private void ShowNumberOfWorkers()
