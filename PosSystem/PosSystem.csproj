@@ -108,13 +108,17 @@
     <Compile Include="SQL\SeeTeam\UpdateWorkerDetails.cs" />
     <Compile Include="SQL\Stock\LoadDataGridViewStock.cs" />
     <Compile Include="SQL\Stock\DisplayStock.cs" />
+    <Compile Include="SQL\Stock\DisplayItem.cs" />
     <Compile Include="Stock\Stock.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Stock\Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock\StockClearControls.cs" />
     <Compile Include="Stock\StockSetontrolsLocationCenter.cs" />
+    <Compile Include="SQL\Stock\UpdateItemDetails.cs" />
+    <Compile Include="SQL\Stock\updateStockQuantity.cs" />
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />
     <Compile Include="SQL\UserDetails\SaveUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\oleDbConnection.cs" />

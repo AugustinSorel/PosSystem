@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -36,22 +38,44 @@ namespace PosSystem
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             new DisplayStock(this);
+            new DisplayItem(this);
         }
 
-        private void BtnEnable_Click(object sender, System.EventArgs e)
+        private void BtnEnable_Click_1(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = true;
+            groupBox2.Enabled = true;
             txtboxQuantity.Focus();
         }
 
-        private void BtnSave_Click(object sender, System.EventArgs e)
+        private void BtnSave_Click_1(object sender, System.EventArgs e)
         {
+            new UpdateItemDetails(this);
+            new UpdateStockQuantity(this);
+            LoadData();
             groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
         }
 
-        private void BtnCancel_Click(object sender, System.EventArgs e)
+        private void BtnCancel_Click_1(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            ClearControls();
+        }
+
+        private void ClearControls()
+        {
+            new StockClearControls(groupBox1, groupBox2);
+        }
+
+        private void BtnBrowse_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Multiselect = false })
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    pictureBoxItem.Image = Image.FromFile(openFileDialog.FileName);
+            }
         }
     }
 }

@@ -14,9 +14,12 @@ namespace PosSystem
 
         private void ShowSelectedData()
         {
-           stock.lblCodeBar.Text = stock.dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Trim();
-           stock.lblUnitPrice.Text = stock.dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim();
-           stock.pictureBoxitem.Image = ConvertByteToImage(GetByteImage());
+            stock.TxtBoxDescrption.Text = stock.dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            stock.TxtBoxSupplierID.Text = stock.dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            stock.TxtBoxPrice.Text = stock.dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            stock.textBoxStockMin.Text = stock.dataGridView1.SelectedRows[0].Cells[6].Value.ToString().Trim();
+            stock.textBoxStockMax.Text = stock.dataGridView1.SelectedRows[0].Cells[7].Value.ToString().Trim();
+           stock.pictureBoxItem.Image = ConvertByteToImage(GetByteImage());
         }
 
         private byte[] GetByteImage()
