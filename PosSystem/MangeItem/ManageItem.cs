@@ -39,11 +39,19 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
-            groupBox1.Enabled = false;
-            groupBox2.Enabled = false;
-            new AddProduct(this);
-            new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
-            new ManageStockClearControls(this);
+            if (BarCodeUnique())
+            {
+                groupBox1.Enabled = false;
+                groupBox2.Enabled = false;
+                new AddProduct(this);
+                new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
+                new ManageStockClearControls(this);
+            }
+        }
+
+        private bool BarCodeUnique()
+        {
+            return !ManageItemBarCode.CheckIfBarCodeIsUnique(this);
         }
 
         private void BtnBrowse_Click(object sender, System.EventArgs e)

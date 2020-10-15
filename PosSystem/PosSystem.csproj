@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\ManageItem\ManageItemBarCode.cs" />
     <Compile Include="MangeItem\ManageItemClearControls.cs" />
     <Compile Include="CreateUserControls\CreateStock.cs" />
     <Compile Include="SQL\ManageItem\SaveToStock.cs" />
