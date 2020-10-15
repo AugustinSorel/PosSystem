@@ -110,6 +110,10 @@
     <Compile Include="SQL\Stock\LoadDataGridViewStock.cs" />
     <Compile Include="SQL\Stock\DisplayStock.cs" />
     <Compile Include="SQL\Stock\DisplayItem.cs" />
+    <Compile Include="SQL\Stock\SearchItemByCodeBar.cs" />
+    <Compile Include="SQL\Stock\GroupBy\OrderByItemPrice.cs" />
+    <Compile Include="SQL\Stock\GroupBy\OrderByItemQuantity.cs" />
+    <Compile Include="Stock\ShowNumberOfItems.cs" />
     <Compile Include="Stock\Stock.cs">
       <SubType>UserControl</SubType>
     </Compile>

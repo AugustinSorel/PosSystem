@@ -22,12 +22,14 @@ namespace PosSystem
         private void SetControlsLocation()
         {
             panel1.Location = StockSetontrolsLocationCenter.Panel1(panel1.Width);
+            panel2.Location = StockSetontrolsLocationCenter.SetPanel2(panel2.Width, panel2.Height);
             dataGridView1.Location = StockSetontrolsLocationCenter.DataGridView(dataGridView1.Width);
         }
 
         private void LoadData()
         {
             new LoadDataGridViewStock(dataGridView1);
+            lblNumberOfItems.Text = ShowNumberOfItems.Display();
         }
 
         private DockStyle GetFillDock()
@@ -76,6 +78,45 @@ namespace PosSystem
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                     pictureBoxItem.Image = Image.FromFile(openFileDialog.FileName);
             }
+        }
+
+        private void BtnSearchNameReset_Click(object sender, EventArgs e)
+        {
+            groupBox3.Enabled = false;
+            TxtBoxSearchName.Clear();
+            LoadData();
+        }
+
+        private void BtnSearchNameEnable_Click(object sender, EventArgs e)
+        {
+            groupBox3.Enabled = true;
+            TxtBoxSearchName.Focus();
+        }
+
+        private void BtnSearchNameSearch_Click(object sender, EventArgs e)
+        {
+            new SearchItemByCodeBar(this);
+        }
+
+        private void EnableGroupBoxGroupBy_Click(object sender, EventArgs e)
+        {
+            groupBox4.Enabled = true;
+        }
+
+        private void ResetGroupBoxGroupBy_Click(object sender, EventArgs e)
+        {
+            groupBox4.Enabled = false;
+            LoadData();
+        }
+
+        private void BtnGroupStockQuantity_Click(object sender, EventArgs e)
+        {
+            new OrderByItemQuantity(dataGridView1);
+        }
+
+        private void BtnGroupByPrice_Click(object sender, EventArgs e)
+        {
+            new OrderByItemPrice(dataGridView1);
         }
     }
 }
