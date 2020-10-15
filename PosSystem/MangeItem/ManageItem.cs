@@ -26,19 +26,23 @@ namespace PosSystem
         private void BtnEnable_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = true;
+            groupBox2.Enabled = true;
             TxtBoxDescrption.Focus();
         }
 
         private void BtnCancel_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            txtboxQuantity.Text = 0.ToString();
         }
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
             new AddProduct(this);
-            new SaveToStock(TxtBoxBarCode.Text);
+            new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
             new ManageStockClearControls(this);
         }
 

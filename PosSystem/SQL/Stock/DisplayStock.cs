@@ -1,6 +1,8 @@
-﻿namespace PosSystem
+﻿using System;
+
+namespace PosSystem
 {
-    internal class DisplayStock
+    internal class DisplayStock: SqlQueries
     {
         private readonly Stock stock;
 
@@ -12,16 +14,14 @@
 
         private void ShowSelectedData()
         {
-           stock.TxtBoxName.Text = seeTeam.dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-           stock.TxtBoxSurname.Text = seeTeam.dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
-           stock.TxtBoxAge.Text = seeTeam.dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Trim();
-           stock.TxtBoxGender.Text = seeTeam.dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim();
-           stock.WorkerPicture.Image = ConvertByteToImage(GetByteImage(seeTeam));
+           stock.lblCodeBar.Text = stock.dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Trim();
+           stock.lblUnitPrice.Text = stock.dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim();
+           stock.pictureBoxitem.Image = ConvertByteToImage(GetByteImage());
         }
 
-        private byte[] GetByteImage(SeeTeam seeTeam)
+        private byte[] GetByteImage()
         {
-            return (Byte[])seeTeam.dataGridView1.SelectedRows[0].Cells[5].Value;
+            return (Byte[])stock.dataGridView1.SelectedRows[0].Cells[5].Value;
         }
     }
 }

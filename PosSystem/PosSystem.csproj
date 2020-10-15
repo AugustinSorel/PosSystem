@@ -114,6 +114,7 @@
     <Compile Include="Stock\Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock\StockSetontrolsLocationCenter.cs" />
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />
     <Compile Include="SQL\UserDetails\SaveUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\oleDbConnection.cs" />

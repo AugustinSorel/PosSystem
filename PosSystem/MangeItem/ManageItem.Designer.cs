@@ -42,14 +42,18 @@
             this.TxtBoxDescrption = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.BtnBrowse = new System.Windows.Forms.Button();
+            this.pictureBoxItem = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnEnable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxItem = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtboxQuantity = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -211,6 +215,15 @@
             this.BtnBrowse.UseVisualStyleBackColor = true;
             this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
+            // pictureBoxItem
+            // 
+            this.pictureBoxItem.Location = new System.Drawing.Point(20, 19);
+            this.pictureBoxItem.Name = "pictureBoxItem";
+            this.pictureBoxItem.Size = new System.Drawing.Size(100, 100);
+            this.pictureBoxItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxItem.TabIndex = 0;
+            this.pictureBoxItem.TabStop = false;
+            // 
             // btnCancel
             // 
             this.btnCancel.FlatAppearance.BorderSize = 0;
@@ -231,7 +244,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnSave.Location = new System.Drawing.Point(545, 334);
+            this.BtnSave.Location = new System.Drawing.Point(926, 334);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 33);
             this.BtnSave.TabIndex = 1;
@@ -245,7 +258,7 @@
             this.BtnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnEnable.Location = new System.Drawing.Point(439, 334);
+            this.BtnEnable.Location = new System.Drawing.Point(805, 334);
             this.BtnEnable.Name = "BtnEnable";
             this.BtnEnable.Size = new System.Drawing.Size(100, 33);
             this.BtnEnable.TabIndex = 1;
@@ -255,37 +268,64 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BtnEnable);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Location = new System.Drawing.Point(19, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(698, 403);
+            this.panel1.Size = new System.Drawing.Size(1038, 403);
             this.panel1.TabIndex = 2;
             // 
-            // pictureBoxItem
+            // groupBox2
             // 
-            this.pictureBoxItem.Location = new System.Drawing.Point(20, 19);
-            this.pictureBoxItem.Name = "pictureBoxItem";
-            this.pictureBoxItem.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxItem.TabIndex = 0;
-            this.pictureBoxItem.TabStop = false;
+            this.groupBox2.Controls.Add(this.txtboxQuantity);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox2.Location = new System.Drawing.Point(687, 22);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(339, 162);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Add Sotck";
             // 
-            // ManageStock
+            // txtboxQuantity
+            // 
+            this.txtboxQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.txtboxQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtboxQuantity.Location = new System.Drawing.Point(218, 91);
+            this.txtboxQuantity.Name = "txtboxQuantity";
+            this.txtboxQuantity.Size = new System.Drawing.Size(77, 20);
+            this.txtboxQuantity.TabIndex = 4;
+            this.txtboxQuantity.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Location = new System.Drawing.Point(15, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Quantity:";
+            // 
+            // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.panel1);
-            this.Name = "ManageStock";
-            this.Size = new System.Drawing.Size(759, 552);
+            this.Name = "ManageItem";
+            this.Size = new System.Drawing.Size(1118, 552);
             this.Load += new System.EventHandler(this.ManageStock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -310,5 +350,8 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pictureBoxItem;
         public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.TextBox txtboxQuantity;
+        private System.Windows.Forms.Label label2;
     }
 }
