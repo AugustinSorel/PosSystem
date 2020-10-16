@@ -49,9 +49,23 @@ namespace PosSystem
 
         private void BtnDeleteDelete_Click(object sender, EventArgs e)
         {
-            groupBox3.Enabled = false;
-            //new SaveSupplier(this);
-            new ManageSupplierClearControls(this);
+            if (SupplierIDExists() && WarningMessage())
+            {
+                groupBox3.Enabled = false;
+                new DeleteSupplier(txtDelete.Text);
+                new ManageSupplierClearControls(this);
+                txtDelete.Clear();
+            }
+        }
+
+        private bool WarningMessage()
+        {
+            return DisplayWarning.Message();
+        }
+
+        private bool SupplierIDExists()
+        {
+            return SupplierIdD.Exists(txtDelete.Text);
         }
 
         private void BtnDeleteEnable_Click(object sender, EventArgs e)

@@ -49,6 +49,9 @@
     <Compile Include="CreateUserControls\CreateSale.cs" />
     <Compile Include="CreateUserControls\CreateSupplier.cs" />
     <Compile Include="CreateUserControls\CreateMangeSupplier.cs" />
+    <Compile Include="SQL\ManageSupplier\DisplayWarning.cs" />
+    <Compile Include="SQL\ManageSupplier\SupplierIdD.cs" />
+    <Compile Include="SQL\ManageSupplier\DeleteSupplier.cs" />
     <Compile Include="ManageSupplier\ManageItemSetLocation.cs" />
     <Compile Include="ManageSupplier\ManageSupplier.cs">
       <SubType>UserControl</SubType>
