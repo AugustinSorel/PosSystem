@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -15,6 +16,7 @@ namespace PosSystem
             Dock = GetFill();
             BringToFront();
             panel1.Location = ManageStockSetCenterLocation.Panel1Center(panel1.Width);
+            panel2.Location = ManageStockSetCenterLocation.Panel2Center(panel2.Width);
             pictureBoxItem.Image = Properties.Resources.DefaultItem;
         }
 
@@ -61,6 +63,39 @@ namespace PosSystem
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                     pictureBoxItem.Image = Image.FromFile(openFileDialog.FileName);
             }
+        }
+
+        private void BtnDeleteCancel_Click(object sender, System.EventArgs e)
+        {
+            groupBox3.Enabled = false;
+            txtDelete.Clear();
+        }
+
+        private void BtnDeleteEnable_Click(object sender, System.EventArgs e)
+        {
+            groupBox3.Enabled = true;
+            txtDelete.Focus();
+        }
+
+        private void BtnDeleteDelete_Click(object sender, System.EventArgs e)
+        {
+            if (txtDelete.Text != string.Empty && WorkerIdExists() && WarningMessage())
+            {
+                new DeleteStockItem(txtDelete.Text);
+                new DeleteItem(txtDelete.Text);
+                groupBox3.Enabled = false;
+                txtDelete.Clear();
+            }
+        }
+
+        private bool WarningMessage()
+        {
+            return CheckDeleteItem.Check();
+        }
+
+        private bool WorkerIdExists()
+        {
+            return CheckIfItemBarCodeExists.Check(txtDelete.Text);
         }
     }
 }

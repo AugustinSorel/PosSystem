@@ -50,10 +50,20 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtboxQuantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.BtnDeleteCancel = new System.Windows.Forms.Button();
+            this.btnDeleteEnable = new System.Windows.Forms.Button();
+            this.BtnDeleteDelete = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -311,14 +321,114 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Quantity:";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Controls.Add(this.BtnDeleteCancel);
+            this.panel2.Controls.Add(this.btnDeleteEnable);
+            this.panel2.Controls.Add(this.BtnDeleteDelete);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Location = new System.Drawing.Point(30, 454);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1027, 200);
+            this.panel2.TabIndex = 5;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtDelete);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Enabled = false;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox3.Location = new System.Drawing.Point(5, 34);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(996, 126);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Delete item";
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.txtDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtDelete.Location = new System.Drawing.Point(456, 60);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(213, 20);
+            this.txtDelete.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label9.Location = new System.Drawing.Point(279, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 25);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "BarCode";
+            // 
+            // BtnDeleteCancel
+            // 
+            this.BtnDeleteCancel.FlatAppearance.BorderSize = 0;
+            this.BtnDeleteCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnDeleteCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnDeleteCancel.Location = new System.Drawing.Point(25, 159);
+            this.BtnDeleteCancel.Name = "BtnDeleteCancel";
+            this.BtnDeleteCancel.Size = new System.Drawing.Size(83, 38);
+            this.BtnDeleteCancel.TabIndex = 1;
+            this.BtnDeleteCancel.Text = "Cancel";
+            this.BtnDeleteCancel.UseVisualStyleBackColor = true;
+            this.BtnDeleteCancel.Click += new System.EventHandler(this.BtnDeleteCancel_Click);
+            // 
+            // btnDeleteEnable
+            // 
+            this.btnDeleteEnable.FlatAppearance.BorderSize = 0;
+            this.btnDeleteEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnDeleteEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.btnDeleteEnable.Location = new System.Drawing.Point(811, 159);
+            this.btnDeleteEnable.Name = "btnDeleteEnable";
+            this.btnDeleteEnable.Size = new System.Drawing.Size(83, 38);
+            this.btnDeleteEnable.TabIndex = 1;
+            this.btnDeleteEnable.Text = "Enable";
+            this.btnDeleteEnable.UseVisualStyleBackColor = true;
+            this.btnDeleteEnable.Click += new System.EventHandler(this.BtnDeleteEnable_Click);
+            // 
+            // BtnDeleteDelete
+            // 
+            this.BtnDeleteDelete.FlatAppearance.BorderSize = 0;
+            this.BtnDeleteDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnDeleteDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnDeleteDelete.Location = new System.Drawing.Point(932, 159);
+            this.BtnDeleteDelete.Name = "BtnDeleteDelete";
+            this.BtnDeleteDelete.Size = new System.Drawing.Size(83, 38);
+            this.BtnDeleteDelete.TabIndex = 1;
+            this.BtnDeleteDelete.Text = "Delete";
+            this.BtnDeleteDelete.UseVisualStyleBackColor = true;
+            this.BtnDeleteDelete.Click += new System.EventHandler(this.BtnDeleteDelete_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label16.Location = new System.Drawing.Point(418, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 25);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Delete Item";
+            // 
             // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ManageItem";
-            this.Size = new System.Drawing.Size(1118, 552);
+            this.Size = new System.Drawing.Size(1118, 668);
             this.Load += new System.EventHandler(this.ManageStock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -326,6 +436,10 @@
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -353,5 +467,13 @@
         public System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.TextBox txtboxQuantity;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.TextBox txtDelete;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Button BtnDeleteCancel;
+        public System.Windows.Forms.Button btnDeleteEnable;
+        public System.Windows.Forms.Button BtnDeleteDelete;
+        public System.Windows.Forms.Label label16;
     }
 }
