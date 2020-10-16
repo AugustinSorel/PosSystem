@@ -1,6 +1,6 @@
 ﻿namespace PosSystem
 {
-    partial class Sale
+    partial class Supplier
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Sale
+            // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.Name = "Sale";
-            this.Size = new System.Drawing.Size(770, 507);
-            this.Load += new System.EventHandler(this.Sale_Load);
+            this.Name = "Supplier";
+            this.Size = new System.Drawing.Size(762, 406);
+            this.Load += new System.EventHandler(this.Supplier_Load);
             this.ResumeLayout(false);
 
         }

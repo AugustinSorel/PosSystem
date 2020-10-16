@@ -47,10 +47,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateUserControls\CreateSale.cs" />
-    <Compile Include="Sale.cs">
+    <Compile Include="CreateUserControls\CreateSupplier.cs" />
+    <Compile Include="CreateUserControls\CreateMangeSupplier.cs" />
+    <Compile Include="ManageSupplier\ManageItemSetLocation.cs" />
+    <Compile Include="ManageSupplier\ManageSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Sale.Designer.cs">
+    <Compile Include="ManageSupplier\ManageSupplier.Designer.cs">
+      <DependentUpon>ManageSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSupplier\ManageSupplierClearControls.cs" />
+    <Compile Include="SQL\ManageSupplier\SaveSupplier.cs" />
+    <Compile Include="Sale\Sale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sale\Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\ManageItem\CheckIfItemBarCodeExists.cs" />
@@ -135,6 +146,12 @@
     <Compile Include="Stock\StockSetontrolsLocationCenter.cs" />
     <Compile Include="SQL\Stock\UpdateItemDetails.cs" />
     <Compile Include="SQL\Stock\updateStockQuantity.cs" />
+    <Compile Include="Supplier\Supplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Supplier\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />
     <Compile Include="SQL\UserDetails\SaveUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\oleDbConnection.cs" />
@@ -198,6 +215,9 @@
     <Compile Include="UserDetails\UserDetails.Designer.cs">
       <DependentUpon>UserDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ManageSupplier\ManageSupplier.resx">
+      <DependentUpon>ManageSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MangeItem\ManageItem.resx">
       <DependentUpon>ManageItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,7 +246,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sale.resx">
+    <EmbeddedResource Include="Sale\Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeeTeam\SeeTeam.resx">
@@ -234,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopBar\TopBar.resx">
       <DependentUpon>TopBar.cs</DependentUpon>
@@ -293,7 +316,11 @@
     <None Include="Resources\Sale.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Sale\" />
+    <None Include="Resources\supplier.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManageSupplier.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

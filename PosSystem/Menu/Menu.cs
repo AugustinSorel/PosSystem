@@ -94,9 +94,19 @@ namespace PosSystem
             new CreateStock();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             new CreateSale();
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            new CreateSupplier();
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+            new CreateMangeSupplier();
         }
     }
 }

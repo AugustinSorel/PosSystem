@@ -36,9 +36,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.BtnStock = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,6 +52,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -103,7 +109,7 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 666);
+            this.panel1.Location = new System.Drawing.Point(0, 797);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(173, 98);
             this.panel1.TabIndex = 4;
@@ -114,7 +120,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button4.Location = new System.Drawing.Point(86, 263);
+            this.button4.Location = new System.Drawing.Point(86, 416);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 78);
             this.button4.TabIndex = 0;
@@ -128,7 +134,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button5.Location = new System.Drawing.Point(86, 94);
+            this.button5.Location = new System.Drawing.Point(86, 247);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 78);
             this.button5.TabIndex = 0;
@@ -142,7 +148,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button3.Location = new System.Drawing.Point(86, 179);
+            this.button3.Location = new System.Drawing.Point(86, 332);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 78);
             this.button3.TabIndex = 0;
@@ -152,6 +158,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.pictureBox9);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.BtnStock);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.button5);
@@ -161,10 +171,24 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 308);
+            this.panel2.Location = new System.Drawing.Point(0, 286);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 358);
+            this.panel2.Size = new System.Drawing.Size(173, 511);
             this.panel2.TabIndex = 4;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button7.Location = new System.Drawing.Point(83, 89);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 78);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Supplier";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // BtnStock
             // 
@@ -172,7 +196,7 @@
             this.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnStock.Location = new System.Drawing.Point(86, 10);
+            this.BtnStock.Location = new System.Drawing.Point(86, 163);
             this.BtnStock.Name = "BtnStock";
             this.BtnStock.Size = new System.Drawing.Size(94, 78);
             this.BtnStock.TabIndex = 4;
@@ -192,7 +216,21 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "Sale";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button8.Location = new System.Drawing.Point(86, 8);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(94, 78);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Manage Supplier";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // pictureBox7
             // 
@@ -204,10 +242,30 @@
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::PosSystem.Properties.Resources.ManageSupplier;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 9;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::PosSystem.Properties.Resources.supplier;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 107);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PosSystem.Properties.Resources.stock;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 26);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 179);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +275,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PosSystem.Properties.Resources.ManageItem;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 111);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 264);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,7 +285,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PosSystem.Properties.Resources.AddWorker;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 195);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 348);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +295,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PosSystem.Properties.Resources.SeeTeam;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 291);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 444);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,11 +335,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Name = "Menu";
-            this.Size = new System.Drawing.Size(173, 764);
+            this.Size = new System.Drawing.Size(173, 895);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -312,5 +372,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

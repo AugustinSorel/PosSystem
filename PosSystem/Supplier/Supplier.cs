@@ -2,14 +2,14 @@
 
 namespace PosSystem
 {
-    public partial class Sale : UserControl
+    public partial class Supplier : UserControl
     {
-        public Sale()
+        public Supplier()
         {
             InitializeComponent();
         }
 
-        private void Sale_Load(object sender, System.EventArgs e)
+        private void Supplier_Load(object sender, System.EventArgs e)
         {
             Dock = GetFill();
             BringToFront();
