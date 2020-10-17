@@ -19,8 +19,12 @@ namespace PosSystem
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("Description", ManageStock.TxtBoxDescrption.Text);
             oleDbCommand.Parameters.AddWithValue("SupplierID", ManageStock.TxtBoxSupplierID.Text);
+            oleDbCommand.Parameters.AddWithValue("CategoryID", ManageStock.txtCategory.Text);
+            oleDbCommand.Parameters.AddWithValue("PurchasePrice", ManageStock.TxtBoxPurchacePrice.Text);
+            oleDbCommand.Parameters.AddWithValue("Coefficient", ManageStock.txtCoef.Text);
+            oleDbCommand.Parameters.AddWithValue("SellingPrice", ManageStock.lblFinalPrice.Text);
+            oleDbCommand.Parameters.AddWithValue("VatID", 1);
             oleDbCommand.Parameters.AddWithValue("BarCode", ManageStock.TxtBoxBarCode.Text);
-            oleDbCommand.Parameters.AddWithValue("UnitPrice", ManageStock.TxtBoxPrice.Text);
             oleDbCommand.Parameters.AddWithValue("ProductPhoto", ConvertImageToByte(ManageStock.pictureBoxItem.Image));
             oleDbCommand.Parameters.AddWithValue("StockMin", ManageStock.textBoxStockMin.Text);
             oleDbCommand.Parameters.AddWithValue("StockMax", ManageStock.textBoxStockMax.Text);
@@ -29,7 +33,7 @@ namespace PosSystem
 
         private string GetCommandText()
         {
-            return "INSERT INTO Items (Description, SupplierID, BarCode, UnitPrice, ProductPhoto, StockMin, StockMax) VALUES(?,?,?,?,?,?,?)";
+            return "INSERT INTO Items (Description, SupplierID, CategoryID, PurchasePrice, Coefficient, SellingPrice, VatID, BarCode, ProductPhoto, StockMin, StockMax) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
         }
     }
 }

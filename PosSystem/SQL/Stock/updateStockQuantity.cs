@@ -17,7 +17,7 @@ namespace PosSystem
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("StockQuantity", stock.txtboxQuantity.Text);
-            oleDbCommand.Parameters.AddWithValue("ItemID", stock.dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
+            oleDbCommand.Parameters.AddWithValue("ItemID", stock.dataGridView1.SelectedRows[0].Cells[8].Value.ToString());
             return oleDbCommand;
         }
 

@@ -38,8 +38,6 @@
             this.labelStockMax = new System.Windows.Forms.Label();
             this.textBoxStockMin = new System.Windows.Forms.TextBox();
             this.lblStockMin = new System.Windows.Forms.Label();
-            this.TxtBoxPrice = new System.Windows.Forms.TextBox();
-            this.lblPrice = new System.Windows.Forms.Label();
             this.TxtBoxSupplierID = new System.Windows.Forms.TextBox();
             this.lblSupplierID = new System.Windows.Forms.Label();
             this.TxtBoxDescrption = new System.Windows.Forms.TextBox();
@@ -65,6 +63,14 @@
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
+            this.lblFinalPrice = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCoef = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtBoxPurchacePrice = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,11 +88,11 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 823);
+            this.dataGridView1.Location = new System.Drawing.Point(121, 868);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(837, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(837, 178);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
@@ -99,7 +105,7 @@
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Location = new System.Drawing.Point(34, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1038, 364);
+            this.panel1.Size = new System.Drawing.Size(1038, 464);
             this.panel1.TabIndex = 3;
             // 
             // groupBox2
@@ -137,12 +143,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblFinalPrice);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtCoef);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtCategory);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.TxtBoxPurchacePrice);
+            this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.textBoxStockMax);
             this.groupBox1.Controls.Add(this.labelStockMax);
             this.groupBox1.Controls.Add(this.textBoxStockMin);
             this.groupBox1.Controls.Add(this.lblStockMin);
-            this.groupBox1.Controls.Add(this.TxtBoxPrice);
-            this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.TxtBoxSupplierID);
             this.groupBox1.Controls.Add(this.lblSupplierID);
             this.groupBox1.Controls.Add(this.TxtBoxDescrption);
@@ -153,7 +165,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.groupBox1.Location = new System.Drawing.Point(16, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(654, 276);
+            this.groupBox1.Size = new System.Drawing.Size(654, 397);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Item";
@@ -162,7 +174,7 @@
             // 
             this.textBoxStockMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.textBoxStockMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBoxStockMax.Location = new System.Drawing.Point(478, 227);
+            this.textBoxStockMax.Location = new System.Drawing.Point(471, 346);
             this.textBoxStockMax.Name = "textBoxStockMax";
             this.textBoxStockMax.Size = new System.Drawing.Size(55, 20);
             this.textBoxStockMax.TabIndex = 14;
@@ -172,7 +184,7 @@
             this.labelStockMax.AutoSize = true;
             this.labelStockMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.labelStockMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.labelStockMax.Location = new System.Drawing.Point(160, 227);
+            this.labelStockMax.Location = new System.Drawing.Point(153, 346);
             this.labelStockMax.Name = "labelStockMax";
             this.labelStockMax.Size = new System.Drawing.Size(105, 25);
             this.labelStockMax.TabIndex = 13;
@@ -182,7 +194,7 @@
             // 
             this.textBoxStockMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.textBoxStockMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.textBoxStockMin.Location = new System.Drawing.Point(478, 188);
+            this.textBoxStockMin.Location = new System.Drawing.Point(471, 307);
             this.textBoxStockMin.Name = "textBoxStockMin";
             this.textBoxStockMin.Size = new System.Drawing.Size(55, 20);
             this.textBoxStockMin.TabIndex = 12;
@@ -192,31 +204,11 @@
             this.lblStockMin.AutoSize = true;
             this.lblStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblStockMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblStockMin.Location = new System.Drawing.Point(160, 188);
+            this.lblStockMin.Location = new System.Drawing.Point(153, 307);
             this.lblStockMin.Name = "lblStockMin";
             this.lblStockMin.Size = new System.Drawing.Size(99, 25);
             this.lblStockMin.TabIndex = 11;
             this.lblStockMin.Text = "Stock Min";
-            // 
-            // TxtBoxPrice
-            // 
-            this.TxtBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.TxtBoxPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.TxtBoxPrice.Location = new System.Drawing.Point(478, 151);
-            this.TxtBoxPrice.Name = "TxtBoxPrice";
-            this.TxtBoxPrice.Size = new System.Drawing.Size(55, 20);
-            this.TxtBoxPrice.TabIndex = 10;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblPrice.Location = new System.Drawing.Point(160, 151);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(95, 25);
-            this.lblPrice.TabIndex = 9;
-            this.lblPrice.Text = "Unit Price";
             // 
             // TxtBoxSupplierID
             // 
@@ -287,7 +279,7 @@
             this.BtnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnEnable.Location = new System.Drawing.Point(795, 317);
+            this.BtnEnable.Location = new System.Drawing.Point(795, 417);
             this.BtnEnable.Name = "BtnEnable";
             this.BtnEnable.Size = new System.Drawing.Size(100, 33);
             this.BtnEnable.TabIndex = 1;
@@ -301,7 +293,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnSave.Location = new System.Drawing.Point(926, 317);
+            this.BtnSave.Location = new System.Drawing.Point(926, 417);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 33);
             this.BtnSave.TabIndex = 1;
@@ -315,7 +307,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.btnCancel.Location = new System.Drawing.Point(36, 317);
+            this.btnCancel.Location = new System.Drawing.Point(36, 417);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 33);
             this.btnCancel.TabIndex = 1;
@@ -333,7 +325,7 @@
             this.panel2.Controls.Add(this.BtnSearchNameReset);
             this.panel2.Controls.Add(this.BtnSearchNameEnable);
             this.panel2.Controls.Add(this.BtnSearchNameSearch);
-            this.panel2.Location = new System.Drawing.Point(190, 400);
+            this.panel2.Location = new System.Drawing.Point(190, 488);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 352);
             this.panel2.TabIndex = 6;
@@ -528,6 +520,90 @@
             this.BtnSearchNameSearch.UseVisualStyleBackColor = true;
             this.BtnSearchNameSearch.Click += new System.EventHandler(this.BtnSearchNameSearch_Click);
             // 
+            // lblFinalPrice
+            // 
+            this.lblFinalPrice.AutoSize = true;
+            this.lblFinalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblFinalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.lblFinalPrice.Location = new System.Drawing.Point(482, 261);
+            this.lblFinalPrice.Name = "lblFinalPrice";
+            this.lblFinalPrice.Size = new System.Drawing.Size(23, 25);
+            this.lblFinalPrice.TabIndex = 28;
+            this.lblFinalPrice.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label4.Location = new System.Drawing.Point(146, 261);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 25);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Selling Price";
+            // 
+            // txtCoef
+            // 
+            this.txtCoef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.txtCoef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtCoef.Location = new System.Drawing.Point(464, 224);
+            this.txtCoef.Name = "txtCoef";
+            this.txtCoef.Size = new System.Drawing.Size(55, 20);
+            this.txtCoef.TabIndex = 26;
+            this.txtCoef.TextChanged += new System.EventHandler(this.TxtCoef_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label3.Location = new System.Drawing.Point(146, 224);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 25);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Coefficient Price";
+            // 
+            // txtCategory
+            // 
+            this.txtCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.txtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtCategory.Location = new System.Drawing.Point(398, 137);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(213, 20);
+            this.txtCategory.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label5.Location = new System.Drawing.Point(150, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 25);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Category ID";
+            // 
+            // TxtBoxPurchacePrice
+            // 
+            this.TxtBoxPurchacePrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.TxtBoxPurchacePrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.TxtBoxPurchacePrice.Location = new System.Drawing.Point(464, 180);
+            this.TxtBoxPurchacePrice.Name = "TxtBoxPurchacePrice";
+            this.TxtBoxPurchacePrice.Size = new System.Drawing.Size(55, 20);
+            this.TxtBoxPurchacePrice.TabIndex = 22;
+            this.TxtBoxPurchacePrice.TextChanged += new System.EventHandler(this.TxtBoxPurchacePrice_TextChanged);
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.lblPrice.Location = new System.Drawing.Point(146, 180);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(144, 25);
+            this.lblPrice.TabIndex = 21;
+            this.lblPrice.Text = "Purchase Price";
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,8 +644,6 @@
         public System.Windows.Forms.Label labelStockMax;
         public System.Windows.Forms.TextBox textBoxStockMin;
         public System.Windows.Forms.Label lblStockMin;
-        public System.Windows.Forms.TextBox TxtBoxPrice;
-        public System.Windows.Forms.Label lblPrice;
         public System.Windows.Forms.TextBox TxtBoxSupplierID;
         public System.Windows.Forms.Label lblSupplierID;
         public System.Windows.Forms.TextBox TxtBoxDescrption;
@@ -595,5 +669,13 @@
         public System.Windows.Forms.Button BtnSearchNameReset;
         public System.Windows.Forms.Button BtnSearchNameEnable;
         public System.Windows.Forms.Button BtnSearchNameSearch;
+        public System.Windows.Forms.Label lblFinalPrice;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtCoef;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtCategory;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox TxtBoxPurchacePrice;
+        public System.Windows.Forms.Label lblPrice;
     }
 }

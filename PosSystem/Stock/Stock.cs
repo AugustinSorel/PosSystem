@@ -118,5 +118,19 @@ namespace PosSystem
         {
             new OrderByItemPrice(dataGridView1);
         }
+
+        private void TxtBoxPurchacePrice_TextChanged(object sender, EventArgs e)
+        {
+            double purchasePrice;
+            double coef;
+            purchasePrice = TxtBoxPurchacePrice.Text == string.Empty ? 0 : double.Parse(TxtBoxPurchacePrice.Text);
+            coef = txtCoef.Text == string.Empty ? 0 : int.Parse(txtCoef.Text);
+            lblFinalPrice.Text = (purchasePrice * coef).ToString();
+        }
+
+        private void TxtCoef_TextChanged(object sender, EventArgs e)
+        {
+            TxtBoxPurchacePrice_TextChanged(sender, e);
+        }
     }
 }

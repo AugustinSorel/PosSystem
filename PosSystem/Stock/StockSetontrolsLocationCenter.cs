@@ -18,7 +18,7 @@ namespace PosSystem
 
         internal static Point SetPanel2(int Panel2Width, int Panel2Height)
         {
-            return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - Panel2Width / 2, Screen.PrimaryScreen.Bounds.Height / 2 - Panel2Height / 2 + 50);
+            return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - Panel2Width / 2, Screen.PrimaryScreen.Bounds.Height / 2 - Panel2Height / 2 + 100);
         }
     }
 }

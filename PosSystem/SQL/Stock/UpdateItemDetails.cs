@@ -18,7 +18,12 @@ namespace PosSystem
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("Descritpion", stock.TxtBoxDescrption.Text);
             oleDbCommand.Parameters.AddWithValue("SupplierID", stock.TxtBoxSupplierID.Text);
-            oleDbCommand.Parameters.AddWithValue("UnitPrice", stock.TxtBoxPrice.Text);
+
+            oleDbCommand.Parameters.AddWithValue("CategoryID", stock.txtCategory.Text);
+            oleDbCommand.Parameters.AddWithValue("PurchasePrice", stock.TxtBoxPurchacePrice.Text);
+            oleDbCommand.Parameters.AddWithValue("Coefficient", stock.txtCoef.Text);
+            oleDbCommand.Parameters.AddWithValue("SellingPrice", stock.lblFinalPrice.Text);
+
             oleDbCommand.Parameters.AddWithValue("ProductPhoto", ConvertImageToByte(stock.pictureBoxItem.Image));
             oleDbCommand.Parameters.AddWithValue("StockMin", stock.textBoxStockMin.Text);
             oleDbCommand.Parameters.AddWithValue("StockMax", stock.textBoxStockMax.Text);
@@ -28,7 +33,7 @@ namespace PosSystem
 
         private string GetCommandText()
         {
-            return "UPDATE Items SET Description=@Descritpion, SupplierID=@SupplierID, UnitPrice=@UnitPrice, ProductPhoto=@ProductPhoto, StockMin=@StockMin, StockMax=@StockMax WHERE ItemID=@ItemID";
+            return "UPDATE Items SET Description=@Descritpion, SupplierID=@SupplierID, CategoryID=@CategoryID, PurchasePrice=@PurchasePrice, Coefficient=@Coefficient, SellingPrice=@SellingPrice, ProductPhoto=@ProductPhoto, StockMin=@StockMin, StockMax=@StockMax WHERE ItemID=@ItemID";
         }
     }
 }
