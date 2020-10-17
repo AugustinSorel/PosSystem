@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\CreateDatabase\Tables\CreateCategoryTable.cs" />
     <Compile Include="CreateUserControls\CreateSale.cs" />
     <Compile Include="CreateUserControls\CreateSupplier.cs" />
     <Compile Include="CreateUserControls\CreateMangeSupplier.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\CreateVatTable.cs" />
     <Compile Include="SQL\ManageSupplier\DisplayWarning.cs" />
     <Compile Include="SQL\ManageSupplier\SupplierIdD.cs" />
     <Compile Include="SQL\ManageSupplier\DeleteSupplier.cs" />
