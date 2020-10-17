@@ -155,6 +155,11 @@
     <Compile Include="Supplier\Supplier.Designer.cs">
       <DependentUpon>Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQL\Supplier\SupplierLoadDataGridView.cs" />
+    <Compile Include="SQL\Supplier\SupplierDisplayDetails.cs" />
+    <Compile Include="Supplier\SupplierClearControls.cs" />
+    <Compile Include="Supplier\SupplierSetLocation.cs" />
+    <Compile Include="SQL\Supplier\UpdaateSupplier.cs" />
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />
     <Compile Include="SQL\UserDetails\SaveUserSecurity.cs" />
     <Compile Include="SQL\UserDetails\oleDbConnection.cs" />

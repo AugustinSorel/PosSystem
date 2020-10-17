@@ -51,7 +51,7 @@ namespace PosSystem
 
         private void ShowNumberOfWorkers()
         {
-            lblWorkerNumber.Text = Workers.GetNumberOfWorkers();
+            lblWorkerNumber.Text = dataGridView1.Rows.Count >= 1 ? Workers.GetNumberOfWorkers() : 1.ToString();
         }
 
         private DockStyle GetFillDock()
