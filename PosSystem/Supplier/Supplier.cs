@@ -27,9 +27,9 @@ namespace PosSystem
 
         private void LoadData()
         {
-            SelectFirstRow();
             new SupplierLoadDataGridView(dataGridView1);
             lblNumberOfItems.Text = dataGridView1.Rows.Count >= 1 ? GetSupplier.Number() : 1.ToString();
+            SelectFirstRow();
         }
 
         private void SelectFirstRow()
