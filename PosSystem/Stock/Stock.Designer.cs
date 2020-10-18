@@ -71,6 +71,9 @@
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -143,6 +146,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lblFinalPrice);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtCoef);
@@ -604,6 +610,39 @@
             this.BtnSearchNameSearch.UseVisualStyleBackColor = true;
             this.BtnSearchNameSearch.Click += new System.EventHandler(this.BtnSearchNameSearch_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label6.Location = new System.Drawing.Point(605, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 25);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "£";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label7.Location = new System.Drawing.Point(605, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 25);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "£";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label10.Location = new System.Drawing.Point(605, 174);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 25);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "£";
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -677,5 +716,8 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox TxtBoxPurchacePrice;
         public System.Windows.Forms.Label lblPrice;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label6;
     }
 }

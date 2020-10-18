@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -26,7 +27,15 @@ namespace PosSystem
 
         private void LoadData()
         {
+            SelectFirstRow();
             new SupplierLoadDataGridView(dataGridView1);
+            lblNumberOfItems.Text = dataGridView1.Rows.Count >= 1 ? GetSupplier.Number() : 1.ToString();
+        }
+
+        private void SelectFirstRow()
+        {
+            if (dataGridView1.Rows.Count > 1)
+                DataGridView1_CellClick(dataGridView1, new DataGridViewCellEventArgs(0, 0));
         }
 
         private static DockStyle GetFill()
@@ -56,6 +65,44 @@ namespace PosSystem
         {
             groupBox1.Enabled = false;
             new SupplierClearControls(this);
+        }
+
+        private void BtnSearchNameSearch_Click(object sender, System.EventArgs e)
+        {
+            new SupplierSearch(this);
+            groupBox3.Enabled = false;
+        }
+
+        private void BtnSearchNameEnable_Click(object sender, System.EventArgs e)
+        {
+            groupBox3.Enabled = true;
+            TxtBoxSearchName.Focus();
+        }
+
+        private void BtnSearchNameReset_Click(object sender, System.EventArgs e)
+        {
+            LoadData();
+            groupBox3.Enabled = false;
+        }
+
+        private void EnableGroupBoxGroupBy_Click(object sender, System.EventArgs e)
+        {
+            groupBox4.Enabled = true;
+        }
+
+        private void ResetGroupBoxGroupBy_Click(object sender, System.EventArgs e)
+        {
+            groupBox4.Enabled = false;
+        }
+
+        private void BtnGroupByPrice_Click(object sender, System.EventArgs e)
+        {
+            new SupplierOrderById(dataGridView1);
+        }
+
+        private void BtnGroupName_Click(object sender, System.EventArgs e)
+        {
+            new SupplierOrderByName(dataGridView1);
         }
     }
 }

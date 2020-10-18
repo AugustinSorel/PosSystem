@@ -152,6 +152,7 @@
     <Compile Include="Stock\StockSetontrolsLocationCenter.cs" />
     <Compile Include="SQL\Stock\UpdateItemDetails.cs" />
     <Compile Include="SQL\Stock\updateStockQuantity.cs" />
+    <Compile Include="Supplier\GetSupplier.cs" />
     <Compile Include="Supplier\Supplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +162,9 @@
     <Compile Include="SQL\Supplier\SupplierLoadDataGridView.cs" />
     <Compile Include="SQL\Supplier\SupplierDisplayDetails.cs" />
     <Compile Include="Supplier\SupplierClearControls.cs" />
+    <Compile Include="SQL\Supplier\SupplierOrderById.cs" />
+    <Compile Include="SQL\Supplier\SupplierOrderByName.cs" />
+    <Compile Include="SQL\Supplier\SupplierSearch.cs" />
     <Compile Include="Supplier\SupplierSetLocation.cs" />
     <Compile Include="SQL\Supplier\UpdaateSupplier.cs" />
     <Compile Include="UserDetails\SaveUserSecurityDetails.cs" />

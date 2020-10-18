@@ -46,9 +46,9 @@
             this.lblNumberOfItems = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.BtnGroupByPrice = new System.Windows.Forms.Button();
+            this.BtnGroupById = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.BtnGroupStockQuantity = new System.Windows.Forms.Button();
+            this.BtnGroupName = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtBoxSearchName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -270,9 +270,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.BtnGroupByPrice);
+            this.groupBox4.Controls.Add(this.BtnGroupById);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.BtnGroupStockQuantity);
+            this.groupBox4.Controls.Add(this.BtnGroupName);
             this.groupBox4.Enabled = false;
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.groupBox4.Location = new System.Drawing.Point(24, 139);
@@ -282,18 +282,19 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search by";
             // 
-            // BtnGroupByPrice
+            // BtnGroupById
             // 
-            this.BtnGroupByPrice.FlatAppearance.BorderSize = 0;
-            this.BtnGroupByPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGroupByPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.BtnGroupByPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnGroupByPrice.Location = new System.Drawing.Point(556, 19);
-            this.BtnGroupByPrice.Name = "BtnGroupByPrice";
-            this.BtnGroupByPrice.Size = new System.Drawing.Size(100, 38);
-            this.BtnGroupByPrice.TabIndex = 6;
-            this.BtnGroupByPrice.Text = "Price";
-            this.BtnGroupByPrice.UseVisualStyleBackColor = true;
+            this.BtnGroupById.FlatAppearance.BorderSize = 0;
+            this.BtnGroupById.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGroupById.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnGroupById.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnGroupById.Location = new System.Drawing.Point(556, 19);
+            this.BtnGroupById.Name = "BtnGroupById";
+            this.BtnGroupById.Size = new System.Drawing.Size(100, 38);
+            this.BtnGroupById.TabIndex = 6;
+            this.BtnGroupById.Text = "Id";
+            this.BtnGroupById.UseVisualStyleBackColor = true;
+            this.BtnGroupById.Click += new System.EventHandler(this.BtnGroupByPrice_Click);
             // 
             // label8
             // 
@@ -302,22 +303,23 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.label8.Location = new System.Drawing.Point(10, 26);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.Size = new System.Drawing.Size(99, 25);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Group by: ";
+            this.label8.Text = "Order by: ";
             // 
-            // BtnGroupStockQuantity
+            // BtnGroupName
             // 
-            this.BtnGroupStockQuantity.FlatAppearance.BorderSize = 0;
-            this.BtnGroupStockQuantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGroupStockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.BtnGroupStockQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnGroupStockQuantity.Location = new System.Drawing.Point(382, 19);
-            this.BtnGroupStockQuantity.Name = "BtnGroupStockQuantity";
-            this.BtnGroupStockQuantity.Size = new System.Drawing.Size(159, 38);
-            this.BtnGroupStockQuantity.TabIndex = 5;
-            this.BtnGroupStockQuantity.Text = "StockQuantity";
-            this.BtnGroupStockQuantity.UseVisualStyleBackColor = true;
+            this.BtnGroupName.FlatAppearance.BorderSize = 0;
+            this.BtnGroupName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnGroupName.Location = new System.Drawing.Point(382, 19);
+            this.BtnGroupName.Name = "BtnGroupName";
+            this.BtnGroupName.Size = new System.Drawing.Size(159, 38);
+            this.BtnGroupName.TabIndex = 5;
+            this.BtnGroupName.Text = "Supplier Name";
+            this.BtnGroupName.UseVisualStyleBackColor = true;
+            this.BtnGroupName.Click += new System.EventHandler(this.BtnGroupName_Click);
             // 
             // groupBox3
             // 
@@ -364,6 +366,7 @@
             this.EnableGroupBoxGroupBy.TabIndex = 5;
             this.EnableGroupBoxGroupBy.Text = "Enable";
             this.EnableGroupBoxGroupBy.UseVisualStyleBackColor = true;
+            this.EnableGroupBoxGroupBy.Click += new System.EventHandler(this.EnableGroupBoxGroupBy_Click);
             // 
             // ResetGroupBoxGroupBy
             // 
@@ -377,6 +380,7 @@
             this.ResetGroupBoxGroupBy.TabIndex = 5;
             this.ResetGroupBoxGroupBy.Text = "Reset";
             this.ResetGroupBoxGroupBy.UseVisualStyleBackColor = true;
+            this.ResetGroupBoxGroupBy.Click += new System.EventHandler(this.ResetGroupBoxGroupBy_Click);
             // 
             // BtnSearchNameReset
             // 
@@ -390,6 +394,7 @@
             this.BtnSearchNameReset.TabIndex = 5;
             this.BtnSearchNameReset.Text = "Reset";
             this.BtnSearchNameReset.UseVisualStyleBackColor = true;
+            this.BtnSearchNameReset.Click += new System.EventHandler(this.BtnSearchNameReset_Click);
             // 
             // BtnSearchNameEnable
             // 
@@ -403,6 +408,7 @@
             this.BtnSearchNameEnable.TabIndex = 5;
             this.BtnSearchNameEnable.Text = "Enable";
             this.BtnSearchNameEnable.UseVisualStyleBackColor = true;
+            this.BtnSearchNameEnable.Click += new System.EventHandler(this.BtnSearchNameEnable_Click);
             // 
             // BtnSearchNameSearch
             // 
@@ -416,6 +422,7 @@
             this.BtnSearchNameSearch.TabIndex = 5;
             this.BtnSearchNameSearch.Text = "Search";
             this.BtnSearchNameSearch.UseVisualStyleBackColor = true;
+            this.BtnSearchNameSearch.Click += new System.EventHandler(this.BtnSearchNameSearch_Click);
             // 
             // dataGridView1
             // 
@@ -427,7 +434,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(542, 223);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
@@ -477,9 +484,9 @@
         public System.Windows.Forms.Label lblNumberOfItems;
         public System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.Button BtnGroupByPrice;
+        public System.Windows.Forms.Button BtnGroupById;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.Button BtnGroupStockQuantity;
+        public System.Windows.Forms.Button BtnGroupName;
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.TextBox TxtBoxSearchName;
         public System.Windows.Forms.Label label1;
