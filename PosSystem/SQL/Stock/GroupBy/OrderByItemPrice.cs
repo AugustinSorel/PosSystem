@@ -21,7 +21,7 @@ namespace PosSystem
 
         private string GetCommandText()
         {
-            return "SELECT UnitPrice, BarCode From Items ORDER BY UnitPrice";
+            return "SELECT SellingPrice, BarCode From Items ORDER BY SellingPrice";
         }
     }
 }

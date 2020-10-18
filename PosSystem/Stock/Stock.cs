@@ -52,11 +52,19 @@ namespace PosSystem
 
         private void BtnSave_Click_1(object sender, System.EventArgs e)
         {
-            new UpdateItemDetails(this);
-            new UpdateStockQuantity(this);
-            LoadData();
-            groupBox1.Enabled = false;
-            groupBox2.Enabled = false;
+            if (SupplierIdExists())
+            {
+                new UpdateItemDetails(this);
+                new UpdateStockQuantity(this);
+                LoadData();
+                groupBox1.Enabled = false;
+                groupBox2.Enabled = false;
+            }
+        }
+
+        private bool SupplierIdExists()
+        {
+            return ManageItemSupplier.CheckIfSupplierIDIsUnique(TxtBoxSupplierID.Text);
         }
 
         private void BtnCancel_Click_1(object sender, System.EventArgs e)

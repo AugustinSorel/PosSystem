@@ -41,7 +41,7 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
-            if (BarCodeUnique())
+            if (BarCodeUnique() && SupplierExists() && CategoryExists())
             {
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
@@ -49,6 +49,16 @@ namespace PosSystem
                 new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
                 new ManageStockClearControls(this);
             }
+        }
+
+        private bool SupplierExists()
+        {
+            return ManageItemSupplier.CheckIfSupplierIDIsUnique(TxtBoxSupplierID.Text);
+        }
+
+        private bool CategoryExists()
+        {
+            return true;
         }
 
         private bool BarCodeUnique()
