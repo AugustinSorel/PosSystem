@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sale\SaleSetLocation.cs" />
     <Compile Include="SQL\Sale\SaleDisplayItem.cs" />
     <Compile Include="SQL\ManageItem\ManageItemSupplier.cs" />
     <Compile Include="SQL\CreateDatabase\Tables\CreateCategoryTable.cs" />

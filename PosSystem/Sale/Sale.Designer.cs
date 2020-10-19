@@ -37,6 +37,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblItemIDDisplay = new System.Windows.Forms.Label();
             this.lblItemID = new System.Windows.Forms.Label();
@@ -46,8 +47,14 @@
             this.TxtBoxDescrption = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.pictureBoxItem = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblDisplayFinalPrice = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDate
@@ -74,28 +81,37 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 145);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.textBox1.Location = new System.Drawing.Point(23, 63);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
+            this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 4;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyDown);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(297, 143);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.Location = new System.Drawing.Point(543, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(84, 37);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(234, 472);
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button2.Location = new System.Drawing.Point(543, 290);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(84, 37);
             this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
+            this.button2.Text = "Order";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
@@ -105,13 +121,14 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(19, 217);
+            this.listView1.Location = new System.Drawing.Point(23, 98);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(290, 180);
+            this.listView1.Size = new System.Drawing.Size(404, 227);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -131,6 +148,10 @@
             // 
             this.columnHeader3.Text = "ItemID";
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Price";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblItemIDDisplay);
@@ -141,14 +162,13 @@
             this.groupBox1.Controls.Add(this.TxtBoxDescrption);
             this.groupBox1.Controls.Add(this.lblDescription);
             this.groupBox1.Controls.Add(this.pictureBoxItem);
-            this.groupBox1.Enabled = false;
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.groupBox1.Location = new System.Drawing.Point(392, 110);
+            this.groupBox1.Location = new System.Drawing.Point(150, 68);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(654, 173);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Create Item";
+            this.groupBox1.Text = "Item Description";
             // 
             // lblItemIDDisplay
             // 
@@ -235,24 +255,71 @@
             this.pictureBoxItem.TabIndex = 0;
             this.pictureBoxItem.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox2.Location = new System.Drawing.Point(150, 292);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(654, 331);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sale";
+            // 
+            // lblDisplayFinalPrice
+            // 
+            this.lblDisplayFinalPrice.AutoSize = true;
+            this.lblDisplayFinalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblDisplayFinalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.lblDisplayFinalPrice.Location = new System.Drawing.Point(142, 16);
+            this.lblDisplayFinalPrice.Name = "lblDisplayFinalPrice";
+            this.lblDisplayFinalPrice.Size = new System.Drawing.Size(51, 31);
+            this.lblDisplayFinalPrice.TabIndex = 10;
+            this.lblDisplayFinalPrice.Text = "0 £";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label1.Location = new System.Drawing.Point(5, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 31);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Final Price";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblDisplayFinalPrice);
+            this.panel1.Location = new System.Drawing.Point(852, 580);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(194, 52);
+            this.panel1.TabIndex = 12;
+            // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LblWorkerID);
             this.Controls.Add(this.lblDate);
             this.Name = "Sale";
-            this.Size = new System.Drawing.Size(1049, 507);
+            this.Size = new System.Drawing.Size(1049, 635);
             this.Load += new System.EventHandler(this.Sale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +345,10 @@
         public System.Windows.Forms.Label lblItemIDDisplay;
         public System.Windows.Forms.Label lblItemID;
         public System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label lblDisplayFinalPrice;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
