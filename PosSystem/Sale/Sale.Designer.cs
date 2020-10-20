@@ -347,8 +347,8 @@
         public System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label lblDisplayFinalPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label lblDisplayFinalPrice;
     }
 }
