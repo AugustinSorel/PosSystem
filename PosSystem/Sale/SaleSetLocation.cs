@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -17,7 +18,12 @@ namespace PosSystem
 
         internal static Point FinaPrice()
         {
-            return new Point(Screen.PrimaryScreen.Bounds.Width - 500 , Screen.PrimaryScreen.Bounds.Width / 2 );
+            return new Point(Screen.PrimaryScreen.Bounds.Width - 700 , Screen.PrimaryScreen.Bounds.Width / 2 - 100);
+        }
+
+        internal static Point Panel2(int width)
+        {
+            return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - width / 2, 0);
         }
     }
 }

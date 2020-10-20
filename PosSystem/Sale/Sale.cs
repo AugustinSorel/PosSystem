@@ -24,6 +24,7 @@ namespace PosSystem
             groupBox1.Location = SaleSetLocation.GroupBox1(groupBox1.Width);
             groupBox2.Location = SaleSetLocation.GroupBox2(groupBox2.Width);
             panel1.Location = SaleSetLocation.FinaPrice();
+            panel2.Location = SaleSetLocation.Panel2(panel2.Width);
         }
 
         private void FocusCodeBarTextBox()
@@ -54,8 +55,16 @@ namespace PosSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            new SaleDisplayItem(this);
-            new AddItemToList(this);
+            if (BarCodeExists())
+            {
+                new SaleDisplayItem(this);
+                new AddItemToList(this);
+            }
+        }
+
+        private bool BarCodeExists()
+        {
+            return CheckIfItemBarCodeExists.Check(textBox1.Text);
         }
 
         private void Button2_Click(object sender, EventArgs e)

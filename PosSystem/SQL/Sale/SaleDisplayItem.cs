@@ -13,7 +13,7 @@ namespace PosSystem
             OleDbDataReader oleDbDataReader = GetCommand().ExecuteReader();
             while (oleDbDataReader.Read())
             {
-                sale.TxtBoxDescrption.Text = oleDbDataReader["Description"].ToString().Trim();
+                sale.lblDescriptionDisplay.Text = oleDbDataReader["Description"].ToString().Trim();
                 sale.lblFinalPrice.Text = oleDbDataReader["SellingPrice"].ToString().Trim();
                 sale.lblItemIDDisplay.Text = oleDbDataReader["ItemID"].ToString().Trim();
                 image = ((byte[])oleDbDataReader[9]);
