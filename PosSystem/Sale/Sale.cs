@@ -87,8 +87,8 @@ namespace PosSystem
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (textBox1.Text.Length == 13 )
-                MessageBox.Show("Test");
+            if (textBox1.Text.Length == 13)
+                button1.PerformClick();
         }
     }
 }
