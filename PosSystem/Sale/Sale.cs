@@ -55,11 +55,16 @@ namespace PosSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (BarCodeExists())
+            if (BarCodeExists() && ItemIsInStock())
             {
                 new SaleDisplayItem(this);
                 new AddItemToList(this);
             }
+        }
+
+        private bool ItemIsInStock()
+        {
+            return CheckItemInStock.CheckIfEnoughStock(textBox1.Text);
         }
 
         private bool BarCodeExists()
@@ -89,7 +94,7 @@ namespace PosSystem
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (textBox1.Text.Length == 13)
+            if (textBox1.Text.Length == 13 && e.KeyCode != Keys.Back)
                 button1.PerformClick();
         }
     }
