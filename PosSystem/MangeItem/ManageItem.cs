@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ZXing;
 
 namespace PosSystem
 {
@@ -41,7 +42,7 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
-            if (BarCodeUnique() && SupplierExists() && CategoryExists())
+            if (BarCodeUnique() && SupplierExists() && CategoryExists() && BarCodeLengthIs13())
             {
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
@@ -49,6 +50,11 @@ namespace PosSystem
                 new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
                 new ManageStockClearControls(this);
             }
+        }
+
+        private bool BarCodeLengthIs13()
+        {
+            return TxtBoxBarCode.Text.Length == 13;
         }
 
         private bool SupplierExists()
@@ -120,6 +126,46 @@ namespace PosSystem
         private void TxtBoxPurchacePrice_TextChanged(object sender, EventArgs e)
         {
             TxtCoef_TextChanged(sender, e);
+        }
+
+        private void BtnGenerateBarcode_Click(object sender, EventArgs e)
+        {
+            TxtBoxBarCode.Clear();
+            Random random = new Random();
+
+            for (int i = 0; i < 13; i++)
+            {
+                int digit = random.Next(0, 9);
+                TxtBoxBarCode.Text += digit.ToString();
+
+                if (!BarCodeUnique())
+                    btnGenerateBarcode.PerformClick();
+            }
+        }
+
+        private void TxtBoxBarCode_TextChanged(object sender, EventArgs e)
+        {
+            if (BarCodeGreaterThanZero())
+            {
+                BarcodeWriter barcodeWriter = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
+                pictureBoxBarCode.Image = barcodeWriter.Write(TxtBoxBarCode.Text);
+            }
+        }
+
+        private bool BarCodeGreaterThanZero()
+        {
+            return TxtBoxBarCode.Text.Length > 0;
+        }
+
+        private void TxtBoxBarCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (CodeBarLengthInRange() && e.KeyCode != Keys.Back)
+                e.SuppressKeyPress = true;
+        }
+
+        private bool CodeBarLengthInRange()
+        {
+            return TxtBoxBarCode.Text.Length >= 13;
         }
     }
 }

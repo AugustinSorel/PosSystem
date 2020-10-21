@@ -27,7 +27,7 @@ namespace PosSystem
                 + "Coefficient DOUBLE,"
                 + "SellingPrice DOUBLE,"
                 + "VatID NUMERIC,"
-                + "BarCode NUMERIC,"
+                + "BarCode CHAR(13),"
                 + "ProductPhoto OLEOBJECT,"
                 + "StockMin NUMERIC,"
                 + "StockMax NUMERIC,"

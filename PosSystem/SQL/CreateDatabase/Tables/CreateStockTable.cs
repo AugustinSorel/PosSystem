@@ -19,7 +19,7 @@ namespace PosSystem
         private string GetCommand()
         {
             return "CREATE TABLE Stock("
-                + "ItemID AUTOINCREMENT,"
+                + "ItemID CHAR(13),"
                 + "StockQuantity NUMERIC,"
                 + "PRIMARY KEY(ItemID)"
                 + ")";

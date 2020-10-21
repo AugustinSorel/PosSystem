@@ -77,6 +77,8 @@ namespace PosSystem
         {
             for (int i = 0; i < listView1.Items.Count; i++)
                 new RemoveStock(listView1.Items[i].SubItems[0].Text, listView1.Items[i].SubItems[1].Text);
+
+            lblDescriptionDisplay.Text = "0 £";
         }
 
         private void ListView1_Click(object sender, EventArgs e)
