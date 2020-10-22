@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sale\CreateReceipt.cs" />
     <Compile Include="SQL\Sale\CheckItemInStock.cs" />
     <Compile Include="SQL\Sale\RemoveStock.cs" />
     <Compile Include="Sale\AddItemToList.cs" />
