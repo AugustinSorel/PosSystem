@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MangeWorker\CheckWorkerAge.cs" />
     <Compile Include="Sale\CreateReceipt.cs" />
     <Compile Include="SQL\Sale\CheckItemInStock.cs" />
     <Compile Include="SQL\Sale\RemoveStock.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Stock\Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock\StockCheckInput.cs" />
     <Compile Include="Stock\StockClearControls.cs" />
     <Compile Include="Stock\StockSetontrolsLocationCenter.cs" />
     <Compile Include="SQL\Stock\UpdateItemDetails.cs" />
@@ -173,6 +175,7 @@
     </Compile>
     <Compile Include="SQL\Supplier\SupplierLoadDataGridView.cs" />
     <Compile Include="SQL\Supplier\SupplierDisplayDetails.cs" />
+    <Compile Include="Supplier\SupplierCheckInput.cs" />
     <Compile Include="Supplier\SupplierClearControls.cs" />
     <Compile Include="SQL\Supplier\SupplierOrderById.cs" />
     <Compile Include="SQL\Supplier\SupplierOrderByName.cs" />
@@ -235,6 +238,7 @@
     </Compile>
     <Compile Include="SQL\CreateDatabase\Tables\CreateWorkerSecurityTable.cs" />
     <Compile Include="SQL\UserDetails\UserDerailsCheckIfUserNameIsTaken.cs" />
+    <Compile Include="UserDetails\UserDetailsCheckInput.cs" />
     <Compile Include="UserDetails\UserDetailsSetLocation.cs" />
     <Compile Include="UserDetails\UserDetails.cs">
       <SubType>UserControl</SubType>

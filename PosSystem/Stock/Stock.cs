@@ -52,7 +52,7 @@ namespace PosSystem
 
         private void BtnSave_Click_1(object sender, System.EventArgs e)
         {
-            if (SupplierIdExists())
+            if (SupplierIdExists() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput())
             {
                 new UpdateItemDetails(this);
                 new UpdateStockQuantity(this);
@@ -60,6 +60,22 @@ namespace PosSystem
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
             }
+        }
+
+        private bool TextboxesFilled()
+        {
+            return StockCheckInput.CheckTextboxesFilled(groupBox1);
+        }
+
+        private bool CheckMinAndMax()
+        {
+            return StockCheckInput.CheckMinAndMax(textBoxStockMax.Text, textBoxStockMin.Text);
+        }
+
+        private bool CheckIntegerInput()
+        {
+            return StockCheckInput.CheckInteger(TxtBoxPurchacePrice.Text) && StockCheckInput.CheckInteger(txtCoef.Text)
+                && StockCheckInput.CheckInteger(textBoxStockMin.Text) && StockCheckInput.CheckInteger(textBoxStockMax.Text);
         }
 
         private bool SupplierIdExists()
@@ -129,11 +145,14 @@ namespace PosSystem
 
         private void TxtBoxPurchacePrice_TextChanged(object sender, EventArgs e)
         {
-            double purchasePrice;
-            double coef;
-            purchasePrice = TxtBoxPurchacePrice.Text == string.Empty ? 0 : double.Parse(TxtBoxPurchacePrice.Text);
-            coef = txtCoef.Text == string.Empty ? 0 : int.Parse(txtCoef.Text);
-            lblFinalPrice.Text = (purchasePrice * coef).ToString();
+            if (StockCheckInput.CheckInteger(TxtBoxPurchacePrice.Text))
+            {
+                double purchasePrice;
+                double coef;
+                purchasePrice = TxtBoxPurchacePrice.Text == string.Empty ? 0 : double.Parse(TxtBoxPurchacePrice.Text);
+                coef = txtCoef.Text == string.Empty ? 0 : int.Parse(txtCoef.Text);
+                lblFinalPrice.Text = (purchasePrice * coef).ToString();
+            }
         }
 
         private void TxtCoef_TextChanged(object sender, EventArgs e)

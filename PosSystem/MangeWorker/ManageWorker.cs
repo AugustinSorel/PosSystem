@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -32,12 +33,17 @@ namespace PosSystem
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
-            if (UserNameIsNotTaken() && DataFilled() && HandleCheckboxChecked())
+            if (UserNameIsNotTaken() && DataFilled() && HandleCheckboxChecked() && CheckAge())
             {
                 new AddWorkerDetails(this);
                 new AddWorkerSecurity(this);
                 BtnCancel.PerformClick();
             }
+        }
+
+        private bool CheckAge()
+        {
+            return CheckWorkerAge.CheckIfInteger(txtBoxAge.Text);
         }
 
         private bool HandleCheckboxChecked()
@@ -88,6 +94,7 @@ namespace PosSystem
         {
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
+            txtBoxName.Focus();
         }
 
         private void Button3_Click(object sender, System.EventArgs e)

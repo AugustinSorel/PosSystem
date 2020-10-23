@@ -42,7 +42,7 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
-            if (BarCodeUnique() && SupplierExists() && CategoryExists() && BarCodeLengthIs13())
+            if (BarCodeUnique() && SupplierExists() && CategoryExists() && BarCodeLengthIs13() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput())
             {
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
@@ -50,6 +50,22 @@ namespace PosSystem
                 new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
                 new ManageStockClearControls(this);
             }
+        }
+
+        private bool TextboxesFilled()
+        {
+            return StockCheckInput.CheckTextboxesFilled(groupBox1);
+        }
+
+        private bool CheckMinAndMax()
+        {
+            return StockCheckInput.CheckMinAndMax(textBoxStockMax.Text, textBoxStockMin.Text);
+        }
+
+        private bool CheckIntegerInput()
+        {
+            return StockCheckInput.CheckInteger(TxtBoxPurchacePrice.Text) && StockCheckInput.CheckInteger(txtCoef.Text)
+                && StockCheckInput.CheckInteger(textBoxStockMin.Text) && StockCheckInput.CheckInteger(textBoxStockMax.Text);
         }
 
         private bool BarCodeLengthIs13()
@@ -116,11 +132,14 @@ namespace PosSystem
 
         private void TxtCoef_TextChanged(object sender, EventArgs e)
         {
-            double purchasePrice;
-            double coef;
-            purchasePrice = TxtBoxPurchacePrice.Text == string.Empty ? 0 : double.Parse(TxtBoxPurchacePrice.Text);
-            coef = txtCoef.Text == string.Empty ? 0 : int.Parse(txtCoef.Text);
-            lblFinalPrice.Text = (purchasePrice * coef).ToString();
+            if (StockCheckInput.CheckInteger(TxtBoxPurchacePrice.Text))
+            {
+                double purchasePrice;
+                double coef;
+                purchasePrice = TxtBoxPurchacePrice.Text == string.Empty ? 0 : double.Parse(TxtBoxPurchacePrice.Text);
+                coef = txtCoef.Text == string.Empty ? 0 : int.Parse(txtCoef.Text);
+                lblFinalPrice.Text = (purchasePrice * coef).ToString();
+            }
         }
 
         private void TxtBoxPurchacePrice_TextChanged(object sender, EventArgs e)

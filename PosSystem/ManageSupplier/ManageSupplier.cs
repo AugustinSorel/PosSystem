@@ -42,9 +42,22 @@ namespace PosSystem
 
         private void BtnAdd_Click(object sender, System.EventArgs e)
         {
-            groupBox1.Enabled = false;
-            new SaveSupplier(this);
-            new ManageSupplierClearControls(this);
+            if (TextBoxesFilled() && PhoneNumberCorrect())
+            {
+                groupBox1.Enabled = false;
+                new SaveSupplier(this);
+                new ManageSupplierClearControls(this);
+            }
+        }
+
+        private bool TextBoxesFilled()
+        {
+            return SupplierCheckInput.TextBoxesFilled(groupBox1);
+        }
+
+        private bool PhoneNumberCorrect()
+        {
+            return SupplierCheckInput.PhoneNumber(txtBoxPhone.Text);
         }
 
         private void BtnDeleteDelete_Click(object sender, EventArgs e)

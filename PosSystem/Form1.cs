@@ -29,7 +29,7 @@ namespace PosSystem
 
         private void CreateLoginPage()
         {
-            panel1.Controls.Add(new LoginPage()); //TODO: Create panel dynamicly
+            panel1.Controls.Add(new LoginPage()); 
         }
     }
 }

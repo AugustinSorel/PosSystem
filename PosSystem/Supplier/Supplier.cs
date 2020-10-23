@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -50,9 +49,22 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
-            new UpdaateSupplier(this);
-            groupBox1.Enabled = false;
-            LoadData();
+            if (TextBoxesFilled() && PhoneNumberCorrect())
+            {
+                new UpdaateSupplier(this);
+                groupBox1.Enabled = false;
+                LoadData();
+            }
+        }
+
+        private bool TextBoxesFilled()
+        {
+            return SupplierCheckInput.TextBoxesFilled(groupBox1);
+        }
+
+        private bool PhoneNumberCorrect()
+        {
+            return SupplierCheckInput.PhoneNumber(textBoxPhone.Text);
         }
 
         private void BtnEnable_Click(object sender, System.EventArgs e)

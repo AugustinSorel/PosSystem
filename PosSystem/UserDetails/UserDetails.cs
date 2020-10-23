@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -46,9 +47,22 @@ namespace PosSystem
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            new SaveUserDetails(this);
-            MessageBox.Show("Account saved successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            groupBox1.Enabled = false;
+            if (TextboxesFilledDetails() && AgeCorrect())
+            {
+                new SaveUserDetails(this);
+                MessageBox.Show("Account saved successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                groupBox1.Enabled = false;
+            }
+        }
+
+        private bool TextboxesFilledDetails()
+        {
+            return UserDetailsCheckInput.TextboxesFilled(groupBox1);
+        }
+
+        private bool AgeCorrect()
+        {
+            return UserDetailsCheckInput.Age(TxtboxAge.Text);
         }
 
         private void Button2_Click(object sender, System.EventArgs e)
@@ -71,8 +85,13 @@ namespace PosSystem
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
-            if (UsernameNotTaken())
+            if (UsernameNotTaken() && TextboxesFilledSecurity())
                 new SaveUserSecurityDetails(this);
+        }
+
+        private bool TextboxesFilledSecurity()
+        {
+            return UserDetailsCheckInput.TextboxesFilled(groupBox2);
         }
 
         private bool UsernameNotTaken()
