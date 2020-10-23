@@ -19,11 +19,13 @@ namespace PosSystem
         private string GetCommand()
         {
             return "CREATE TABLE Sale("
-                + "ItemID AUTOINCREMENT,"
+                + "ReceiptID AUTOINCREMENT,"
+                + "itemID NUMERIC,"
+                + "TotalPrice NUMERIC,"
+                + "ReceiptDate DATE,"
                 + "SaleQuantity NUMERIC,"
                 + "WorkerID NUMERIC,"
-                + "CustomerID NUMERIC,"
-                + "PRIMARY KEY(ItemID)"
+                + "PRIMARY KEY(ReceiptID)"
                 + ")";
         }
     }

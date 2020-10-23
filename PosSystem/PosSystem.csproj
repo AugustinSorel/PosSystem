@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\SaleHistory\SaleHistory.cs" />
     <Compile Include="MangeWorker\CheckWorkerAge.cs" />
+    <Compile Include="SQL\Sale\AddSale.cs" />
     <Compile Include="Sale\CreateReceipt.cs" />
     <Compile Include="SQL\Sale\CheckItemInStock.cs" />
     <Compile Include="SQL\Sale\RemoveStock.cs" />

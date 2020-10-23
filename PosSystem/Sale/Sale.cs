@@ -76,7 +76,14 @@ namespace PosSystem
         {
             PrintReceipt();
             RemoveItemFromDB();
+            AddToSale();
             listView1.Items.Clear();
+        }
+
+        private void AddToSale()
+        {
+            for (int i = 0; i < listView1.Items.Count; i++)
+                new AddSale(listView1, i);
         }
 
         private void PrintReceipt()
