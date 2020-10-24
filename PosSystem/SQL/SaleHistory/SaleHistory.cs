@@ -6,11 +6,13 @@ namespace PosSystem
 {
     internal class SaleHistory: SqlQueries
     {
-        private static string day1 = DateTime.Now.AddDays(-7).ToString("dd-MM-yyyy");
-        private static float totalPrice = 0;
+        private static string Day;
+        private static float totalPrice;
 
-        internal static float GetDay1()
+        internal static float GetDay(string day)
         {
+            Day = day;
+            totalPrice = 0;
             OleDbDataReader dr = GetCommand().ExecuteReader(CommandBehavior.SingleResult);
             while (dr.Read())
                 totalPrice += float.Parse(dr["TotalPrice"].ToString());
@@ -22,7 +24,7 @@ namespace PosSystem
         {
             OleDbCommand cmd = oleDbConnection.CreateCommand();
             cmd.CommandText = GetCommandText();
-            cmd.Parameters.AddWithValue("@ReceiptDate", day1);
+            cmd.Parameters.AddWithValue("@ReceiptDate", Day);
 
             if (oleDbConnection.State == ConnectionState.Closed)
                 oleDbConnection.Open();
