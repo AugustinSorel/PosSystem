@@ -8,7 +8,7 @@ namespace PosSystem
     internal class CreateMonthGraph
     {
         private readonly Chart chart1;
-        private static readonly List<float> UnsortedMoneyPerDay = new List<float>();
+        private readonly List<float> UnsortedMoneyPerDay = new List<float>();
         private readonly List<float> SortedMoneyPerDay;
 
         private readonly int day1 = 0;
@@ -31,37 +31,40 @@ namespace PosSystem
             max = SortedMoneyPerDay[30];
             min = SortedMoneyPerDay[0];
 
-            var chart = chart1.ChartAreas[0];
-            chart.AxisX.LabelStyle.Format = "";
-            chart.AxisY.LabelStyle.Format = "";
-            chart.AxisX.LabelStyle.IsEndLabelVisible = true;
+            ChartArea chart = chart1.ChartAreas[0];
+            chart.AxisX.IntervalType = DateTimeIntervalType.Number;
 
-            chart.AxisX.Minimum = day1;
             chart.AxisX.Maximum = day30;
+            chart.AxisX.Minimum = day1;
 
+            chart.AxisY.IntervalType = DateTimeIntervalType.Number;
             chart.AxisY.Maximum = max;
             chart.AxisY.Minimum = min;
 
-            chart.AxisX.Interval = 1;
-            chart.AxisY.Interval = max / 10;
+            chart1.Series.Clear();
 
-            chart1.Series.Add("Week");
-            chart1.Series["Week"].ChartType = SeriesChartType.Spline;
-            chart1.Series["Week"].Color = Color.Red;
+            
+            chart.AxisY.Interval = max / 10;
+            chart.AxisX.Interval = 1;
+
+
+
+
+            chart1.Series.Add("Month");
+            chart1.Series["Month"].ChartType = SeriesChartType.Spline;
+            chart1.Series[0].Color = Color.Red;
 
             chart1.ChartAreas[0].BackColor = Color.Transparent;
             chart1.Legends[0].BackColor = Color.Transparent;
             chart1.BackColor = Color.Transparent;
 
-            chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.White;
-            chart1.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.White;
             chart1.ChartAreas[0].AxisY.LineColor = Color.White;
             chart1.ChartAreas[0].AxisX.LineColor = Color.White;
             chart1.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
             chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
 
-        internal static string GetFinalPrice()
+        internal string GetFinalPrice()
         {
             float finalPrice = 0;
             foreach (var item in UnsortedMoneyPerDay)
@@ -73,7 +76,7 @@ namespace PosSystem
         private void PlotPoint()
         {
             for (int i = 0; i < 31; i++)
-                chart1.Series["Week"].Points.AddXY(day1 + i, UnsortedMoneyPerDay[i]);
+                chart1.Series[0].Points.AddXY(day1 + i, UnsortedMoneyPerDay[i]);
         }
 
         private void GetUnsortedList()
