@@ -58,9 +58,13 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnEnable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtboxQuantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtDelete = new System.Windows.Forms.TextBox();
@@ -398,11 +402,11 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnSave.Location = new System.Drawing.Point(932, 457);
+            this.BtnSave.Location = new System.Drawing.Point(811, 457);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 33);
             this.BtnSave.TabIndex = 1;
-            this.BtnSave.Text = "Save";
+            this.BtnSave.Text = "Add";
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -412,7 +416,7 @@
             this.BtnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnEnable.Location = new System.Drawing.Point(811, 457);
+            this.BtnEnable.Location = new System.Drawing.Point(690, 457);
             this.BtnEnable.Name = "BtnEnable";
             this.BtnEnable.Size = new System.Drawing.Size(100, 33);
             this.BtnEnable.TabIndex = 1;
@@ -422,15 +426,41 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BtnEnable);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Location = new System.Drawing.Point(19, 11);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1038, 502);
             this.panel1.TabIndex = 2;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(697, 207);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(328, 243);
+            this.listView1.TabIndex = 16;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Barcode";
+            this.columnHeader1.Width = 147;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Quantity";
+            this.columnHeader2.Width = 175;
             // 
             // groupBox2
             // 
@@ -464,6 +494,20 @@
             this.label2.Size = new System.Drawing.Size(91, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Quantity:";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button1.Location = new System.Drawing.Point(926, 457);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
@@ -631,5 +675,9 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.PictureBox pictureBoxBarCode;
         private System.Windows.Forms.Button btnGenerateBarcode;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ListView listView1;
     }
 }

@@ -20,11 +20,11 @@ namespace PosSystem
         {
             return "CREATE TABLE OrderDetails("
                 + "OrderID AUTOINCREMENT,"
-                + "OrderNumber NUMERIC,"
                 + "OrderLine NUMERIC,"
-                + "ItemID NUMERIC,"
+                + "Barcode NUMERIC,"
                 + "OrderQuantity NUMERIC,"
-                + "PRIMARY KEY(OrderID)"
+                + "WorkerID NUMERIC,"
+                + "PRIMARY KEY(OrderID, Barcode)"
                 + ")";
         }
     }

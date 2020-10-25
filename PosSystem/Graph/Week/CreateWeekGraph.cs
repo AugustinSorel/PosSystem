@@ -24,8 +24,13 @@ namespace PosSystem
             GetUnsortedList();
             SortedMoneyPerDay = GraphBubbleSort.GetListSorted(UnsortedMoneyPerDay);
             SetUpChart();
-            PlotPoint();
-            label.Text = GetFinalPrice();
+            if (max > 0)
+            {
+                PlotPoint();
+                label.Text = GetFinalPrice();
+            }
+            else
+                label.Text = "NO DATA";
         }
 
         internal string GetFinalPrice()
