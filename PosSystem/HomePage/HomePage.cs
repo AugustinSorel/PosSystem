@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace PosSystem
 {
@@ -13,19 +14,33 @@ namespace PosSystem
         {
             Dock = DockStyle.Fill;
             this.BringToFront();
-            CreateWeekGraph();
-            DisplayMontGrap();
+            SetLocation();
+            SelectWeekGraph();
         }
 
-        private void DisplayMontGrap()
+        private void SetLocation()
         {
-            new CreateMonthGraph(chart2);
-            //label4.Text = CreateMonthGraph.GetFinalPrice();
+            groupBox1.Location = HomePageLocation.SetGraphLocation(groupBox1.Width);
         }
 
-        private void CreateWeekGraph()
+        private void SelectWeekGraph()
         {
-            //new CreateWeekGraph(chart1);
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    label1.Text = "Weekly view";
+                    new CreateWeekGraph(chart1, label2);
+                    break;
+                case 1:
+                    label1.Text = "Monthly view";
+                    new CreateMonthGraph(chart1, label2);
+                    break;
+            }
         }
     }
 }

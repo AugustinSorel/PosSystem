@@ -21,7 +21,6 @@ namespace PosSystem
                 }
             }
 
-
             return SortedMoneyPerDay;
         }
     }

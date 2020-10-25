@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PosSystem
@@ -8,7 +9,7 @@ namespace PosSystem
     internal class CreateWeekGraph
     {
         private readonly Chart chart1;
-        private static readonly List<float> UnsortedMoneyPerDay = new List<float>();
+        private readonly List<float> UnsortedMoneyPerDay = new List<float>();
         private readonly List<float> SortedMoneyPerDay;
 
         private readonly int day1 = int.Parse(DateTime.Now.AddDays(-7).ToString("dd"));
@@ -16,7 +17,7 @@ namespace PosSystem
         private float max;
         private float min;
 
-        public CreateWeekGraph(Chart chart1)
+        public CreateWeekGraph(Chart chart1, Label label)
         {
             this.chart1 = chart1;
 
@@ -24,10 +25,10 @@ namespace PosSystem
             SortedMoneyPerDay = GraphBubbleSort.GetListSorted(UnsortedMoneyPerDay);
             SetUpChart();
             PlotPoint();
-            
+            label.Text = GetFinalPrice();
         }
 
-        internal static string GetFinalPrice()
+        internal string GetFinalPrice()
         {
             float finalPrice = 0;
             foreach (var item in UnsortedMoneyPerDay)
@@ -38,6 +39,8 @@ namespace PosSystem
 
         private void SetUpChart()
         {
+            chart1.Series.Clear();
+
             max = SortedMoneyPerDay[7];
             min = SortedMoneyPerDay[0];
 
