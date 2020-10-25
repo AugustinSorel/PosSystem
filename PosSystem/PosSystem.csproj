@@ -56,7 +56,9 @@
     <Compile Include="Graph\GraphBubbleSort.cs" />
     <Compile Include="Graph\Week\CreateWeekGraph.cs" />
     <Compile Include="Graph\Month\CreateMonthGraph.cs" />
+    <Compile Include="SQL\Notification\DisplayItemSelected.cs" />
     <Compile Include="HomePage\HomePageLocation.cs" />
+    <Compile Include="SQL\Notification\ShowNotification.cs" />
     <Compile Include="SQL\SaleHistory\SaleHistory.cs" />
     <Compile Include="MangeWorker\CheckWorkerAge.cs" />
     <Compile Include="SQL\Sale\AddSale.cs" />

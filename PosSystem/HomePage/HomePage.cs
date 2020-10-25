@@ -16,11 +16,18 @@ namespace PosSystem
             this.BringToFront();
             SetLocation();
             SelectWeekGraph();
+            ShowNotification();
+        }
+
+        private void ShowNotification()
+        {
+            new ShowNotification(listView1, label3, textBox1.Text);
         }
 
         private void SetLocation()
         {
             groupBox1.Location = HomePageLocation.SetGraphLocation(groupBox1.Width);
+            groupBox2.Location = HomePageLocation.SetNotificationLocation(groupBox1.Width);
         }
 
         private void SelectWeekGraph()
@@ -41,6 +48,16 @@ namespace PosSystem
                     new CreateMonthGraph(chart1, label2);
                     break;
             }
+        }
+
+        private void ListView1_Click(object sender, EventArgs e)
+        {
+            new DisplayItemSelected(this);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            ShowNotification();
         }
     }
 }

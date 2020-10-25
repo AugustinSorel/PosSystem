@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -9,6 +8,11 @@ namespace PosSystem
         internal static Point SetGraphLocation(int width)
         {
             return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - width / 2, 0);
+        }
+
+        internal static Point SetNotificationLocation(int width)
+        {
+            return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - width / 2, Screen.PrimaryScreen.Bounds.Height - 500);
         }
     }
 }
