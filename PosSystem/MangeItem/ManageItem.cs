@@ -190,7 +190,7 @@ namespace PosSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i <= listView1.Items.Count; i++)
+            for (int i = 0; i < listView1.Items.Count; i++)
                 new AddToOrderDetails(this, i);
 
             listView1.Items.Clear();
