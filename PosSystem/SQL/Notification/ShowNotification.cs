@@ -84,7 +84,7 @@ namespace PosSystem
             return (oleDbDataReader["ItemID"].ToString());
         }
 
-        private static OleDbCommand GetCommand()
+        private OleDbCommand GetCommand()
         {
             OleDbCommand cmd = oleDbConnection.CreateCommand();
             cmd.CommandText = GetCommandText();

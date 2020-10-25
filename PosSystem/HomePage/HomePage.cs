@@ -21,7 +21,20 @@ namespace PosSystem
 
         private void ShowNotification()
         {
-            new ShowNotification(listView1, label3, textBox1.Text);
+            if (InputIsDigit() && InputNotEmpty())
+            {
+                new ShowNotification(listView1, label3, textBox1.Text);
+            }
+        }
+
+        private bool InputIsDigit()
+        {
+            return RangeStockInput.checkRange(textBox1.Text);
+        }
+
+        private bool InputNotEmpty()
+        {
+            return textBox1.Text != string.Empty;
         }
 
         private void SetLocation()
