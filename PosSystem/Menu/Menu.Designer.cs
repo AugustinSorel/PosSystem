@@ -32,33 +32,33 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.BtnStock = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.BtnStock = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +114,16 @@
             this.panel1.Size = new System.Drawing.Size(173, 98);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PosSystem.Properties.Resources.AccountDetails;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // button4
             // 
             this.button4.FlatAppearance.BorderSize = 0;
@@ -138,7 +148,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 78);
             this.button5.TabIndex = 0;
-            this.button5.Text = "Manage Item";
+            this.button5.Text = "Order";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
@@ -176,48 +186,6 @@
             this.panel2.Size = new System.Drawing.Size(173, 511);
             this.panel2.TabIndex = 4;
             // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button7.Location = new System.Drawing.Point(83, 89);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 78);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Supplier";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
-            // 
-            // BtnStock
-            // 
-            this.BtnStock.FlatAppearance.BorderSize = 0;
-            this.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.BtnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnStock.Location = new System.Drawing.Point(86, 163);
-            this.BtnStock.Name = "BtnStock";
-            this.BtnStock.Size = new System.Drawing.Size(94, 78);
-            this.BtnStock.TabIndex = 4;
-            this.BtnStock.Text = "Stock";
-            this.BtnStock.UseVisualStyleBackColor = true;
-            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button6.Location = new System.Drawing.Point(83, 196);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 36);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Sale";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
-            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -232,16 +200,6 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::PosSystem.Properties.Resources.Sale;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 186);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::PosSystem.Properties.Resources.ManageSupplier;
@@ -252,6 +210,20 @@
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button7.Location = new System.Drawing.Point(83, 89);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 78);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Supplier";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PosSystem.Properties.Resources.supplier;
@@ -261,6 +233,20 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
+            // 
+            // BtnStock
+            // 
+            this.BtnStock.FlatAppearance.BorderSize = 0;
+            this.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.BtnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.BtnStock.Location = new System.Drawing.Point(86, 163);
+            this.BtnStock.Name = "BtnStock";
+            this.BtnStock.Size = new System.Drawing.Size(94, 78);
+            this.BtnStock.TabIndex = 4;
+            this.BtnStock.Text = "Stock";
+            this.BtnStock.UseVisualStyleBackColor = true;
+            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
             // 
             // pictureBox6
             // 
@@ -302,15 +288,29 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox2
+            // button6
             // 
-            this.pictureBox2.Image = global::PosSystem.Properties.Resources.AccountDetails;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button6.Location = new System.Drawing.Point(83, 196);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 36);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Sale";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::PosSystem.Properties.Resources.Sale;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 186);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -338,15 +338,15 @@
             this.Size = new System.Drawing.Size(173, 895);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

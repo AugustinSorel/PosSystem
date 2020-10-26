@@ -53,11 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL\CreateDatabase\Tables\Category\CategoryDictionary.cs" />
     <Compile Include="Graph\GraphBubbleSort.cs" />
     <Compile Include="Graph\Week\CreateWeekGraph.cs" />
     <Compile Include="Graph\Month\CreateMonthGraph.cs" />
     <Compile Include="HomePage\RangeStockInput.cs" />
     <Compile Include="MangeItem\AddNewItemToList.cs" />
+    <Compile Include="SQL\CreateDatabase\Category\addCategory.cs" />
+    <Compile Include="SQL\CreateDatabase\Vat\AddVat.cs" />
     <Compile Include="SQL\ManageItem\ManageItemGetItem.cs" />
     <Compile Include="SQL\Order\AddToOrder.cs" />
     <Compile Include="SQL\Order\addToOrderDetails.cs" />
@@ -74,7 +77,7 @@
     <Compile Include="Sale\SaleSetLocation.cs" />
     <Compile Include="SQL\Sale\SaleDisplayItem.cs" />
     <Compile Include="SQL\ManageItem\ManageItemSupplier.cs" />
-    <Compile Include="SQL\CreateDatabase\Tables\CreateCategoryTable.cs" />
+    <Compile Include="SQL\CreateDatabase\Tables\Category\CreateCategoryTable.cs" />
     <Compile Include="CreateUserControls\CreateSale.cs" />
     <Compile Include="CreateUserControls\CreateSupplier.cs" />
     <Compile Include="CreateUserControls\CreateMangeSupplier.cs" />

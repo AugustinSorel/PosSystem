@@ -19,11 +19,10 @@ namespace PosSystem
         private string GetCommand()
         {
             return "CREATE TABLE Category("
-                + "FamilyID AUTOINCREMENT,"
-                + "FamilyDescription CHAR,"
-                + "CategoryID NUMERIC,"
-                + "CategoryDescription CHAR,"
-                + "PRIMARY KEY(FamilyID, CategoryID)"
+                + "CategoryID AUTOINCREMENT,"
+                + "CategoryName CHAR,"
+                + "Description CHAR,"
+                + "PRIMARY KEY(CategoryID)"
                 + ")";
         }
     }

@@ -25,6 +25,18 @@ namespace PosSystem
             CreateCustomer();
             CreateCategory();
             CreateVat();
+            AddVAT();
+            AddCategory();
+        }
+
+        private void AddCategory()
+        {
+            new AddCategory();
+        }
+
+        private void AddVAT()
+        {
+            new AddVat();
         }
 
         private void CreateVat()

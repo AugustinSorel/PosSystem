@@ -21,7 +21,7 @@ namespace PosSystem
             return "CREATE TABLE OrderDetails("
                 + "OrderID AUTOINCREMENT,"
                 + "OrderLine NUMERIC,"
-                + "Barcode NUMERIC,"
+                + "Barcode CHAR,"
                 + "OrderQuantity NUMERIC,"
                 + "WorkerID NUMERIC,"
                 + "PRIMARY KEY(OrderID, Barcode)"
