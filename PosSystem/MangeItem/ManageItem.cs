@@ -16,9 +16,25 @@ namespace PosSystem
         {
             Dock = GetFill();
             BringToFront();
+            SetLocation();
+            pictureBoxItem.Image = GetDefaultImage();
+            SetCombboBox();
+        }
+
+        private void SetCombboBox()
+        {
+            new SetSupplierId(comboBox1);
+        }
+
+        private static Bitmap GetDefaultImage()
+        {
+            return Properties.Resources.DefaultItem;
+        }
+
+        private void SetLocation()
+        {
             panel1.Location = ManageStockSetCenterLocation.Panel1Center(panel1.Width);
             panel2.Location = ManageStockSetCenterLocation.Panel2Center(panel2.Width);
-            pictureBoxItem.Image = Properties.Resources.DefaultItem;
         }
 
         private static DockStyle GetFill()
@@ -60,7 +76,7 @@ namespace PosSystem
 
         private bool CheckMinAndMax()
         {
-            return StockCheckInput.CheckMinAndMax(textBoxStockMax.Text, textBoxStockMin.Text);
+            return comboBox1.SelectedIndex.ToString() != "NO SUPPLIER";
         }
 
         private bool CheckIntegerInput()
@@ -76,7 +92,13 @@ namespace PosSystem
 
         private bool SupplierExists()
         {
-            return ManageItemSupplier.CheckIfSupplierIDIsUnique(TxtBoxSupplierID.Text);
+            if (comboBox1.SelectedItem.ToString() != "NO SUPPLIER") 
+            { 
+                MessageBox.Show("Supplier ID doesnt exists");
+                return false;
+            }
+            else
+                return true;
         }
 
         private bool CategoryExists()

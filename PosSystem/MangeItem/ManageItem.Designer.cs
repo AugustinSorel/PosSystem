@@ -48,7 +48,6 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.TxtBoxBarCode = new System.Windows.Forms.TextBox();
             this.lblBarCode = new System.Windows.Forms.Label();
-            this.TxtBoxSupplierID = new System.Windows.Forms.TextBox();
             this.lblSupplierID = new System.Windows.Forms.Label();
             this.TxtBoxDescrption = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@
             this.btnDeleteEnable = new System.Windows.Forms.Button();
             this.BtnDeleteDelete = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
@@ -84,6 +84,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btnGenerateBarcode);
             this.groupBox1.Controls.Add(this.pictureBoxBarCode);
             this.groupBox1.Controls.Add(this.label7);
@@ -103,7 +104,6 @@
             this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.TxtBoxBarCode);
             this.groupBox1.Controls.Add(this.lblBarCode);
-            this.groupBox1.Controls.Add(this.TxtBoxSupplierID);
             this.groupBox1.Controls.Add(this.lblSupplierID);
             this.groupBox1.Controls.Add(this.TxtBoxDescrption);
             this.groupBox1.Controls.Add(this.lblDescription);
@@ -318,15 +318,6 @@
             this.lblBarCode.Size = new System.Drawing.Size(95, 25);
             this.lblBarCode.TabIndex = 7;
             this.lblBarCode.Text = "Bar Code";
-            // 
-            // TxtBoxSupplierID
-            // 
-            this.TxtBoxSupplierID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.TxtBoxSupplierID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.TxtBoxSupplierID.Location = new System.Drawing.Point(398, 93);
-            this.TxtBoxSupplierID.Name = "TxtBoxSupplierID";
-            this.TxtBoxSupplierID.Size = new System.Drawing.Size(213, 20);
-            this.TxtBoxSupplierID.TabIndex = 6;
             // 
             // lblSupplierID
             // 
@@ -608,6 +599,15 @@
             this.label16.TabIndex = 1;
             this.label16.Text = "Delete Item";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.comboBox1.Location = new System.Drawing.Point(398, 92);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
             // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,7 +643,6 @@
         public System.Windows.Forms.Label lblPrice;
         public System.Windows.Forms.TextBox TxtBoxBarCode;
         public System.Windows.Forms.Label lblBarCode;
-        public System.Windows.Forms.TextBox TxtBoxSupplierID;
         public System.Windows.Forms.Label lblSupplierID;
         public System.Windows.Forms.TextBox TxtBoxDescrption;
         public System.Windows.Forms.Label lblDescription;
@@ -679,5 +678,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }
