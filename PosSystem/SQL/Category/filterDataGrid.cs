@@ -4,21 +4,27 @@ namespace PosSystem
 {
     internal class FilterDataGrid
     {
+        private readonly DataGridView dataGridView;
+        private readonly string textToKeep;
+
         public FilterDataGrid(DataGridView dataGridView, string textToKeep)
         {
-            //int loopNum = dataGridView.Rows.Count;
-            //for (int i = 0; i < dataGridView.RowCount; i++)
-            //    if (dataGridView.Rows[i].Cells[1].Value.ToString().Trim() != textToKeep)
-            //        dataGridView.Rows.RemoveAt(i);
+            this.dataGridView = dataGridView;
+            this.textToKeep = textToKeep;
 
+            DeleteRow();
+        }
+
+        private void DeleteRow()
+        {
             for (int i = dataGridView.RowCount - 1; i >= 0; i--)
-            {
-                var row = dataGridView.Rows[i];
-                if (!row.IsNewRow && dataGridView.Rows[i].Cells[1].Value.ToString().Trim() != textToKeep)
-                {
-                    dataGridView.Rows.Remove(row);
-                }
-            }
+                if (CheckifRowHasText(i))
+                    dataGridView.Rows.Remove(dataGridView.Rows[i]);
+        }
+
+        private bool CheckifRowHasText(int i)
+        {
+            return dataGridView.Rows[i].Cells[1].Value.ToString().Trim() != textToKeep;
         }
     }
 }

@@ -82,6 +82,7 @@ namespace PosSystem
         private void BtnSearchNameReset_Click(object sender, EventArgs e)
         {
             groupBox3.Enabled = false;
+            TxtBoxSearchName.Clear();
             LoadData();
         }
 
@@ -98,7 +99,27 @@ namespace PosSystem
 
         private void BtnGroupByName_Click(object sender, EventArgs e)
         {
-            new CategoryGroupByName();
+            new CategoryGroupByName(dataGridView1);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            groupBox2.Enabled = true;
+            textBoxInputName.Focus();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            groupBox2.Enabled = false;
+            textBoxInputDesc.Clear();
+            textBoxInputName.Clear();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            new InsertNewCategory(this);
+            button3.PerformClick();
+            LoadData();
         }
     }
 }

@@ -42,22 +42,30 @@
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxInputDesc = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxInputName = new System.Windows.Forms.TextBox();
             this.BtnWorkerDetailsEnable = new System.Windows.Forms.Button();
-            this.BtnWorkerSecurityUpdate = new System.Windows.Forms.Button();
             this.BtnWorkerDetailsUpdate = new System.Windows.Forms.Button();
             this.BtnWorkerDetailsCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxDescription = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtboxName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,15 +239,116 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.BtnWorkerDetailsEnable);
-            this.panel1.Controls.Add(this.BtnWorkerSecurityUpdate);
             this.panel1.Controls.Add(this.BtnWorkerDetailsUpdate);
             this.panel1.Controls.Add(this.BtnWorkerDetailsCancel);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 368);
+            this.panel1.Size = new System.Drawing.Size(1076, 368);
             this.panel1.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button1.Location = new System.Drawing.Point(862, 310);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 38);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Enable";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.btnSave.Location = new System.Drawing.Point(968, 306);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 38);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button3.Location = new System.Drawing.Point(541, 310);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 38);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Cancel";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBoxInputDesc);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.textBoxInputName);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox2.Location = new System.Drawing.Point(541, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(527, 259);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Category Details";
+            // 
+            // textBoxInputDesc
+            // 
+            this.textBoxInputDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.textBoxInputDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.textBoxInputDesc.Location = new System.Drawing.Point(235, 155);
+            this.textBoxInputDesc.Multiline = true;
+            this.textBoxInputDesc.Name = "textBoxInputDesc";
+            this.textBoxInputDesc.Size = new System.Drawing.Size(213, 70);
+            this.textBoxInputDesc.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label9.Location = new System.Drawing.Point(56, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 25);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Name:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label10.Location = new System.Drawing.Point(56, 173);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(115, 25);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Description:";
+            // 
+            // textBoxInputName
+            // 
+            this.textBoxInputName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.textBoxInputName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.textBoxInputName.Location = new System.Drawing.Point(235, 83);
+            this.textBoxInputName.Name = "textBoxInputName";
+            this.textBoxInputName.Size = new System.Drawing.Size(213, 20);
+            this.textBoxInputName.TabIndex = 2;
             // 
             // BtnWorkerDetailsEnable
             // 
@@ -247,7 +356,7 @@
             this.BtnWorkerDetailsEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnWorkerDetailsEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnWorkerDetailsEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnWorkerDetailsEnable.Location = new System.Drawing.Point(437, 310);
+            this.BtnWorkerDetailsEnable.Location = new System.Drawing.Point(329, 310);
             this.BtnWorkerDetailsEnable.Name = "BtnWorkerDetailsEnable";
             this.BtnWorkerDetailsEnable.Size = new System.Drawing.Size(100, 38);
             this.BtnWorkerDetailsEnable.TabIndex = 3;
@@ -255,26 +364,13 @@
             this.BtnWorkerDetailsEnable.UseVisualStyleBackColor = true;
             this.BtnWorkerDetailsEnable.Click += new System.EventHandler(this.BtnWorkerDetailsEnable_Click);
             // 
-            // BtnWorkerSecurityUpdate
-            // 
-            this.BtnWorkerSecurityUpdate.FlatAppearance.BorderSize = 0;
-            this.BtnWorkerSecurityUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnWorkerSecurityUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.BtnWorkerSecurityUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnWorkerSecurityUpdate.Location = new System.Drawing.Point(919, 356);
-            this.BtnWorkerSecurityUpdate.Name = "BtnWorkerSecurityUpdate";
-            this.BtnWorkerSecurityUpdate.Size = new System.Drawing.Size(100, 38);
-            this.BtnWorkerSecurityUpdate.TabIndex = 3;
-            this.BtnWorkerSecurityUpdate.Text = "Update";
-            this.BtnWorkerSecurityUpdate.UseVisualStyleBackColor = true;
-            // 
             // BtnWorkerDetailsUpdate
             // 
             this.BtnWorkerDetailsUpdate.FlatAppearance.BorderSize = 0;
             this.BtnWorkerDetailsUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnWorkerDetailsUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnWorkerDetailsUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnWorkerDetailsUpdate.Location = new System.Drawing.Point(555, 310);
+            this.BtnWorkerDetailsUpdate.Location = new System.Drawing.Point(435, 310);
             this.BtnWorkerDetailsUpdate.Name = "BtnWorkerDetailsUpdate";
             this.BtnWorkerDetailsUpdate.Size = new System.Drawing.Size(100, 38);
             this.BtnWorkerDetailsUpdate.TabIndex = 3;
@@ -288,7 +384,7 @@
             this.BtnWorkerDetailsCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnWorkerDetailsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnWorkerDetailsCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnWorkerDetailsCancel.Location = new System.Drawing.Point(128, 310);
+            this.BtnWorkerDetailsCancel.Location = new System.Drawing.Point(8, 310);
             this.BtnWorkerDetailsCancel.Name = "BtnWorkerDetailsCancel";
             this.BtnWorkerDetailsCancel.Size = new System.Drawing.Size(100, 38);
             this.BtnWorkerDetailsCancel.TabIndex = 3;
@@ -306,12 +402,34 @@
             this.groupBox1.Controls.Add(this.txtboxName);
             this.groupBox1.Enabled = false;
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.groupBox1.Location = new System.Drawing.Point(128, 28);
+            this.groupBox1.Location = new System.Drawing.Point(8, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(527, 259);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Details";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label5.Location = new System.Drawing.Point(313, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label2.Location = new System.Drawing.Point(56, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Id:";
             // 
             // TxtBoxDescription
             // 
@@ -354,28 +472,6 @@
             this.txtboxName.Size = new System.Drawing.Size(213, 20);
             this.txtboxName.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label2.Location = new System.Drawing.Point(56, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Id:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label5.Location = new System.Drawing.Point(313, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "0";
-            // 
             // Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,7 +481,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Category";
-            this.Size = new System.Drawing.Size(928, 724);
+            this.Size = new System.Drawing.Size(1079, 724);
             this.Load += new System.EventHandler(this.Category_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -394,6 +490,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -415,7 +513,6 @@
         public System.Windows.Forms.Button BtnSearchNameSearch;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button BtnWorkerDetailsEnable;
-        public System.Windows.Forms.Button BtnWorkerSecurityUpdate;
         public System.Windows.Forms.Button BtnWorkerDetailsUpdate;
         public System.Windows.Forms.Button BtnWorkerDetailsCancel;
         public System.Windows.Forms.GroupBox groupBox1;
@@ -426,5 +523,13 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.TextBox textBoxInputDesc;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox textBoxInputName;
     }
 }
