@@ -53,6 +53,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category\Category.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Category\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\Category\filterDataGrid.cs" />
+    <Compile Include="SQL\Category\CategoryGroupByName.cs" />
+    <Compile Include="SQL\Category\CategorySearchByName.cs" />
+    <Compile Include="SQL\Category\UpdateCategory.cs" />
+    <Compile Include="SQL\Category\DisplayCategory.cs" />
+    <Compile Include="SQL\Category\CategoryLoadData.cs" />
+    <Compile Include="CreateUserControls\CreateCategory.cs" />
     <Compile Include="SQL\CreateDatabase\Tables\Category\CategoryDictionary.cs" />
     <Compile Include="Graph\GraphBubbleSort.cs" />
     <Compile Include="Graph\Week\CreateWeekGraph.cs" />
@@ -263,6 +276,9 @@
     <Compile Include="UserDetails\UserDetails.Designer.cs">
       <DependentUpon>UserDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Category\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageSupplier\ManageSupplier.resx">
       <DependentUpon>ManageSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +386,8 @@
   <ItemGroup>
     <None Include="Resources\ManageSupplier.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
