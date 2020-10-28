@@ -38,7 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxStockMax = new System.Windows.Forms.TextBox();
             this.labelStockMax = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@
             this.BtnDeleteDelete = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
@@ -84,6 +84,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btnGenerateBarcode);
             this.groupBox1.Controls.Add(this.pictureBoxBarCode);
@@ -94,7 +95,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtCoef);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCategory);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxStockMax);
             this.groupBox1.Controls.Add(this.labelStockMax);
@@ -215,15 +215,6 @@
             this.label3.Size = new System.Drawing.Size(153, 25);
             this.label3.TabIndex = 17;
             this.label3.Text = "Coefficient Price";
-            // 
-            // txtCategory
-            // 
-            this.txtCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.txtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.txtCategory.Location = new System.Drawing.Point(398, 188);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(213, 20);
-            this.txtCategory.TabIndex = 16;
             // 
             // label1
             // 
@@ -608,6 +599,15 @@
             this.comboBox1.Size = new System.Drawing.Size(213, 21);
             this.comboBox1.TabIndex = 0;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.comboBox2.Location = new System.Drawing.Point(398, 187);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(213, 21);
+            this.comboBox2.TabIndex = 35;
+            // 
             // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,7 +665,6 @@
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox txtCoef;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox txtCategory;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblFinalPrice;
         public System.Windows.Forms.Label label4;
@@ -679,5 +678,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox comboBox2;
     }
 }

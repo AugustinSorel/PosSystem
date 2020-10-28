@@ -34,11 +34,13 @@
             this.txtboxQuantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblFinalPrice = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtBoxPurchacePrice = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -46,7 +48,6 @@
             this.labelStockMax = new System.Windows.Forms.Label();
             this.textBoxStockMin = new System.Windows.Forms.TextBox();
             this.lblStockMin = new System.Windows.Forms.Label();
-            this.TxtBoxSupplierID = new System.Windows.Forms.TextBox();
             this.lblSupplierID = new System.Windows.Forms.Label();
             this.TxtBoxDescrption = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -71,9 +72,8 @@
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,6 +146,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -153,7 +155,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtCoef);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCategory);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtBoxPurchacePrice);
             this.groupBox1.Controls.Add(this.lblPrice);
@@ -161,7 +162,6 @@
             this.groupBox1.Controls.Add(this.labelStockMax);
             this.groupBox1.Controls.Add(this.textBoxStockMin);
             this.groupBox1.Controls.Add(this.lblStockMin);
-            this.groupBox1.Controls.Add(this.TxtBoxSupplierID);
             this.groupBox1.Controls.Add(this.lblSupplierID);
             this.groupBox1.Controls.Add(this.TxtBoxDescrption);
             this.groupBox1.Controls.Add(this.lblDescription);
@@ -175,6 +175,39 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Item";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label10.Location = new System.Drawing.Point(605, 174);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 25);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "£";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label7.Location = new System.Drawing.Point(605, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 25);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "£";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label6.Location = new System.Drawing.Point(605, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 25);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "£";
             // 
             // lblFinalPrice
             // 
@@ -218,15 +251,6 @@
             this.label3.Size = new System.Drawing.Size(153, 25);
             this.label3.TabIndex = 25;
             this.label3.Text = "Coefficient Price";
-            // 
-            // txtCategory
-            // 
-            this.txtCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.txtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.txtCategory.Location = new System.Drawing.Point(398, 137);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(213, 20);
-            this.txtCategory.TabIndex = 24;
             // 
             // label5
             // 
@@ -299,15 +323,6 @@
             this.lblStockMin.Size = new System.Drawing.Size(99, 25);
             this.lblStockMin.TabIndex = 11;
             this.lblStockMin.Text = "Stock Min";
-            // 
-            // TxtBoxSupplierID
-            // 
-            this.TxtBoxSupplierID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.TxtBoxSupplierID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.TxtBoxSupplierID.Location = new System.Drawing.Point(398, 93);
-            this.TxtBoxSupplierID.Name = "TxtBoxSupplierID";
-            this.TxtBoxSupplierID.Size = new System.Drawing.Size(213, 20);
-            this.TxtBoxSupplierID.TabIndex = 6;
             // 
             // lblSupplierID
             // 
@@ -610,38 +625,23 @@
             this.BtnSearchNameSearch.UseVisualStyleBackColor = true;
             this.BtnSearchNameSearch.Click += new System.EventHandler(this.BtnSearchNameSearch_Click);
             // 
-            // label6
+            // comboBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label6.Location = new System.Drawing.Point(605, 261);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 25);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "£";
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.comboBox1.Location = new System.Drawing.Point(398, 92);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 21);
+            this.comboBox1.TabIndex = 32;
             // 
-            // label7
+            // comboBox2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label7.Location = new System.Drawing.Point(605, 224);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 25);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "£";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label10.Location = new System.Drawing.Point(605, 174);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 25);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "£";
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.comboBox2.Location = new System.Drawing.Point(398, 137);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(213, 21);
+            this.comboBox2.TabIndex = 36;
             // 
             // Stock
             // 
@@ -683,7 +683,6 @@
         public System.Windows.Forms.Label labelStockMax;
         public System.Windows.Forms.TextBox textBoxStockMin;
         public System.Windows.Forms.Label lblStockMin;
-        public System.Windows.Forms.TextBox TxtBoxSupplierID;
         public System.Windows.Forms.Label lblSupplierID;
         public System.Windows.Forms.TextBox TxtBoxDescrption;
         public System.Windows.Forms.Label lblDescription;
@@ -712,12 +711,13 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtCoef;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox txtCategory;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox TxtBoxPurchacePrice;
         public System.Windows.Forms.Label lblPrice;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox comboBox2;
     }
 }

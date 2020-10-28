@@ -24,6 +24,7 @@ namespace PosSystem
         private void SetCombboBox()
         {
             new SetSupplierId(comboBox1);
+            new SetCategoryId(comboBox2);
         }
 
         private static Bitmap GetDefaultImage()
@@ -76,7 +77,7 @@ namespace PosSystem
 
         private bool CheckMinAndMax()
         {
-            return comboBox1.SelectedIndex.ToString() != "NO SUPPLIER";
+            return StockCheckInput.CheckMinAndMax(textBoxStockMax.Text, textBoxStockMin.Text);
         }
 
         private bool CheckIntegerInput()
@@ -92,7 +93,7 @@ namespace PosSystem
 
         private bool SupplierExists()
         {
-            if (comboBox1.SelectedItem.ToString() != "NO SUPPLIER") 
+            if (!ManageItemSupplier.CheckIfSupplierIDIsUnique(comboBox1.SelectedItem.ToString()) || comboBox1.SelectedItem.ToString() == "NO SUPPLIER") 
             { 
                 MessageBox.Show("Supplier ID doesnt exists");
                 return false;
@@ -103,7 +104,13 @@ namespace PosSystem
 
         private bool CategoryExists()
         {
-            return true;
+            if (comboBox2.SelectedItem.ToString() == "NO CATEGORY")
+            {
+                MessageBox.Show("Category ID doesnt exists");
+                return false;
+            }
+            else
+                return true;
         }
 
         private bool BarCodeUnique()

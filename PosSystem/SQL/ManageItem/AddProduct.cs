@@ -19,7 +19,7 @@ namespace PosSystem
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("Description", ManageStock.TxtBoxDescrption.Text);
             oleDbCommand.Parameters.AddWithValue("SupplierID", ManageStock.comboBox1.SelectedItem.ToString());
-            oleDbCommand.Parameters.AddWithValue("CategoryID", ManageStock.txtCategory.Text);
+            oleDbCommand.Parameters.AddWithValue("CategoryID", ManageStock.comboBox2.SelectedItem.ToString());
             oleDbCommand.Parameters.AddWithValue("PurchasePrice", ManageStock.TxtBoxPurchacePrice.Text);
             oleDbCommand.Parameters.AddWithValue("Coefficient", ManageStock.txtCoef.Text);
             oleDbCommand.Parameters.AddWithValue("SellingPrice", ManageStock.lblFinalPrice.Text);

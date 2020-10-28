@@ -59,6 +59,7 @@
     <Compile Include="Category\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="MangeItem\SetCategoryId.cs" />
     <Compile Include="SQL\ManageItem\SetSupplierId.cs" />
     <Compile Include="SQL\Category\InsertNewCategory.cs" />
     <Compile Include="SQL\Category\filterDataGrid.cs" />

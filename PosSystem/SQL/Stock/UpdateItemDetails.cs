@@ -17,9 +17,9 @@ namespace PosSystem
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("Descritpion", stock.TxtBoxDescrption.Text);
-            oleDbCommand.Parameters.AddWithValue("SupplierID", stock.TxtBoxSupplierID.Text);
+            oleDbCommand.Parameters.AddWithValue("SupplierID", stock.comboBox1.SelectedItem.ToString());
 
-            oleDbCommand.Parameters.AddWithValue("CategoryID", stock.txtCategory.Text);
+            oleDbCommand.Parameters.AddWithValue("CategoryID", stock.comboBox2.SelectedItem.ToString());
             oleDbCommand.Parameters.AddWithValue("PurchasePrice", stock.TxtBoxPurchacePrice.Text);
             oleDbCommand.Parameters.AddWithValue("Coefficient", stock.txtCoef.Text);
             oleDbCommand.Parameters.AddWithValue("SellingPrice", stock.lblFinalPrice.Text);

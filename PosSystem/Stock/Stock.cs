@@ -17,6 +17,13 @@ namespace PosSystem
             BringToFront();
             SetControlsLocation();
             LoadData();
+            SetCombboBox();
+        }
+
+        private void SetCombboBox()
+        {
+            new SetSupplierId(comboBox1);
+            new SetCategoryId(comboBox2);
         }
 
         private void SetControlsLocation()
@@ -52,7 +59,7 @@ namespace PosSystem
 
         private void BtnSave_Click_1(object sender, System.EventArgs e)
         {
-            if (SupplierIdExists() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput())
+            if (SupplierIdExists() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput() && CheckCategory())
             {
                 new UpdateItemDetails(this);
                 new UpdateStockQuantity(this);
@@ -60,6 +67,17 @@ namespace PosSystem
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
             }
+        }
+
+        private bool CheckCategory()
+        {
+            if (comboBox2.SelectedItem.ToString() == "NO CATEGORY")
+            {
+                MessageBox.Show("Category ID doesnt exists");
+                return false;
+            }
+            else
+                return true;
         }
 
         private bool TextboxesFilled()
@@ -80,7 +98,13 @@ namespace PosSystem
 
         private bool SupplierIdExists()
         {
-            return ManageItemSupplier.CheckIfSupplierIDIsUnique(TxtBoxSupplierID.Text);
+            if (!ManageItemSupplier.CheckIfSupplierIDIsUnique(comboBox1.SelectedItem.ToString()) || comboBox1.SelectedItem.ToString() == "NO SUPPLIER")
+            {
+                MessageBox.Show("Supplier ID doesnt exists");
+                return false;
+            }
+            else
+                return true;
         }
 
         private void BtnCancel_Click_1(object sender, System.EventArgs e)
