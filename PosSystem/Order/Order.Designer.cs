@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblSupplierID = new System.Windows.Forms.Label();
             this.BtnEnable = new System.Windows.Forms.Button();
@@ -53,6 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.pictureBoxItem = new System.Windows.Forms.PictureBox();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,6 +77,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblSupplierID);
             this.groupBox1.Enabled = false;
@@ -85,21 +90,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Item";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.textBox1.Location = new System.Drawing.Point(485, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(83, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label2.Location = new System.Drawing.Point(107, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Quantity:";
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.comboBox1.Location = new System.Drawing.Point(398, 92);
+            this.comboBox1.Location = new System.Drawing.Point(355, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(213, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // lblSupplierID
             // 
             this.lblSupplierID.AutoSize = true;
             this.lblSupplierID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblSupplierID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblSupplierID.Location = new System.Drawing.Point(150, 93);
+            this.lblSupplierID.Location = new System.Drawing.Point(107, 65);
             this.lblSupplierID.Name = "lblSupplierID";
             this.lblSupplierID.Size = new System.Drawing.Size(79, 25);
             this.lblSupplierID.TabIndex = 5;
@@ -131,6 +158,7 @@
             this.BtnSave.TabIndex = 1;
             this.BtnSave.Text = "Add";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnCancel
             // 
@@ -138,36 +166,39 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.btnCancel.Location = new System.Drawing.Point(16, 245);
+            this.btnCancel.Location = new System.Drawing.Point(16, 235);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 33);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(25, 33);
+            this.listView1.Location = new System.Drawing.Point(51, 33);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(328, 243);
+            this.listView1.Size = new System.Drawing.Size(372, 243);
             this.listView1.TabIndex = 16;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Click += new System.EventHandler(this.ListView1_Click);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Item ID";
-            this.columnHeader1.Width = 147;
+            this.columnHeader1.Width = 92;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Quantity";
-            this.columnHeader2.Width = 175;
+            this.columnHeader2.Width = 119;
             // 
             // button1
             // 
@@ -175,7 +206,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button1.Location = new System.Drawing.Point(487, 273);
+            this.button1.Location = new System.Drawing.Point(461, 243);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 33);
             this.button1.TabIndex = 1;
@@ -206,9 +237,9 @@
             // 
             this.panel3.Controls.Add(this.LblWorkerID);
             this.panel3.Controls.Add(this.lblDate);
-            this.panel3.Location = new System.Drawing.Point(623, 342);
+            this.panel3.Location = new System.Drawing.Point(622, 337);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(550, 54);
+            this.panel3.Size = new System.Drawing.Size(506, 54);
             this.panel3.TabIndex = 18;
             // 
             // LblWorkerID
@@ -335,6 +366,11 @@
             this.pictureBoxItem.TabIndex = 0;
             this.pictureBoxItem.TabStop = false;
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Total Price";
+            this.columnHeader3.Width = 97;
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,5 +425,8 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label lblDescription;
         public System.Windows.Forms.PictureBox pictureBoxItem;
+        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

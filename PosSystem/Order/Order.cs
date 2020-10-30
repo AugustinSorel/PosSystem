@@ -16,6 +16,12 @@ namespace PosSystem
             BringToFront();
             SetLocation();
             DisplayLabels();
+            SetComboBoxes();
+        }
+
+        private void SetComboBoxes()
+        {
+            new SetOrderQuantityComboBox(comboBox1);
         }
 
         private void DisplayLabels()
@@ -52,6 +58,47 @@ namespace PosSystem
         {
             groupBox1.Enabled = true;
             comboBox1.Focus();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            textBox1.Text = 0.ToString();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            if (CombpBoxNotEmpty() && CombpBoxHasData())
+            {
+                DisplayItem();
+                new InserOrderToList(this);
+            }
+        }
+
+        private bool CombpBoxNotEmpty()
+        {
+            return comboBox1.Text != string.Empty;
+        }
+
+        private bool CombpBoxHasData()
+        {
+            return comboBox1.Text != "NO ITEM";  
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DisplayItem();
+        }
+
+        private void ListView1_Click(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = comboBox1.FindString(listView1.SelectedItems[0].SubItems[0].Text);
+            DisplayItem();
+        }
+
+        private void DisplayItem()
+        {
+            new OrderDisplayItem(this);
         }
     }
 }

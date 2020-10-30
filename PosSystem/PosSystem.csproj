@@ -59,7 +59,9 @@
     <Compile Include="Category\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="MangeItem\SetCategoryId.cs" />
+    <Compile Include="Order\InserOrderToList.cs" />
+    <Compile Include="SQL\Order\OrderDisplayItem.cs" />
+    <Compile Include="SQL\ManageItem\SetCategoryId.cs" />
     <Compile Include="CreateUserControls\CreateOrder.cs" />
     <Compile Include="Order\Order.cs">
       <SubType>UserControl</SubType>
@@ -68,6 +70,7 @@
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Order\OrderLocation.cs" />
+    <Compile Include="SQL\Order\SetOrderQuantityComboBox.cs" />
     <Compile Include="SQL\ManageItem\SetSupplierId.cs" />
     <Compile Include="SQL\Category\InsertNewCategory.cs" />
     <Compile Include="SQL\Category\filterDataGrid.cs" />

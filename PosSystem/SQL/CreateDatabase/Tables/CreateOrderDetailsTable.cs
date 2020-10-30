@@ -24,7 +24,8 @@ namespace PosSystem
                 + "OrderLine NUMERIC,"
                 + "ItemID NUMERIC,"
                 + "OrderQuantity NUMERIC,"
-                + "WorkerID NUMERIC"
+                + "WorkerID NUMERIC,"
+                + "Price DOUBLE"
                 + ")";
         }
     }
