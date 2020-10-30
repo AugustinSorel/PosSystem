@@ -19,12 +19,12 @@ namespace PosSystem
         private string GetCommand()
         {
             return "CREATE TABLE OrderDetails("
-                + "OrderID AUTOINCREMENT,"
+                + "OrderID NUMERIC,"
+                + "OrderDate DATE,"
                 + "OrderLine NUMERIC,"
-                + "Barcode CHAR,"
+                + "ItemID NUMERIC,"
                 + "OrderQuantity NUMERIC,"
-                + "WorkerID NUMERIC,"
-                + "PRIMARY KEY(OrderID, Barcode)"
+                + "WorkerID NUMERIC"
                 + ")";
         }
     }

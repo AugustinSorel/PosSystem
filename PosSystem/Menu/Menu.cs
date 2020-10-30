@@ -113,5 +113,10 @@ namespace PosSystem
         {
             new CreateCategory();
         }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            new CreateOrder();
+        }
     }
 }

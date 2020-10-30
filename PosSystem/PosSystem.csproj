@@ -60,6 +60,14 @@
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
     <Compile Include="MangeItem\SetCategoryId.cs" />
+    <Compile Include="CreateUserControls\CreateOrder.cs" />
+    <Compile Include="Order\Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Order\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\OrderLocation.cs" />
     <Compile Include="SQL\ManageItem\SetSupplierId.cs" />
     <Compile Include="SQL\Category\InsertNewCategory.cs" />
     <Compile Include="SQL\Category\filterDataGrid.cs" />
@@ -303,6 +311,9 @@
     <EmbeddedResource Include="Menu\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Order\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -391,6 +402,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

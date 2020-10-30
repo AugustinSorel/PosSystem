@@ -143,6 +143,16 @@ namespace PosSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Order {
+            get {
+                object obj = ResourceManager.GetObject("Order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sale {
             get {
                 object obj = ResourceManager.GetObject("Sale", resourceCulture);
