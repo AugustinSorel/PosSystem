@@ -15,7 +15,7 @@ namespace PosSystem
             {
                 order.lblDescriptionDisplay.Text = oleDbDataReader["Description"].ToString().Trim();
                 order.lblFinalPrice.Text = oleDbDataReader["SellingPrice"].ToString().Trim();
-                order.lblItemIDDisplay.Text = oleDbDataReader["ItemID"].ToString().Trim();
+                order.lblItemIDDisplay.Text = oleDbDataReader["BarCode"].ToString().Trim();
                 image = ((byte[])oleDbDataReader[9]);
             }
             order.pictureBoxItem.Image = ConvertByteToImage(image);
@@ -32,7 +32,7 @@ namespace PosSystem
 
         private static string GetCommandText()
         {
-            return "select * from Items where ItemID = @ItemID";
+            return "select * from Items where BarCode = @BarCode";
         }
     }
 }

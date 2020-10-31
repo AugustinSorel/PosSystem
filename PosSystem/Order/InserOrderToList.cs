@@ -46,7 +46,7 @@ namespace PosSystem
 
                 if (TextBoxIsCodeBar(itemID))
                 {
-                    quantity++;
+                    quantity += int.Parse(order.textBox1.Text);
                     order.listView1.Items[i].SubItems[1].Text = quantity.ToString();
                     order.listView1.Items[i].SubItems[2].Text = (quantity * price).ToString();
                     DisplayFinalPrice();
@@ -68,7 +68,7 @@ namespace PosSystem
 
         private void AddItems()
         {
-            listViewItem.SubItems.Add("1");
+            listViewItem.SubItems.Add(order.textBox1.Text);
             listViewItem.SubItems.Add(order.lblFinalPrice.Text);
             order.listView1.Items.Add(listViewItem);
         }

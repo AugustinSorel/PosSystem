@@ -72,7 +72,13 @@ namespace PosSystem
             {
                 DisplayItem();
                 new InserOrderToList(this);
+                ResetInputQuantity();
             }
+        }
+
+        private void ResetInputQuantity()
+        {
+            textBox1.Text = 1.ToString();
         }
 
         private bool CombpBoxNotEmpty()
@@ -82,7 +88,7 @@ namespace PosSystem
 
         private bool CombpBoxHasData()
         {
-            return comboBox1.Text != "NO ITEM";  
+            return comboBox1.Text != "NO ITEM" && comboBox1.Text != 0.ToString();  
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,6 +105,23 @@ namespace PosSystem
         private void DisplayItem()
         {
             new OrderDisplayItem(this);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            AddToStock();
+            ClearList();
+        }
+
+        private void ClearList()
+        {
+            listView1.Items.Clear();
+        }
+
+        private void AddToStock()
+        {
+            for (int i = 0; i < listView1.Items.Count; i++)
+                new AddOrderTostock(listView1.Items[i].SubItems[0].Text, listView1.Items[i].SubItems[1].Text);
         }
     }
 }

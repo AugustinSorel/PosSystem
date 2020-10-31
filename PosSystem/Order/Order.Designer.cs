@@ -40,6 +40,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.pictureBoxItem = new System.Windows.Forms.PictureBox();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,7 +98,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(83, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "0";
+            this.textBox1.Text = "1";
             // 
             // label2
             // 
@@ -128,9 +128,9 @@
             this.lblSupplierID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.lblSupplierID.Location = new System.Drawing.Point(107, 65);
             this.lblSupplierID.Name = "lblSupplierID";
-            this.lblSupplierID.Size = new System.Drawing.Size(79, 25);
+            this.lblSupplierID.Size = new System.Drawing.Size(91, 25);
             this.lblSupplierID.TabIndex = 5;
-            this.lblSupplierID.Text = "Item ID:";
+            this.lblSupplierID.Text = "Barcode:";
             // 
             // BtnEnable
             // 
@@ -192,13 +192,18 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Item ID";
+            this.columnHeader1.Text = "Barcode";
             this.columnHeader1.Width = 92;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Quantity";
             this.columnHeader2.Width = 119;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Total Price";
+            this.columnHeader3.Width = 97;
             // 
             // button1
             // 
@@ -212,6 +217,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Order";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
@@ -296,7 +302,7 @@
             this.lblItemIDDisplay.AutoSize = true;
             this.lblItemIDDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblItemIDDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblItemIDDisplay.Location = new System.Drawing.Point(490, 145);
+            this.lblItemIDDisplay.Location = new System.Drawing.Point(443, 144);
             this.lblItemIDDisplay.Name = "lblItemIDDisplay";
             this.lblItemIDDisplay.Size = new System.Drawing.Size(23, 25);
             this.lblItemIDDisplay.TabIndex = 31;
@@ -309,9 +315,9 @@
             this.lblItemID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.lblItemID.Location = new System.Drawing.Point(154, 145);
             this.lblItemID.Name = "lblItemID";
-            this.lblItemID.Size = new System.Drawing.Size(68, 25);
+            this.lblItemID.Size = new System.Drawing.Size(91, 25);
             this.lblItemID.TabIndex = 30;
-            this.lblItemID.Text = "ItemID";
+            this.lblItemID.Text = "Barcode:";
             // 
             // label6
             // 
@@ -342,9 +348,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.label4.Location = new System.Drawing.Point(154, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 25);
+            this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Selling Price";
+            this.label4.Text = "Selling Price:";
             // 
             // lblDescription
             // 
@@ -353,9 +359,9 @@
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.lblDescription.Location = new System.Drawing.Point(154, 35);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(156, 25);
+            this.lblDescription.Size = new System.Drawing.Size(162, 25);
             this.lblDescription.TabIndex = 3;
-            this.lblDescription.Text = "Item Description ";
+            this.lblDescription.Text = "Item Description :";
             // 
             // pictureBoxItem
             // 
@@ -365,11 +371,6 @@
             this.pictureBoxItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxItem.TabIndex = 0;
             this.pictureBoxItem.TabStop = false;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Total Price";
-            this.columnHeader3.Width = 97;
             // 
             // Order
             // 
@@ -382,7 +383,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Order";
-            this.Size = new System.Drawing.Size(1131, 756);
+            this.Size = new System.Drawing.Size(1131, 802);
             this.Load += new System.EventHandler(this.Order_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -425,8 +426,8 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label lblDescription;
         public System.Windows.Forms.PictureBox pictureBoxItem;
-        private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

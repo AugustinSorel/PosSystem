@@ -12,7 +12,7 @@ namespace PosSystem
             OleDbDataReader dr = GetCommand().ExecuteReader(CommandBehavior.SingleResult);
             while (dr.Read())
             {
-                supplierID = dr["ItemID"].ToString().Trim();
+                supplierID = dr["BarCode"].ToString().Trim();
                 comboBox1.Items.Add(supplierID);
             }
 
@@ -33,7 +33,7 @@ namespace PosSystem
 
         private string GetCommandText()
         {
-            return "Select ItemID from Items";
+            return "Select BarCode from Items";
         }
     }
 }
