@@ -46,15 +46,12 @@ namespace PosSystem
         private void BtnEnable_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = true;
-            groupBox2.Enabled = true;
             TxtBoxDescrption.Focus();
         }
 
         private void BtnCancel_Click(object sender, System.EventArgs e)
         {
             groupBox1.Enabled = false;
-            groupBox2.Enabled = false;
-            txtboxQuantity.Text = 0.ToString();
         }
 
         private void BtnSave_Click(object sender, System.EventArgs e)
@@ -62,10 +59,8 @@ namespace PosSystem
             if (BarCodeUnique() && SupplierExists() && CategoryExists() && BarCodeLengthIs13() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput())
             {
                 groupBox1.Enabled = false;
-                groupBox2.Enabled = false;
                 new AddProduct(this);
-                new SaveToStock(TxtBoxBarCode.Text, txtboxQuantity.Text);
-                new AddNewItemToList(this);
+                new SaveToStock(TxtBoxBarCode.Text);
                 new ManageStockClearControls(this);
             }
         }
@@ -215,14 +210,6 @@ namespace PosSystem
         private bool CodeBarLengthInRange()
         {
             return TxtBoxBarCode.Text.Length >= 13;
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < listView1.Items.Count; i++)
-                new AddToOrderDetails(this, i);
-
-            listView1.Items.Clear();
         }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnGenerateBarcode = new System.Windows.Forms.Button();
             this.pictureBoxBarCode = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,13 +58,6 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnEnable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtboxQuantity = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtDelete = new System.Windows.Forms.TextBox();
@@ -71,13 +66,10 @@
             this.btnDeleteEnable = new System.Windows.Forms.Button();
             this.BtnDeleteDelete = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +109,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Item";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.comboBox2.Location = new System.Drawing.Point(398, 187);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(213, 21);
+            this.comboBox2.TabIndex = 35;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.comboBox1.Location = new System.Drawing.Point(398, 92);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // btnGenerateBarcode
             // 
@@ -384,7 +394,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnSave.Location = new System.Drawing.Point(811, 457);
+            this.BtnSave.Location = new System.Drawing.Point(570, 457);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 33);
             this.BtnSave.TabIndex = 1;
@@ -398,7 +408,7 @@
             this.BtnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnEnable.Location = new System.Drawing.Point(690, 457);
+            this.BtnEnable.Location = new System.Drawing.Point(461, 457);
             this.BtnEnable.Name = "BtnEnable";
             this.BtnEnable.Size = new System.Drawing.Size(100, 33);
             this.BtnEnable.TabIndex = 1;
@@ -408,88 +418,14 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listView1);
-            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BtnEnable);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Location = new System.Drawing.Point(19, 11);
+            this.panel1.Location = new System.Drawing.Point(19, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1038, 502);
+            this.panel1.Size = new System.Drawing.Size(685, 502);
             this.panel1.TabIndex = 2;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(697, 207);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(328, 243);
-            this.listView1.TabIndex = 16;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Barcode";
-            this.columnHeader1.Width = 147;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Quantity";
-            this.columnHeader2.Width = 175;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtboxQuantity);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Enabled = false;
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.groupBox2.Location = new System.Drawing.Point(687, 22);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(339, 162);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add Sotck";
-            // 
-            // txtboxQuantity
-            // 
-            this.txtboxQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.txtboxQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.txtboxQuantity.Location = new System.Drawing.Point(218, 91);
-            this.txtboxQuantity.Name = "txtboxQuantity";
-            this.txtboxQuantity.Size = new System.Drawing.Size(77, 20);
-            this.txtboxQuantity.TabIndex = 4;
-            this.txtboxQuantity.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(15, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Quantity:";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.button1.Location = new System.Drawing.Point(926, 457);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Order";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
@@ -590,24 +526,6 @@
             this.label16.TabIndex = 1;
             this.label16.Text = "Delete Item";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.comboBox1.Location = new System.Drawing.Point(398, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(213, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.comboBox2.Location = new System.Drawing.Point(398, 187);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(213, 21);
-            this.comboBox2.TabIndex = 35;
-            // 
             // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,8 +541,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -652,9 +568,6 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pictureBoxItem;
         public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.TextBox txtboxQuantity;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.TextBox txtDelete;
@@ -673,10 +586,6 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.PictureBox pictureBoxBarCode;
         private System.Windows.Forms.Button btnGenerateBarcode;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.ComboBox comboBox2;
     }

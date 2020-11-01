@@ -19,8 +19,8 @@ namespace PosSystem
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("OrderLine", index);
-            oleDbCommand.Parameters.AddWithValue("Barcode", manageItem.listView1.Items[index].SubItems[0].Text);
-            oleDbCommand.Parameters.AddWithValue("OrderQuantity", manageItem.listView1.Items[index].SubItems[1].Text); // CHANGE TO STRING 
+            oleDbCommand.Parameters.AddWithValue("Barcode", manageItem.TxtBoxBarCode.Text);
+            oleDbCommand.Parameters.AddWithValue("OrderQuantity", 0);  
             oleDbCommand.Parameters.AddWithValue("WorkerID", UserDetailsVAR.Id);
             return oleDbCommand;
         }

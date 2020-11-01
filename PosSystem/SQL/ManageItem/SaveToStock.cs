@@ -5,12 +5,10 @@ namespace PosSystem
     internal class SaveToStock: SqlQueries
     {
         private readonly string codeBar;
-        private readonly string Quantity;
 
-        public SaveToStock(string text, string Quantity)
+        public SaveToStock(string text)
         {
             codeBar = text;
-            this.Quantity = Quantity;
             ExecuteCommand(CreateCommand());
         }
 
@@ -18,7 +16,7 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.Parameters.AddWithValue("ItemID", codeBar);
-            oleDbCommand.Parameters.AddWithValue("StockQuantity", Quantity);
+            oleDbCommand.Parameters.AddWithValue("StockQuantity", 0);
             oleDbCommand.CommandText = GetCommandText();
             return oleDbCommand;
         }
