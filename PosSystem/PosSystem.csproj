@@ -59,6 +59,9 @@
     <Compile Include="Category\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order\RecordForOrder.cs" />
+    <Compile Include="SQL\Order\GetOrderID.cs" />
+    <Compile Include="SQL\Order\InsertOrderDetails.cs" />
     <Compile Include="SQL\Order\AddOrderTostock.cs" />
     <Compile Include="Order\InserOrderToList.cs" />
     <Compile Include="SQL\Order\OrderDisplayItem.cs" />

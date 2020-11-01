@@ -22,7 +22,7 @@ namespace PosSystem
                 + "OrderID NUMERIC,"
                 + "OrderDate DATE,"
                 + "OrderLine NUMERIC,"
-                + "ItemID NUMERIC,"
+                + "ItemID CHAR,"
                 + "OrderQuantity NUMERIC,"
                 + "WorkerID NUMERIC,"
                 + "Price DOUBLE"

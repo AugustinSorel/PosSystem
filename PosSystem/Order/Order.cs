@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -110,7 +111,27 @@ namespace PosSystem
         private void Button1_Click(object sender, EventArgs e)
         {
             AddToStock();
+            InsertOrderDetails();
             ClearList();
+            ClearPrice();
+        }
+
+        private void InsertOrderDetails()
+        {
+            int orderID = GetOrderID.GetHigherOrder();
+            List<RecordForOrder> recordForOrder = new List<RecordForOrder>();
+
+            recordForOrder.Add();
+
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                new InsertOrderDetails(listView1.Items[i].SubItems[0].Text, listView1.Items[i].SubItems[1].Text, listView1.Items[i].SubItems[2].Text, i, orderID);
+            }
+        }
+
+        private void ClearPrice()
+        {
+            label1.Text = "Final Price:  0 £";
         }
 
         private void ClearList()
