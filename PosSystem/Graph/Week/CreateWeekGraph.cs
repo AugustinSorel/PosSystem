@@ -20,6 +20,7 @@ namespace PosSystem
         public CreateWeekGraph(Chart chart1, Label label)
         {
             this.chart1 = chart1;
+            day1 = GetDay1();
 
             GetUnsortedList();
             SortedMoneyPerDay = GraphBubbleSort.GetListSorted(UnsortedMoneyPerDay);
@@ -46,8 +47,8 @@ namespace PosSystem
         {
             chart1.Series.Clear();
 
-            max = SortedMoneyPerDay[7];
-            min = SortedMoneyPerDay[0];
+            max = SortedMoneyPerDay[day7];
+            min = SortedMoneyPerDay[day1];
 
             var chart = chart1.ChartAreas[0];
             chart.AxisX.LabelStyle.Format = "";
@@ -79,15 +80,20 @@ namespace PosSystem
             chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
 
+        private int GetDay1()
+        {
+            return day7 <= 7 ? 0 : day1;
+        }
+
         private void PlotPoint()
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = day1; i <= day7; i++)
                 chart1.Series["Week"].Points.AddXY(day1 + i, UnsortedMoneyPerDay[i]);
         }
 
         private void GetUnsortedList()
         {
-            for (int i = -7; i <= 0; i++)
+            for (int i = -day7; i <= day1; i++)
                 UnsortedMoneyPerDay.Add(SaleHistory.GetDay(DateTime.Now.AddDays(i).ToString("dd-MM-yyyy")));
         }
     }
