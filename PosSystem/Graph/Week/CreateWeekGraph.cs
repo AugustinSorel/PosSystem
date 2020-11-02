@@ -93,7 +93,7 @@ namespace PosSystem
 
         private void GetUnsortedList()
         {
-            for (int i = -day7; i <= day1; i++)
+            for (int i = day1; i <= day7; i++)
                 UnsortedMoneyPerDay.Add(SaleHistory.GetDay(DateTime.Now.AddDays(i).ToString("dd-MM-yyyy")));
         }
     }
