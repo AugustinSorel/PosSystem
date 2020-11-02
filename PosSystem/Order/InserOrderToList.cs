@@ -68,8 +68,11 @@ namespace PosSystem
 
         private void AddItems()
         {
+            int quantity = int.Parse(order.textBox1.Text);
+            double price = int.Parse(order.lblFinalPrice.Text);
+
             listViewItem.SubItems.Add(order.textBox1.Text);
-            listViewItem.SubItems.Add(order.lblFinalPrice.Text);
+            listViewItem.SubItems.Add((quantity * price).ToString());
             order.listView1.Items.Add(listViewItem);
         }
 

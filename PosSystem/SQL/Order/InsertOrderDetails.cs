@@ -5,21 +5,12 @@ namespace PosSystem
 {
     internal class InsertOrderDetails: SqlQueries
     {
-        private readonly string itemID;
-        private readonly string quantity;
-        private readonly string price;
-        private readonly int index;
-        private readonly int orderID;
+        private readonly RecordForOrder recordForOrder;
 
-        public InsertOrderDetails(string itemID, string quantity, string price, int index, int orderID)
+        public InsertOrderDetails(RecordForOrder recordForOrder)
         {
-            this.itemID = itemID;
-            this.quantity = quantity;
-            this.price = price;
-            this.index = index;
-            this.orderID = orderID;
-
-            System.Windows.Forms.MessageBox.Show(orderID.ToString());
+            this.recordForOrder = recordForOrder;
+            System.Windows.Forms.MessageBox.Show(recordForOrder.OrderID.ToString());
             ExecuteCommand(CreateCommand());
         }
 
@@ -27,13 +18,13 @@ namespace PosSystem
         {
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
-            oleDbCommand.Parameters.AddWithValue("OrderID", orderID);
+            oleDbCommand.Parameters.AddWithValue("OrderID", recordForOrder.OrderID);
             oleDbCommand.Parameters.AddWithValue("OrderDate", DateTime.Now.ToString("yyyy-MM-dd"));
-            oleDbCommand.Parameters.AddWithValue("OrderLine", index);
-            oleDbCommand.Parameters.AddWithValue("ItemID", itemID);
-            oleDbCommand.Parameters.AddWithValue("OrderQuantity", quantity);
+            oleDbCommand.Parameters.AddWithValue("OrderLine", recordForOrder.Index);
+            oleDbCommand.Parameters.AddWithValue("ItemID", recordForOrder.ItemID);
+            oleDbCommand.Parameters.AddWithValue("OrderQuantity", recordForOrder.Quantity);
             oleDbCommand.Parameters.AddWithValue("WorkerID", UserDetailsVAR.Id);
-            oleDbCommand.Parameters.AddWithValue("Price", price);
+            oleDbCommand.Parameters.AddWithValue("Price", recordForOrder.Price);
             return oleDbCommand;
         }
 

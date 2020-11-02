@@ -6,6 +6,6 @@
         public string Quantity { get; set; }
         public string Price { get; set; }
         public int Index { get; set; }
-        public string OrderID { get; set; }
+        public int OrderID { get; set; }
     }
 }

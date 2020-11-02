@@ -118,15 +118,24 @@ namespace PosSystem
 
         private void InsertOrderDetails()
         {
-            int orderID = GetOrderID.GetHigherOrder();
-            List<RecordForOrder> recordForOrder = new List<RecordForOrder>();
-
-            recordForOrder.Add();
-
             for (int i = 0; i < listView1.Items.Count; i++)
+                new InsertOrderDetails(GetRecord(i));
+        }
+
+        private RecordForOrder GetRecord(int i)
+        {
+            int orderID = GetOrderID.GetHigherOrder();
+
+            RecordForOrder recordForOrder = new RecordForOrder()
             {
-                new InsertOrderDetails(listView1.Items[i].SubItems[0].Text, listView1.Items[i].SubItems[1].Text, listView1.Items[i].SubItems[2].Text, i, orderID);
-            }
+                ItemID = listView1.Items[i].SubItems[0].Text,
+                Quantity = listView1.Items[i].SubItems[1].Text,
+                Price = listView1.Items[i].SubItems[2].Text,
+                Index = i,
+                OrderID = orderID
+            };
+
+            return recordForOrder;
         }
 
         private void ClearPrice()
