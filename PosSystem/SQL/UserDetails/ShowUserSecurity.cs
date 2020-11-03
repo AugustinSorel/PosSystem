@@ -10,7 +10,7 @@ namespace PosSystem
             while (oleDbDataReader.Read())
             {
                 userControl.TxtboxUsername.Text = oleDbDataReader["UserName"].ToString().Trim();
-                userControl.TxtboxPassword.Text = oleDbDataReader["Password"].ToString().Trim();
+                userControl.TxtboxPassword.Text = PasswordSecurity.DecryptMD5(oleDbDataReader["Password"].ToString().Trim());
                 userControl.checkBox1.Checked = bool.Parse(oleDbDataReader["Admin"].ToString());
             }
 

@@ -11,7 +11,7 @@ namespace PosSystem
         public SetUserDetailsVar(string username, string password)
         {
             _Username = username;
-            _Password = password;
+            _Password = PasswordSecurity.EncryptMD5(password);
 
             OleDbDataReader dataReader = CreateCommand().ExecuteReader();
             GetIdAndAdmin(dataReader);

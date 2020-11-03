@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.OleDb;
+﻿using System.Data.OleDb;
 
 namespace PosSystem
 {
@@ -17,7 +16,7 @@ namespace PosSystem
             OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
             oleDbCommand.CommandText = GetCommandText();
             oleDbCommand.Parameters.AddWithValue("Username", ADMIN);
-            oleDbCommand.Parameters.AddWithValue("[Password]", ADMIN);
+            oleDbCommand.Parameters.AddWithValue("[Password]", PasswordSecurity.EncryptMD5(ADMIN));
             oleDbCommand.Parameters.AddWithValue("Admin", "-1");
             return oleDbCommand;
         }
