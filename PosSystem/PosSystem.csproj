@@ -60,6 +60,7 @@
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
     <Compile Include="Order\RecordForOrder.cs" />
+    <Compile Include="PasswordSecurity\PasswordSecurity.cs" />
     <Compile Include="SQL\Order\GetOrderID.cs" />
     <Compile Include="SQL\Order\InsertOrderDetails.cs" />
     <Compile Include="SQL\Order\AddOrderTostock.cs" />

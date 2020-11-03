@@ -12,7 +12,7 @@ namespace PosSystem
         public static bool LoginDetailsIsCorrect(string username, string password) 
         {
             _Username = username;
-            _Password = password;
+            _Password = password; // TODO;
             return CreateDataReader().HasRows;
         }
 
