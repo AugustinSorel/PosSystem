@@ -13,7 +13,7 @@ namespace PosSystem
         {
             _Username = username;
             //_Password = password;
-            _Password = PasswordSecurity.EncryptMD5(password); // TODO;
+            _Password = PasswordSecurity.EncryptMD5(password); // TODO
             return CreateDataReader().HasRows;
         }
 
