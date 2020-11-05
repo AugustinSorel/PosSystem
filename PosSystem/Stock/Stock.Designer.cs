@@ -30,6 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.labelBarcode = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtboxQuantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,10 +76,11 @@
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.labelBarcode = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
@@ -85,7 +88,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -94,7 +97,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 868);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -114,6 +117,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1038, 464);
             this.panel1.TabIndex = 3;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.labelBarcode);
+            this.groupBox6.Enabled = false;
+            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox6.Location = new System.Drawing.Point(687, 218);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(339, 162);
+            this.groupBox6.TabIndex = 16;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Barcode";
+            // 
+            // labelBarcode
+            // 
+            this.labelBarcode.AutoSize = true;
+            this.labelBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.labelBarcode.Location = new System.Drawing.Point(69, 72);
+            this.labelBarcode.Name = "labelBarcode";
+            this.labelBarcode.Size = new System.Drawing.Size(226, 25);
+            this.labelBarcode.TabIndex = 3;
+            this.labelBarcode.Text = "Barcode: xxxxxxxxxxxxx";
             // 
             // groupBox2
             // 
@@ -647,41 +672,44 @@
             this.BtnSearchNameSearch.UseVisualStyleBackColor = true;
             this.BtnSearchNameSearch.Click += new System.EventHandler(this.BtnSearchNameSearch_Click);
             // 
-            // groupBox6
+            // button1
             // 
-            this.groupBox6.Controls.Add(this.labelBarcode);
-            this.groupBox6.Enabled = false;
-            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.groupBox6.Location = new System.Drawing.Point(687, 218);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(339, 162);
-            this.groupBox6.TabIndex = 16;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Barcode";
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.button1.Location = new System.Drawing.Point(862, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 74);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Save to Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // labelBarcode
+            // panel3
             // 
-            this.labelBarcode.AutoSize = true;
-            this.labelBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.labelBarcode.Location = new System.Drawing.Point(69, 72);
-            this.labelBarcode.Name = "labelBarcode";
-            this.labelBarcode.Size = new System.Drawing.Size(226, 25);
-            this.labelBarcode.TabIndex = 3;
-            this.labelBarcode.Text = "Barcode: xxxxxxxxxxxxx";
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Location = new System.Drawing.Point(50, 848);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(982, 198);
+            this.panel3.TabIndex = 7;
             // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Stock";
             this.Size = new System.Drawing.Size(1094, 1049);
             this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -694,8 +722,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -749,5 +776,7 @@
         public System.Windows.Forms.ComboBox comboBox2;
         public System.Windows.Forms.GroupBox groupBox6;
         public System.Windows.Forms.Label labelBarcode;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
     }
 }

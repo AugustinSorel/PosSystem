@@ -56,6 +56,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.pictureBoxItem = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -221,6 +222,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(3, 318);
@@ -372,6 +374,18 @@
             this.pictureBoxItem.TabIndex = 0;
             this.pictureBoxItem.TabStop = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.checkBox1.Location = new System.Drawing.Point(438, 181);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(151, 29);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Save to Excel";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +403,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -429,5 +444,6 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

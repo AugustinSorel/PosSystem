@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -110,10 +109,17 @@ namespace PosSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            SaveToExcel();
             AddToStock();
             InsertOrderDetails();
             ClearList();
             ClearPrice();
+        }
+
+        private void SaveToExcel()
+        {
+            if (checkBox1.Checked)
+                Excel.ListViewSaveToExcel(listView1);
         }
 
         private void InsertOrderDetails()
@@ -152,6 +158,11 @@ namespace PosSystem
         {
             for (int i = 0; i < listView1.Items.Count; i++)
                 new AddOrderTostock(listView1.Items[i].SubItems[0].Text, listView1.Items[i].SubItems[1].Text);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

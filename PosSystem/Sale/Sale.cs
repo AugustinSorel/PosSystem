@@ -97,7 +97,7 @@ namespace PosSystem
 
             if (checkBoxSaveToExcel.Checked)
             {
-                MessageBox.Show("Test");
+                Excel.ListViewSaveToExcel(listView1);
             }
         }
 

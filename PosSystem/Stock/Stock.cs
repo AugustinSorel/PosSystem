@@ -30,7 +30,7 @@ namespace PosSystem
         {
             panel1.Location = StockSetontrolsLocationCenter.Panel1(panel1.Width);
             panel2.Location = StockSetontrolsLocationCenter.SetPanel2(panel2.Width, panel2.Height);
-            dataGridView1.Location = StockSetontrolsLocationCenter.DataGridView(dataGridView1.Width);
+            panel3.Location = StockSetontrolsLocationCenter.DataGridView(panel3.Width);
         }
 
         private void LoadData()
@@ -182,6 +182,11 @@ namespace PosSystem
         private void TxtCoef_TextChanged(object sender, EventArgs e)
         {
             TxtBoxPurchacePrice_TextChanged(sender, e);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Excel.DataGridViewSaveTOExcel(dataGridView1);
         }
     }
 }
