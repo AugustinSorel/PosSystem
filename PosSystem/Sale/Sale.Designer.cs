@@ -48,16 +48,19 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.pictureBoxItem = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxPrintReceipt = new System.Windows.Forms.CheckBox();
             this.lblDisplayFinalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBoxPrintReceipt = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxSaveToExcel = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDate
@@ -259,7 +262,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBoxPrintReceipt);
             this.groupBox2.Controls.Add(this.listView1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
@@ -271,6 +273,17 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sale";
+            // 
+            // checkBoxPrintReceipt
+            // 
+            this.checkBoxPrintReceipt.AutoSize = true;
+            this.checkBoxPrintReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.checkBoxPrintReceipt.Location = new System.Drawing.Point(78, 51);
+            this.checkBoxPrintReceipt.Name = "checkBoxPrintReceipt";
+            this.checkBoxPrintReceipt.Size = new System.Drawing.Size(70, 29);
+            this.checkBoxPrintReceipt.TabIndex = 12;
+            this.checkBoxPrintReceipt.Text = "PDF";
+            this.checkBoxPrintReceipt.UseVisualStyleBackColor = true;
             // 
             // lblDisplayFinalPrice
             // 
@@ -288,7 +301,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label1.Location = new System.Drawing.Point(5, 16);
+            this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 31);
             this.label1.TabIndex = 11;
@@ -298,7 +311,7 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDisplayFinalPrice);
-            this.panel1.Location = new System.Drawing.Point(852, 580);
+            this.panel1.Location = new System.Drawing.Point(845, 199);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 52);
             this.panel1.TabIndex = 12;
@@ -312,22 +325,35 @@
             this.panel2.Size = new System.Drawing.Size(550, 54);
             this.panel2.TabIndex = 13;
             // 
-            // checkBoxPrintReceipt
+            // groupBox3
             // 
-            this.checkBoxPrintReceipt.AutoSize = true;
-            this.checkBoxPrintReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.checkBoxPrintReceipt.Location = new System.Drawing.Point(487, 238);
-            this.checkBoxPrintReceipt.Name = "checkBoxPrintReceipt";
-            this.checkBoxPrintReceipt.Size = new System.Drawing.Size(140, 29);
-            this.checkBoxPrintReceipt.TabIndex = 12;
-            this.checkBoxPrintReceipt.Text = "Print Receipt";
-            this.checkBoxPrintReceipt.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.checkBoxSaveToExcel);
+            this.groupBox3.Controls.Add(this.checkBoxPrintReceipt);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox3.Location = new System.Drawing.Point(845, 292);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 166);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ssave As";
+            // 
+            // checkBox1
+            // 
+            this.checkBoxSaveToExcel.AutoSize = true;
+            this.checkBoxSaveToExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.checkBoxSaveToExcel.Location = new System.Drawing.Point(78, 98);
+            this.checkBoxSaveToExcel.Name = "checkBox1";
+            this.checkBoxSaveToExcel.Size = new System.Drawing.Size(115, 29);
+            this.checkBoxSaveToExcel.TabIndex = 13;
+            this.checkBoxSaveToExcel.Text = "Excel File";
+            this.checkBoxSaveToExcel.UseVisualStyleBackColor = true;
             // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
@@ -344,6 +370,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +403,7 @@
         public System.Windows.Forms.Label lblDescriptionDisplay;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBoxPrintReceipt;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox checkBoxSaveToExcel;
     }
 }

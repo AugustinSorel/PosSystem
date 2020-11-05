@@ -6,7 +6,7 @@ namespace PosSystem
 {
     internal class PasswordSecurity
     {
-        private static string hash = "h@sht3st"; // TODO: find new key
+        private static string hash = "h@sht3st"; 
 
         internal static string EncryptMD5(string password)
         {

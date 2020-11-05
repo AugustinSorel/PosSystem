@@ -25,6 +25,7 @@ namespace PosSystem
             groupBox2.Location = SaleSetLocation.GroupBox2(groupBox2.Width);
             panel1.Location = SaleSetLocation.FinaPrice();
             panel2.Location = SaleSetLocation.Panel2(panel2.Width);
+            groupBox3.Location = SaleSetLocation.GroupBox3(groupBox3.Width);
         }
 
         private void FocusCodeBarTextBox()
@@ -92,6 +93,11 @@ namespace PosSystem
             {
                 new CreateReceipt(listView1, UserDetailsVAR.Id.ToString(), DateTime.Now.ToString("yyyy-MM-dd"));
                 checkBoxPrintReceipt.Checked = false;
+            }
+
+            if (checkBoxSaveToExcel.Checked)
+            {
+                MessageBox.Show("Test");
             }
         }
 

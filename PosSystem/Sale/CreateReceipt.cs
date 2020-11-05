@@ -27,15 +27,10 @@ namespace PosSystem
             this.workerID = workerID;
             this.date = date;
 
-            PrintDialog printDialog = new PrintDialog();
             PrintDocument printDocument = new PrintDocument();
 
-            printDialog.Document = printDocument;
             printDocument.PrintPage += new PrintPageEventHandler(GenerateReceipt);
-
-            DialogResult result = printDialog.ShowDialog();
-            if (result == DialogResult.OK)
-                printDocument.Print();
+            printDocument.Print();
         }
 
         public void GenerateReceipt(object sender, PrintPageEventArgs e)
