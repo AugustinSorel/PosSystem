@@ -56,6 +56,9 @@
             this.BtnWorkerSecurityCancel = new System.Windows.Forms.Button();
             this.BtnSearchNameSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblWorkerNumber = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGroupByAdmin = new System.Windows.Forms.Button();
             this.BtnGroupByAge = new System.Windows.Forms.Button();
@@ -68,18 +71,16 @@
             this.ResetGroupBoxGroupBy = new System.Windows.Forms.Button();
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblWorkerNumber = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WorkerPicture)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -104,6 +105,7 @@
             this.groupBox1.Controls.Add(this.TxtBoxAge);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TxtBoxSurname);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.TxtBoxName);
             this.groupBox1.Controls.Add(this.WorkerPicture);
@@ -424,6 +426,40 @@
             this.panel2.Size = new System.Drawing.Size(739, 352);
             this.panel2.TabIndex = 5;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.lblWorkerNumber);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.groupBox5.Location = new System.Drawing.Point(24, 269);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(681, 70);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Search by";
+            // 
+            // lblWorkerNumber
+            // 
+            this.lblWorkerNumber.AutoSize = true;
+            this.lblWorkerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblWorkerNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.lblWorkerNumber.Location = new System.Drawing.Point(536, 27);
+            this.lblWorkerNumber.Name = "lblWorkerNumber";
+            this.lblWorkerNumber.Size = new System.Drawing.Size(23, 25);
+            this.lblWorkerNumber.TabIndex = 7;
+            this.lblWorkerNumber.Text = "?";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label9.Location = new System.Drawing.Point(10, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(186, 25);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Number of workers: ";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnGroupByAdmin);
@@ -585,39 +621,16 @@
             this.BtnSearchNameEnable.UseVisualStyleBackColor = true;
             this.BtnSearchNameEnable.Click += new System.EventHandler(this.Button8_Click);
             // 
-            // groupBox5
+            // label10
             // 
-            this.groupBox5.Controls.Add(this.lblWorkerNumber);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.groupBox5.Location = new System.Drawing.Point(24, 269);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(681, 70);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Search by";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label9.Location = new System.Drawing.Point(10, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(186, 25);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Number of workers: ";
-            // 
-            // lblWorkerNumber
-            // 
-            this.lblWorkerNumber.AutoSize = true;
-            this.lblWorkerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblWorkerNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblWorkerNumber.Location = new System.Drawing.Point(536, 27);
-            this.lblWorkerNumber.Name = "lblWorkerNumber";
-            this.lblWorkerNumber.Size = new System.Drawing.Size(23, 25);
-            this.lblWorkerNumber.TabIndex = 7;
-            this.lblWorkerNumber.Text = "?";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label10.Location = new System.Drawing.Point(184, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 25);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Name";
             // 
             // SeeTeam
             // 
@@ -638,12 +651,12 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -692,5 +705,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         public System.Windows.Forms.Label lblWorkerNumber;
         public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label10;
     }
 }

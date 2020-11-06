@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    internal class UserDetailsCheckInput
+    internal class SeetTimeCheckInput
     {
         internal static bool TextboxesFilled(GroupBox groupBox1)
         {

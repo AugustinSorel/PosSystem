@@ -72,12 +72,22 @@ namespace PosSystem
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
-            if (txtDelete.Text != string.Empty && WorkerIdExists() && WarningMessage())
+            if (TextboxesNotEmpty() && InputIsNumeric() && WorkerIdExists() && WarningMessage())
             {
                 new DeleteWorkerDetails(this);
                 new DeleteWorkerSecurity(this);
                 BtnDeleteCancel.PerformClick();
             }
+        }
+
+        private bool InputIsNumeric()
+        {
+            return UserDetailsCheckInput.Age(txtDelete.Text);
+        }
+
+        private bool TextboxesNotEmpty()
+        {
+            return txtDelete.Text != string.Empty;
         }
 
         private bool WarningMessage()

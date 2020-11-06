@@ -33,7 +33,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -80,7 +79,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.chart1);
@@ -91,20 +89,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Graph";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Week",
-            "Month"});
-            this.comboBox1.Location = new System.Drawing.Point(700, 419);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -199,7 +183,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label6.Location = new System.Drawing.Point(380, 94);
+            this.label6.Location = new System.Drawing.Point(343, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 25);
             this.label6.TabIndex = 35;
@@ -221,7 +205,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label4.Location = new System.Drawing.Point(380, 58);
+            this.label4.Location = new System.Drawing.Point(343, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 25);
             this.label4.TabIndex = 33;
@@ -243,7 +227,7 @@
             this.lblItemIDDisplay.AutoSize = true;
             this.lblItemIDDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblItemIDDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblItemIDDisplay.Location = new System.Drawing.Point(380, 19);
+            this.lblItemIDDisplay.Location = new System.Drawing.Point(343, 19);
             this.lblItemIDDisplay.Name = "lblItemIDDisplay";
             this.lblItemIDDisplay.Size = new System.Drawing.Size(23, 25);
             this.lblItemIDDisplay.TabIndex = 31;
@@ -339,7 +323,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader columnHeader1;

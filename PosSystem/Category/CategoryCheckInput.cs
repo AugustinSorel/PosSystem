@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace PosSystem
 {
-    internal class UserDetailsCheckInput
+    internal class CategoryCheckInput
     {
         internal static bool TextboxesFilled(GroupBox groupBox1)
         {
@@ -17,20 +17,6 @@ namespace PosSystem
                     }
             }
             return true;
-        }
-
-        internal static bool Age(string stringAge)
-        {
-            try
-            {
-                int age = int.Parse(stringAge);
-                return age >= 0 && age <= 99 ? true : throw new Exception();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Age format incorrect", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
         }
     }
 }

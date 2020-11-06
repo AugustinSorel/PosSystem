@@ -56,13 +56,18 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, System.EventArgs e)
         {
-            if (BarCodeUnique() && SupplierExists() && CategoryExists() && BarCodeLengthIs13() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput())
+            if (TextboxesFilled() && ComboBoxFilled() && BarCodeUnique() && SupplierExists() && CategoryExists() && BarCodeLengthIs13() && CheckMinAndMax() && CheckIntegerInput())
             {
                 groupBox1.Enabled = false;
                 new AddProduct(this);
                 new SaveToStock(TxtBoxBarCode.Text);
                 new ManageStockClearControls(this);
             }
+        }
+
+        private bool ComboBoxFilled()
+        {
+            return StockCheckInput.CheckComboBoxFilled(groupBox1);
         }
 
         private bool TextboxesFilled()
@@ -83,7 +88,7 @@ namespace PosSystem
 
         private bool BarCodeLengthIs13()
         {
-            return TxtBoxBarCode.Text.Length == 13;
+            return StockCheckInput.CheckBarCodeLenght(TxtBoxBarCode.Text);
         }
 
         private bool SupplierExists()

@@ -42,9 +42,17 @@ namespace PosSystem
 
         private void BtnWorkerDetailsUpdate_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = false;
-            new UpdateCategory(this);
-            LoadData();
+            if (CheckTextBoxFilled())
+            {
+                groupBox1.Enabled = false;
+                new UpdateCategory(this);
+                LoadData();
+            }
+        }
+
+        private bool CheckTextBoxFilled()
+        {
+            return CategoryCheckInput.TextboxesFilled(groupBox1);
         }
 
         private void BtnWorkerDetailsEnable_Click(object sender, EventArgs e)
@@ -117,9 +125,17 @@ namespace PosSystem
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            new InsertNewCategory(this);
-            button3.PerformClick();
-            LoadData();
+            if (CheckTextBoxFilledGroupBox2())
+            {
+                new InsertNewCategory(this);
+                button3.PerformClick();
+                LoadData();
+            }
+        }
+
+        private bool CheckTextBoxFilledGroupBox2()
+        {
+            return CategoryCheckInput.TextboxesFilled(groupBox2);
         }
     }
 }

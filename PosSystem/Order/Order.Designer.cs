@@ -43,6 +43,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LblWorkerID = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.pictureBoxItem = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,6 +115,7 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.comboBox1.Location = new System.Drawing.Point(355, 64);
             this.comboBox1.Name = "comboBox1";
@@ -229,6 +230,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(592, 309);
             this.panel2.TabIndex = 17;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.checkBox1.Location = new System.Drawing.Point(438, 181);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(151, 29);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Save to Excel";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -373,18 +386,6 @@
             this.pictureBoxItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxItem.TabIndex = 0;
             this.pictureBoxItem.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.checkBox1.Location = new System.Drawing.Point(438, 181);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(151, 29);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Save to Excel";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Order
             // 

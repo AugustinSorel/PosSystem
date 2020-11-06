@@ -17,7 +17,6 @@ namespace PosSystem
                     HighestID = temp;
             }
             HighestID++;
-            System.Windows.Forms.MessageBox.Show(HighestID.ToString());
             return HighestID;
         }
 

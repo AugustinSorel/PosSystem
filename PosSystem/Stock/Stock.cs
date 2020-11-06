@@ -37,6 +37,8 @@ namespace PosSystem
         {
             new LoadDataGridViewStock(dataGridView1);
             lblNumberOfItems.Text = ShowNumberOfItems.Display();
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
 
         private DockStyle GetFillDock()
@@ -46,8 +48,11 @@ namespace PosSystem
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            new DisplayStock(this);
-            new DisplayItem(this);
+            if (dataGridView1.Columns.Count > 4)
+            {
+                new DisplayStock(this);
+                new DisplayItem(this);
+            }
         }
 
         private void BtnEnable_Click_1(object sender, System.EventArgs e)
@@ -59,13 +64,24 @@ namespace PosSystem
 
         private void BtnSave_Click_1(object sender, System.EventArgs e)
         {
-            if (SupplierIdExists() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput() && CheckCategory())
+            if (SupplierIdExists() && TextboxesFilled() && CheckMinAndMax() && CheckIntegerInput() && CheckCategory() && CurrentStockLessThanMaxStock())
             {
                 new UpdateItemDetails(this);
                 new UpdateStockQuantity(this);
-                LoadData();
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
+                LoadData();
+            }
+        }
+
+        private bool CurrentStockLessThanMaxStock()
+        {
+            if (int.Parse(textBoxStockMax.Text) >= int.Parse(txtboxQuantity.Text))
+                return true;
+            else
+            {
+                MessageBox.Show("Current Stock is higher than stock max", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 

@@ -61,8 +61,11 @@ namespace PosSystem
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            new ShowUserDetailsFromDataGrid(this);
-            new ShowUserSecurityFromDataGrid(this);
+            if (dataGridView1.Columns.Count > 4 )
+            {
+                new ShowUserDetailsFromDataGrid(this);
+                new ShowUserSecurityFromDataGrid(this);
+            }
         }
 
         private void RemoveTheWorkerLoggedIn()
@@ -87,9 +90,22 @@ namespace PosSystem
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            new UpdateWorkerDetails(this);
-            groupBox1.Enabled = false;
-            LoadData();
+            if (CheckAllTextBoxesFilled() && AgeIsNumeric())
+            {
+                new UpdateWorkerDetails(this);
+                groupBox1.Enabled = false;
+                LoadData();
+            }
+        }
+
+        private bool AgeIsNumeric()
+        {
+            return SeetTimeCheckInput.Age(TxtBoxAge.Text);
+        }
+
+        private bool CheckAllTextBoxesFilled()
+        {
+            return SeetTimeCheckInput.TextboxesFilled(groupBox1);
         }
 
         private void Button4_Click(object sender, EventArgs e)

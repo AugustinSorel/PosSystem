@@ -45,22 +45,8 @@ namespace PosSystem
 
         private void SelectWeekGraph()
         {
-            comboBox1.SelectedIndex = 0;
-        }
-
-        private void ComboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    label1.Text = "Weekly view";
-                    new CreateWeekGraph(chart1, label2);
-                    break;
-                case 1:
-                    label1.Text = "Monthly view";
-                    new CreateMonthGraph(chart1, label2);
-                    break;
-            }
+            label1.Text = "Monthly view";
+            new CreateMonthGraph(chart1, label2);
         }
 
         private void ListView1_Click(object sender, EventArgs e)

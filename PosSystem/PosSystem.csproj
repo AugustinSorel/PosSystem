@@ -59,9 +59,11 @@
     <Compile Include="Category\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Category\CategoryCheckInput.cs" />
     <Compile Include="Excel\Excel.cs" />
     <Compile Include="Order\RecordForOrder.cs" />
     <Compile Include="PasswordSecurity\PasswordSecurity.cs" />
+    <Compile Include="SeeTeam\SeetTimeCheckInput.cs" />
     <Compile Include="SQL\Order\GetOrderID.cs" />
     <Compile Include="SQL\Order\InsertOrderDetails.cs" />
     <Compile Include="SQL\Order\AddOrderTostock.cs" />

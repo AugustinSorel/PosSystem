@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PosSystem
@@ -45,6 +46,30 @@ namespace PosSystem
                 MessageBox.Show("number format is incorrect", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        internal static bool CheckComboBoxFilled(GroupBox groupBox1)
+        {
+            foreach (Control item in groupBox1.Controls)
+                if (item is ComboBox)
+                    if (string.IsNullOrEmpty(((ComboBox)item).Text))
+                    {
+                        MessageBox.Show("One of the textboxes is empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+
+            return true;
+        }
+
+        internal static bool CheckBarCodeLenght(string barCode)
+        {
+            if (barCode.Length != 13)
+            {
+                MessageBox.Show("BarCodeLength has to be 13", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
 }

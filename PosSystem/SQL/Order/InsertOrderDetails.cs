@@ -10,7 +10,6 @@ namespace PosSystem
         public InsertOrderDetails(RecordForOrder recordForOrder)
         {
             this.recordForOrder = recordForOrder;
-            System.Windows.Forms.MessageBox.Show(recordForOrder.OrderID.ToString());
             ExecuteCommand(CreateCommand());
         }
 
