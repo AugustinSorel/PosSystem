@@ -3,7 +3,6 @@ using System.Windows.Forms;
 
 namespace ePOSOne.btnProduct
 {
-    // TODO: rewrite RoundedButton 
     public class Button_WOC : Button
     {
         private Color _borderColor = Color.Silver;
