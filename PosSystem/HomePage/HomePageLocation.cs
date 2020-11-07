@@ -12,7 +12,7 @@ namespace PosSystem
 
         internal static Point SetNotificationLocation(int width)
         {
-            return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - width / 2, Screen.PrimaryScreen.Bounds.Height - 500);
+            return new Point(Screen.PrimaryScreen.Bounds.Width / 2 - 400, Screen.PrimaryScreen.Bounds.Height - 500);
         }
     }
 }

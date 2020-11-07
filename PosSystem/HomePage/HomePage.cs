@@ -15,8 +15,14 @@ namespace PosSystem
             Dock = DockStyle.Fill;
             this.BringToFront();
             SetLocation();
-            SelectWeekGraph();
+            DrawSaleGraph();
+            DrawOrderGraph();
             ShowNotification();
+        }
+
+        private void DrawOrderGraph()
+        {
+            new CreateOrderGraph(chart2, label9);
         }
 
         private void ShowNotification()
@@ -43,7 +49,7 @@ namespace PosSystem
             groupBox2.Location = HomePageLocation.SetNotificationLocation(groupBox1.Width);
         }
 
-        private void SelectWeekGraph()
+        private void DrawSaleGraph()
         {
             label1.Text = "Monthly view";
             new CreateMonthGraph(chart1, label2);

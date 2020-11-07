@@ -61,6 +61,8 @@
     </Compile>
     <Compile Include="Category\CategoryCheckInput.cs" />
     <Compile Include="Excel\Excel.cs" />
+    <Compile Include="Graph\Order\CreateOrderGraph.cs" />
+    <Compile Include="SQL\OrderHistory\OrderHistory.cs" />
     <Compile Include="Order\RecordForOrder.cs" />
     <Compile Include="PasswordSecurity\PasswordSecurity.cs" />
     <Compile Include="SeeTeam\SeetTimeCheckInput.cs" />

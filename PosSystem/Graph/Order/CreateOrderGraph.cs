@@ -6,7 +6,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PosSystem
 {
-    internal class CreateMonthGraph
+    internal class CreateOrderGraph
     {
         private readonly Chart chart1;
         private readonly List<float> UnsortedMoneyPerDay = new List<float>();
@@ -17,7 +17,7 @@ namespace PosSystem
         private float max;
         private float min;
 
-        public CreateMonthGraph(Chart chart1, Label label1)
+        public CreateOrderGraph(Chart chart1, Label label1)
         {
             this.chart1 = chart1;
 
@@ -52,13 +52,13 @@ namespace PosSystem
             chart.AxisY.Minimum = min;
 
             chart1.Series.Clear();
-            
+
             chart.AxisY.Interval = max / 10;
             chart.AxisX.Interval = 1;
 
             chart1.Series.Add("Month");
             chart1.Series["Month"].ChartType = SeriesChartType.Spline;
-            chart1.Series[0].Color = Color.Green;
+            chart1.Series[0].Color = Color.Red;
 
             chart1.ChartAreas[0].BackColor = Color.Transparent;
             chart1.Legends[0].BackColor = Color.Transparent;
@@ -78,7 +78,7 @@ namespace PosSystem
             foreach (var item in UnsortedMoneyPerDay)
                 finalPrice += item;
 
-            return "Final Price: " + finalPrice.ToString() + " £";
+            return "Total Order Price: " + finalPrice.ToString() + " £";
         }
 
         private void PlotPoint()
@@ -90,7 +90,7 @@ namespace PosSystem
         private void GetUnsortedList()
         {
             for (int i = -day30; i <= 0; i++)
-                UnsortedMoneyPerDay.Add(SaleHistory.GetDay(DateTime.Now.AddDays(i).ToString("dd-MM-yyyy")));
+                UnsortedMoneyPerDay.Add(OrderHistory.GetDay(DateTime.Now.AddDays(i).ToString("dd-MM-yyyy")));
         }
     }
 }
