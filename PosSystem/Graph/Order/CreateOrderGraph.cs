@@ -78,7 +78,7 @@ namespace PosSystem
             foreach (var item in UnsortedMoneyPerDay)
                 finalPrice += item;
 
-            return "Total Order Price: " + finalPrice.ToString() + " £";
+            return "Total for Order: " + finalPrice.ToString() + " £";
         }
 
         private void PlotPoint()

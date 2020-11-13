@@ -66,6 +66,7 @@
             this.btnDeleteEnable = new System.Windows.Forms.Button();
             this.BtnDeleteDelete = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
@@ -103,7 +104,7 @@
             this.groupBox1.Controls.Add(this.pictureBoxItem);
             this.groupBox1.Enabled = false;
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.groupBox1.Location = new System.Drawing.Point(16, 14);
+            this.groupBox1.Location = new System.Drawing.Point(16, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(654, 437);
             this.groupBox1.TabIndex = 0;
@@ -382,7 +383,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.btnCancel.Location = new System.Drawing.Point(36, 457);
+            this.btnCancel.Location = new System.Drawing.Point(36, 488);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 33);
             this.btnCancel.TabIndex = 1;
@@ -396,7 +397,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnSave.Location = new System.Drawing.Point(570, 457);
+            this.BtnSave.Location = new System.Drawing.Point(570, 488);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 33);
             this.BtnSave.TabIndex = 1;
@@ -410,7 +411,7 @@
             this.BtnEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BtnEnable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.BtnEnable.Location = new System.Drawing.Point(461, 457);
+            this.BtnEnable.Location = new System.Drawing.Point(461, 488);
             this.BtnEnable.Name = "BtnEnable";
             this.BtnEnable.Size = new System.Drawing.Size(100, 33);
             this.BtnEnable.TabIndex = 1;
@@ -420,13 +421,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BtnEnable);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Location = new System.Drawing.Point(19, 16);
+            this.panel1.Location = new System.Drawing.Point(19, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(685, 502);
+            this.panel1.Size = new System.Drawing.Size(685, 531);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -528,6 +530,17 @@
             this.label16.TabIndex = 1;
             this.label16.Text = "Delete Item";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label2.Location = new System.Drawing.Point(255, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Create Item";
+            // 
             // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -590,5 +604,6 @@
         private System.Windows.Forms.Button btnGenerateBarcode;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.Label label2;
     }
 }

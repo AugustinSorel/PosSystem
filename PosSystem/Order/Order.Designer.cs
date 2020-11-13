@@ -89,7 +89,7 @@
             this.groupBox1.Size = new System.Drawing.Size(654, 202);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Create Item";
+            this.groupBox1.Text = "Order Input";
             // 
             // textBox1
             // 
