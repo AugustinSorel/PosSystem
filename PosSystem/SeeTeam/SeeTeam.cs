@@ -36,7 +36,7 @@ namespace PosSystem
         {
             new LoadDataGridView(dataGridView1);
             SelectFirstRow();
-            RemoveTheWorkerLoggedIn();
+            //RemoveTheWorkerLoggedIn();
             ShowNumberOfWorkers();
             ShowTables();
         }

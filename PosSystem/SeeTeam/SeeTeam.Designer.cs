@@ -36,6 +36,7 @@
             this.TxtBoxAge = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtBoxSurname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxName = new System.Windows.Forms.TextBox();
             this.WorkerPicture = new System.Windows.Forms.PictureBox();
@@ -71,7 +72,6 @@
             this.ResetGroupBoxGroupBy = new System.Windows.Forms.Button();
             this.BtnSearchNameReset = new System.Windows.Forms.Button();
             this.BtnSearchNameEnable = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WorkerPicture)).BeginInit();
@@ -180,6 +180,17 @@
             this.TxtBoxSurname.Name = "TxtBoxSurname";
             this.TxtBoxSurname.Size = new System.Drawing.Size(213, 20);
             this.TxtBoxSurname.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label10.Location = new System.Drawing.Point(184, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 25);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Name";
             // 
             // label2
             // 
@@ -436,7 +447,7 @@
             this.groupBox5.Size = new System.Drawing.Size(681, 70);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Search by";
+            this.groupBox5.Text = "Total of workers";
             // 
             // lblWorkerNumber
             // 
@@ -474,7 +485,7 @@
             this.groupBox4.Size = new System.Drawing.Size(681, 70);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Search by";
+            this.groupBox4.Text = "Order  by";
             // 
             // btnGroupByAdmin
             // 
@@ -525,9 +536,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.label8.Location = new System.Drawing.Point(10, 26);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.Size = new System.Drawing.Size(99, 25);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Group by: ";
+            this.label8.Text = "Order by: ";
             // 
             // BtnGroupByName
             // 
@@ -620,17 +631,6 @@
             this.BtnSearchNameEnable.Text = "Enable";
             this.BtnSearchNameEnable.UseVisualStyleBackColor = true;
             this.BtnSearchNameEnable.Click += new System.EventHandler(this.Button8_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label10.Location = new System.Drawing.Point(184, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 25);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Name";
             // 
             // SeeTeam
             // 
