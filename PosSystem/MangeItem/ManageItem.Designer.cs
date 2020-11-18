@@ -32,7 +32,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnGenerateBarcode = new System.Windows.Forms.Button();
-            this.pictureBoxBarCode = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnEnable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtDelete = new System.Windows.Forms.TextBox();
@@ -66,9 +66,7 @@
             this.btnDeleteEnable = new System.Windows.Forms.Button();
             this.BtnDeleteDelete = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,7 +78,6 @@
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btnGenerateBarcode);
-            this.groupBox1.Controls.Add(this.pictureBoxBarCode);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
@@ -136,22 +133,13 @@
             this.btnGenerateBarcode.FlatAppearance.BorderSize = 0;
             this.btnGenerateBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGenerateBarcode.Location = new System.Drawing.Point(20, 325);
+            this.btnGenerateBarcode.Location = new System.Drawing.Point(20, 252);
             this.btnGenerateBarcode.Name = "btnGenerateBarcode";
             this.btnGenerateBarcode.Size = new System.Drawing.Size(100, 106);
             this.btnGenerateBarcode.TabIndex = 34;
             this.btnGenerateBarcode.Text = "Randomly generate barcode";
             this.btnGenerateBarcode.UseVisualStyleBackColor = true;
             this.btnGenerateBarcode.Click += new System.EventHandler(this.BtnGenerateBarcode_Click);
-            // 
-            // pictureBoxBarCode
-            // 
-            this.pictureBoxBarCode.Location = new System.Drawing.Point(20, 200);
-            this.pictureBoxBarCode.Name = "pictureBoxBarCode";
-            this.pictureBoxBarCode.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxBarCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBarCode.TabIndex = 33;
-            this.pictureBoxBarCode.TabStop = false;
             // 
             // label7
             // 
@@ -309,7 +297,6 @@
             this.TxtBoxBarCode.Name = "TxtBoxBarCode";
             this.TxtBoxBarCode.Size = new System.Drawing.Size(213, 20);
             this.TxtBoxBarCode.TabIndex = 8;
-            this.TxtBoxBarCode.TextChanged += new System.EventHandler(this.TxtBoxBarCode_TextChanged);
             this.TxtBoxBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBoxBarCode_KeyDown);
             // 
             // lblBarCode
@@ -431,6 +418,17 @@
             this.panel1.Size = new System.Drawing.Size(685, 531);
             this.panel1.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.label2.Location = new System.Drawing.Point(255, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Create Item";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox3);
@@ -530,17 +528,6 @@
             this.label16.TabIndex = 1;
             this.label16.Text = "Delete Item";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.label2.Location = new System.Drawing.Point(255, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Create Item";
-            // 
             // ManageItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,7 +540,6 @@
             this.Load += new System.EventHandler(this.ManageStock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -600,7 +586,6 @@
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.PictureBox pictureBoxBarCode;
         private System.Windows.Forms.Button btnGenerateBarcode;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.ComboBox comboBox2;

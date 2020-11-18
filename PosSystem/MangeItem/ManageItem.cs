@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using ZXing;
 
 namespace PosSystem
 {
@@ -190,20 +189,6 @@ namespace PosSystem
                 if (!BarCodeUnique())
                     btnGenerateBarcode.PerformClick();
             }
-        }
-
-        private void TxtBoxBarCode_TextChanged(object sender, EventArgs e)
-        {
-            if (BarCodeGreaterThanZero())
-            {
-                BarcodeWriter barcodeWriter = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
-                pictureBoxBarCode.Image = barcodeWriter.Write(TxtBoxBarCode.Text);
-            }
-        }
-
-        private bool BarCodeGreaterThanZero()
-        {
-            return TxtBoxBarCode.Text.Length > 0;
         }
 
         private void TxtBoxBarCode_KeyDown(object sender, KeyEventArgs e)
