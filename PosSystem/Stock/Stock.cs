@@ -39,6 +39,21 @@ namespace PosSystem
             lblNumberOfItems.Text = ShowNumberOfItems.Display();
             dataGridView1.Update();
             dataGridView1.Refresh();
+            ShowTables();
+        }
+
+        private void ShowTables()
+        {
+            dataGridView1.Columns["ItemID"].Visible = true;
+            dataGridView1.Columns["Description"].Visible = true;
+            dataGridView1.Columns["SupplierID"].Visible = true;
+            dataGridView1.Columns["CategoryID"].Visible = true;
+            dataGridView1.Columns["PurchasePrice"].Visible = true;
+            dataGridView1.Columns["Coefficient"].Visible = true;
+            dataGridView1.Columns["VatID"].Visible = true;
+            dataGridView1.Columns["ProductPhoto"].Visible = true;
+            dataGridView1.Columns["StockMin"].Visible = true;
+            dataGridView1.Columns["StockMax"].Visible = true;
         }
 
         private DockStyle GetFillDock()

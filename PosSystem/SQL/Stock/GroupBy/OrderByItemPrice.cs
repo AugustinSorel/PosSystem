@@ -1,27 +1,51 @@
-﻿using System.Data.OleDb;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PosSystem
 {
-    internal class OrderByItemPrice: SqlQueries
+    internal class OrderByItemPrice : SqlQueries
     {
-        public OrderByItemPrice(DataGridView dataGridView1)
+        public OrderByItemPrice(DataGridView dataGridView)
         {
-            OleDbCommand oleDbCommand = CreateCommand();
-            ExecuteCommand(oleDbCommand);
-            dataGridView1.DataSource = SetDataSource(oleDbCommand);
+            List<int> unsorted = new List<int>();
+            List<int> sorted;
+
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+                unsorted.Add(int.Parse(dataGridView.Rows[i].Cells[6].Value.ToString()));
+
+            sorted = GetBubbleSort(unsorted);
+
+            for (int i = 0; i < unsorted.Count; i++)
+                dataGridView[6, i].Value = sorted[i];
+
+            dataGridView.Columns["ItemID"].Visible = false;
+            dataGridView.Columns["Description"].Visible = false;
+            dataGridView.Columns["SupplierID"].Visible = false;
+            dataGridView.Columns["CategoryID"].Visible = false;
+            dataGridView.Columns["PurchasePrice"].Visible = false;
+            dataGridView.Columns["Coefficient"].Visible = false;
+            dataGridView.Columns["VatID"].Visible = false;
+            dataGridView.Columns["ProductPhoto"].Visible = false;
+            dataGridView.Columns["StockMin"].Visible = false;
+            dataGridView.Columns["StockMax"].Visible = false;
         }
 
-        private OleDbCommand CreateCommand()
+        private List<int> GetBubbleSort(List<int> unsorted)
         {
-            OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
-            oleDbCommand.CommandText = GetCommandText();
-            return oleDbCommand;
-        }
+            for (int write = 0; write < unsorted.Count; write++)
+            {
+                for (int sort = 0; sort < unsorted.Count - 1; sort++)
+                {
+                    if (unsorted[sort] < unsorted[sort + 1])
+                    {
+                        int temp = unsorted[sort + 1];
+                        unsorted[sort + 1] = unsorted[sort];
+                        unsorted[sort] = temp;
+                    }
+                }
+            }
 
-        private string GetCommandText()
-        {
-            return "SELECT SellingPrice, BarCode From Items ORDER BY SellingPrice";
+            return unsorted;
         }
     }
 }

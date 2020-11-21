@@ -6,7 +6,14 @@ namespace PosSystem
     {
         public static string GetNumberOfWorkers()
         {
+            CheckConnectionClosed();
             return CreateCommand().ExecuteScalar().ToString();
+        }
+
+        private static void CheckConnectionClosed()
+        {
+            if (oleDbConnection.State == System.Data.ConnectionState.Closed)
+                oleDbConnection.Open();
         }
 
         private static OleDbCommand CreateCommand()
