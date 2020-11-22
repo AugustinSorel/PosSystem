@@ -29,5 +29,10 @@ namespace PosSystem
         {
             return new Point(Screen.PrimaryScreen.Bounds.Width - width - 400, Screen.PrimaryScreen.Bounds.Width / 2 - 500);
         }
+
+        internal static Point GroupBox4(int width)
+        {
+            return new Point(Screen.PrimaryScreen.Bounds.Width - width - 400, Screen.PrimaryScreen.Bounds.Width / 2 - 300);
+        }
     }
 }

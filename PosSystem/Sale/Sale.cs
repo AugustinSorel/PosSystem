@@ -26,6 +26,7 @@ namespace PosSystem
             panel1.Location = SaleSetLocation.FinaPrice();
             panel2.Location = SaleSetLocation.Panel2(panel2.Width);
             groupBox3.Location = SaleSetLocation.GroupBox3(groupBox3.Width);
+            groupBox4.Location = SaleSetLocation.GroupBox4(groupBox4.Width);
         }
 
         private void FocusCodeBarTextBox()
@@ -75,10 +76,46 @@ namespace PosSystem
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            PrintReceipt();
-            RemoveItemFromDB();
-            AddToSale();
-            listView1.Items.Clear();
+            if (CheckPaymentMethod())
+            {
+                PrintReceipt();
+                RemoveItemFromDB();
+                AddToSale();
+                listView1.Items.Clear();
+            }
+        }
+
+        private bool CheckPaymentMethod()
+        {
+            if (radioButton2.Checked || CheckCashInput())
+                return true;
+            else
+                return false;
+        }
+
+        private bool CheckCashInput() // TODO: CLEAN THIS 
+        {
+            double price = 0;
+            try
+            {
+                double cash = double.Parse(textBox2.Text);
+                
+                for (int i = 0; i < listView1.Items.Count; i++)
+                    price += double.Parse(listView1.Items[i].SubItems[3].Text);
+
+                if (cash >= price)
+                    return true;
+                else
+                {
+                    MessageBox.Show("The cash input is too small");
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Enter a valide input for cash", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         private void AddToSale()
@@ -119,6 +156,11 @@ namespace PosSystem
         {
             if (textBox1.Text.Length == 13 && e.KeyCode != Keys.Back)
                 button1.PerformClick();
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Enabled = radioButton1.Checked;
         }
     }
 }

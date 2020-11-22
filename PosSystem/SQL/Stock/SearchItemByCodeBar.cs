@@ -1,8 +1,6 @@
-﻿using System.Data.OleDb;
-
-namespace PosSystem
+﻿namespace PosSystem
 {
-    internal class SearchItemByCodeBar: SqlQueries
+    internal class SearchItemByCodeBar
     {
         public class Node
         {
@@ -12,18 +10,15 @@ namespace PosSystem
 
         static bool IterativeSearch(Node root, long key)
         {
-            // Traverse untill root reaches to dead end 
             while (root != null)
             {
-                // pass right subtree as new tree 
                 if (key > root.data)
                     root = root.right;
 
-                // pass left subtree as new tree 
                 else if (key < root.data)
                     root = root.left;
                 else
-                    return true; // if the key is found return 1 
+                    return true; 
             }
             return false;
         }
@@ -38,17 +33,14 @@ namespace PosSystem
 
         static Node Insert(Node Node, long data)
         {
-            /* If the tree is empty, return a new Node */
             if (Node == null)
                 return NewNode(data);
 
-            /* Otherwise, recur down the tree */
             if (data < Node.data)
                 Node.left = Insert(Node.left, data);
             else if (data > Node.data)
                 Node.right = Insert(Node.right, data);
 
-            /* return the (unchanged) Node pointer */
             return Node;
         }
 
@@ -59,33 +51,19 @@ namespace PosSystem
             for (int i = 0; i <stock.dataGridView1.Rows.Count; i++)
                 Insert(root, long.Parse(stock.dataGridView1.Rows[i].Cells[8].Value.ToString()));
 
-            if (IterativeSearch(root, 53454168532))
-                System.Windows.Forms.MessageBox.Show("Found");
-            else
-                System.Windows.Forms.MessageBox.Show("Not Found");
+            long BarcodeToSearch = long.Parse(stock.TxtBoxSearchName.Text);
 
+            if (IterativeSearch(root, BarcodeToSearch))
+                ShowTableFiltered(stock, BarcodeToSearch);
+            else
+                System.Windows.Forms.MessageBox.Show("Barecode not Founded", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
 
-        //private Stock stock;
-        //
-        //public SearchItemByCodeBar(Stock stock)
-        //{
-        //    this.stock = stock;
-        //    OleDbCommand oleDbCommand = CreateCommand();
-        //    ExecuteCommand(oleDbCommand);
-        //    stock.dataGridView1.DataSource = SetDataSource(oleDbCommand);
-        //}
-        //
-        //private OleDbCommand CreateCommand()
-        //{
-        //    OleDbCommand oleDbCommand = oleDbConnection.CreateCommand();
-        //    oleDbCommand.CommandText = GetCommandText();
-        //    return oleDbCommand;
-        //}
-        //
-        //private string GetCommandText()
-        //{
-        //    return "SELECT * FROM Items WHERE [BarCode] like('" + stock.TxtBoxSearchName.Text + "%')";
-        //}
+        private static void ShowTableFiltered(Stock stock, long BarcodeToSearch)
+        {
+            for (int i = 0; i < stock.dataGridView1.Rows.Count; i++)
+                if (long.Parse(stock.dataGridView1.Rows[i].Cells[8].Value.ToString()) != BarcodeToSearch)
+                    stock.dataGridView1.Rows[i].Visible = false;
+        }
     }
 }
