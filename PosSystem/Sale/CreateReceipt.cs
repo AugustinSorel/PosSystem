@@ -12,20 +12,26 @@ namespace PosSystem
         private readonly string date;
         private readonly Font font = new Font("Courier New", 12);
         private Graphics graphic;
+        private RadioButton radioButtonCash;
+        TextBox textBoxCash;
+        Label LabelBoxChange;
 
         private const int startX = 10;
         private const int startY = 10;
         private int offset = 40;
-        private float cash = 50; // Change this
+        private float cash = 0; 
         private float totalprice = 0.00f;
         private float change = 0;
         private float fontHeight = 0;
 
-        public CreateReceipt(ListView listView1, string workerID, string date)
+        public CreateReceipt(ListView listView1, string workerID, string date, RadioButton radioButtonCash, TextBox textBoxCash, Label LabelBoxChange)
         {
             this.listView1 = listView1;
             this.workerID = workerID;
             this.date = date;
+            this.radioButtonCash = radioButtonCash;
+            this.textBoxCash = textBoxCash;
+            this.LabelBoxChange = LabelBoxChange;
 
             PrintDocument printDocument = new PrintDocument();
 
@@ -46,13 +52,13 @@ namespace PosSystem
         private void DrawBottom()
         {
             graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
-
-            offset += 30;
-            graphic.DrawString("CASH ".PadRight(30) + String.Format("{0:c}", cash), font, new SolidBrush(Color.Black), startX, startY + offset);
-            offset += 15;
-            graphic.DrawString("CHANGE ".PadRight(30) + String.Format("{0:c}", change), font, new SolidBrush(Color.Black), startX, startY + offset);
             offset += 30;
 
+            if (radioButtonCash.Checked)
+                DrawCashOutput();
+            else
+                DrawCardOutPut();
+            
             graphic.DrawString("WORKER ID ".PadRight(30) + String.Format("{0:c}", workerID), font, new SolidBrush(Color.Black), startX, startY + offset);
             offset += 15;
             graphic.DrawString("DATE ".PadRight(30) + String.Format("{0:c}", date), font, new SolidBrush(Color.Black), startX, startY + offset);
@@ -62,6 +68,25 @@ namespace PosSystem
             graphic.DrawString("     Thank-you for your custom,", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset += 15;
             graphic.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
+        }
+
+        private void DrawCardOutPut()
+        {
+            graphic.DrawString("PAYMENT METHOD ".PadRight(30) + String.Format("{0:c}", "CARD"), font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset += 15;
+        }
+
+        private void DrawCashOutput()
+        {
+            cash = float.Parse(textBoxCash.Text.Trim('£'));
+            change = float.Parse(LabelBoxChange.Text.Trim('£'));
+                
+            graphic.DrawString("PAYMENT METHOD ".PadRight(30) + String.Format("{0:c}", "CASH"), font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset += 15;
+            graphic.DrawString("CASH ".PadRight(30) + String.Format("{0:c}", cash), font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset += 15;
+            graphic.DrawString("CHANGE ".PadRight(30) + String.Format("{0:c}", change), font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset += 30;
         }
 
         private void DrawItems()

@@ -81,8 +81,15 @@ namespace PosSystem
                 PrintReceipt();
                 RemoveItemFromDB();
                 AddToSale();
-                listView1.Items.Clear();
+                ClearControls();
             }
+        }
+
+        private void ClearControls()
+        {
+            listView1.Items.Clear();
+            textBox2.Clear();
+            lblDisplayChange.Text = "0 £";
         }
 
         private bool CheckPaymentMethod()
@@ -93,29 +100,9 @@ namespace PosSystem
                 return false;
         }
 
-        private bool CheckCashInput() // TODO: CLEAN THIS 
+        private bool CheckCashInput() 
         {
-            double price = 0;
-            try
-            {
-                double cash = double.Parse(textBox2.Text);
-                
-                for (int i = 0; i < listView1.Items.Count; i++)
-                    price += double.Parse(listView1.Items[i].SubItems[3].Text);
-
-                if (cash >= price)
-                    return true;
-                else
-                {
-                    MessageBox.Show("The cash input is too small");
-                    return false;
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Enter a valide input for cash", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            return SaleCheckInput.CheckCashInput(this);
         }
 
         private void AddToSale()
@@ -128,7 +115,7 @@ namespace PosSystem
         {
             if (checkBoxPrintReceipt.Checked)
             {
-                new CreateReceipt(listView1, UserDetailsVAR.Id.ToString(), DateTime.Now.ToString("yyyy-MM-dd"));
+                new CreateReceipt(listView1, UserDetailsVAR.Id.ToString(), DateTime.Now.ToString("yyyy-MM-dd"), radioButton1, textBox2, lblDisplayChange);
                 checkBoxPrintReceipt.Checked = false;
             }
 
@@ -161,6 +148,19 @@ namespace PosSystem
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             textBox2.Enabled = radioButton1.Checked;
+        }
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text == string.Empty)
+                return;
+
+            if (SaleCheckInput.ChcekTextChangeCash(this))
+            {
+                double change = -(double.Parse(lblDisplayFinalPrice.Text.Trim('£')) - double.Parse(textBox2.Text));
+                lblDisplayChange.Text = change.ToString() + " £";
+
+            }
         }
     }
 }

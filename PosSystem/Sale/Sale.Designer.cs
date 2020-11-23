@@ -52,6 +52,8 @@
             this.lblDisplayFinalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblChange = new System.Windows.Forms.Label();
+            this.lblDisplayChange = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBoxSaveToExcel = new System.Windows.Forms.CheckBox();
@@ -295,7 +297,7 @@
             this.lblDisplayFinalPrice.AutoSize = true;
             this.lblDisplayFinalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblDisplayFinalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.lblDisplayFinalPrice.Location = new System.Drawing.Point(142, 16);
+            this.lblDisplayFinalPrice.Location = new System.Drawing.Point(149, 16);
             this.lblDisplayFinalPrice.Name = "lblDisplayFinalPrice";
             this.lblDisplayFinalPrice.Size = new System.Drawing.Size(51, 31);
             this.lblDisplayFinalPrice.TabIndex = 10;
@@ -308,18 +310,42 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 31);
+            this.label1.Size = new System.Drawing.Size(150, 31);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Final Price";
+            this.label1.Text = "Final Price:";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblChange);
+            this.panel1.Controls.Add(this.lblDisplayChange);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDisplayFinalPrice);
-            this.panel1.Location = new System.Drawing.Point(845, 199);
+            this.panel1.Location = new System.Drawing.Point(845, 134);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 52);
+            this.panel1.Size = new System.Drawing.Size(204, 117);
             this.panel1.TabIndex = 12;
+            // 
+            // lblChange
+            // 
+            this.lblChange.AutoSize = true;
+            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.lblChange.Location = new System.Drawing.Point(3, 73);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(117, 31);
+            this.lblChange.TabIndex = 13;
+            this.lblChange.Text = "Change:";
+            // 
+            // lblDisplayChange
+            // 
+            this.lblDisplayChange.AutoSize = true;
+            this.lblDisplayChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblDisplayChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.lblDisplayChange.Location = new System.Drawing.Point(149, 73);
+            this.lblDisplayChange.Name = "lblDisplayChange";
+            this.lblDisplayChange.Size = new System.Drawing.Size(51, 31);
+            this.lblDisplayChange.TabIndex = 12;
+            this.lblDisplayChange.Text = "0 £";
             // 
             // panel2
             // 
@@ -375,6 +401,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(104, 20);
             this.textBox2.TabIndex = 8;
+            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // radioButton2
             // 
@@ -465,5 +492,7 @@
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label lblChange;
+        public System.Windows.Forms.Label lblDisplayChange;
     }
 }
