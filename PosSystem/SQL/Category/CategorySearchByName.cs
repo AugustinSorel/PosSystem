@@ -27,6 +27,7 @@ namespace PosSystem
         {
             for (int i = 0; i < Category.dataGridView1.Rows.Count; i++)
                 UnsortedList.Add(Category.dataGridView1.Rows[i].Cells[1].Value.ToString().Trim());
+            UnsortedList.Sort();
         }
 
         private static  int BinarySearch(List<string> arr, String x)

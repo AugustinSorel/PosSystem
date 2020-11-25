@@ -1,7 +1,7 @@
 ﻿namespace PosSystem
 {
     internal class SearchItemByCodeBar
-    {
+    {// Binary tree search
         public class Node
         {
             public long data;
