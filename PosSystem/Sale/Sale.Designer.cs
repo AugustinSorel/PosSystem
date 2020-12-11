@@ -120,7 +120,8 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.Location = new System.Drawing.Point(543, 290);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
+            this.button2.Location = new System.Drawing.Point(9, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 37);
             this.button2.TabIndex = 6;
@@ -270,7 +271,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
@@ -317,12 +317,13 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lblChange);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.lblDisplayChange);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDisplayFinalPrice);
             this.panel1.Location = new System.Drawing.Point(845, 134);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(204, 117);
+            this.panel1.Size = new System.Drawing.Size(204, 152);
             this.panel1.TabIndex = 12;
             // 
             // lblChange

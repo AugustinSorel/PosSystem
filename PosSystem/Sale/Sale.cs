@@ -94,10 +94,7 @@ namespace PosSystem
 
         private bool CheckPaymentMethod()
         {
-            if (radioButton2.Checked || CheckCashInput())
-                return true;
-            else
-                return false;
+            return radioButton2.Checked || CheckCashInput();
         }
 
         private bool CheckCashInput() 

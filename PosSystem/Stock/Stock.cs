@@ -212,7 +212,16 @@ namespace PosSystem
 
         private void TxtCoef_TextChanged(object sender, EventArgs e)
         {
-            TxtBoxPurchacePrice_TextChanged(sender, e);
+            try
+            {
+
+                TxtBoxPurchacePrice_TextChanged(sender, e);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)

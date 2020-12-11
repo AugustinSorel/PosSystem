@@ -22,7 +22,6 @@ namespace PosSystem
             CreateOrderDetailsTable();
             CreateSupplierTable();
             CreateStockTable();
-            CreateCustomer();
             CreateCategory();
             CreateVat();
             AddVAT();
@@ -47,11 +46,6 @@ namespace PosSystem
         private void CreateCategory()
         {
             new CreateCategoryTable();
-        }
-
-        private void CreateCustomer()
-        {
-            new CreateCustomerTable();
         }
 
         private void CreateStockTable()

@@ -244,7 +244,7 @@
             this.groupBox5.Size = new System.Drawing.Size(681, 70);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Search by";
+            this.groupBox5.Text = "Number of Supplier";
             // 
             // lblNumberOfItems
             // 
@@ -266,7 +266,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(186, 25);
             this.label9.TabIndex = 7;
-            this.label9.Text = "Number of workers: ";
+            this.label9.Text = "Number of supplier: ";
             // 
             // groupBox4
             // 
