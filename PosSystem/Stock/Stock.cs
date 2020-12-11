@@ -195,7 +195,15 @@ namespace PosSystem
 
         private void BtnGroupByPrice_Click(object sender, EventArgs e)
         {
-            new OrderByItemPrice(dataGridView1);
+            try
+            {
+                new OrderByItemPrice(dataGridView1);
+            }
+            catch (Exception)
+            {
+                ResetGroupBoxGroupBy.PerformClick();
+                BtnGroupByPrice.PerformClick();
+            }
         }
 
         private void TxtBoxPurchacePrice_TextChanged(object sender, EventArgs e)
@@ -212,16 +220,7 @@ namespace PosSystem
 
         private void TxtCoef_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-
-                TxtBoxPurchacePrice_TextChanged(sender, e);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            TxtBoxPurchacePrice_TextChanged(sender, e);
         }
 
         private void Button1_Click(object sender, EventArgs e)
